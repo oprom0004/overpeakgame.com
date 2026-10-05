@@ -41,59 +41,103 @@ const abilities = [
     id: 'laser',
     code: '01',
     title: 'Thermal Laser Vision',
-    category: 'Sustained Energy Projectile',
+    category: 'Sustained Optical Plasma Beam',
     badge: 'Piercing Cut',
+    colorTheme: {
+      text: 'text-orange-400',
+      border: 'border-orange-500/50',
+      bg: 'bg-orange-500/10',
+      bar: 'from-orange-500 to-amber-400',
+      glow: 'shadow-[0_0_30px_rgba(249,115,22,0.15)]'
+    },
     image: '/images/hero-banner.jpg',
     imageAlt: 'OverPeak Thermal Laser Vision destroying skyscraper support columns in Prism City',
+    damagePct: 95,
+    rangePct: 85,
+    drainPct: 60,
+    cooldownPct: 10,
     stats: { damage: '95 / 100', range: '120 meters', consumption: 'Medium / sec', cooldown: 'Instant' },
-    summary: 'Subject OP unleashes twin high-temperature concentrated optical beams from the retinas, generating pinpoint thermal erosion that instantly cuts through titanium armor plates, fuel drums, and reinforced concrete pillar cores.',
+    summary: 'Subject OP unleashes twin high-temperature concentrated optical plasma beams from the retinas, generating pinpoint thermal erosion that instantly cuts through titanium armor plates, fuel drums, and reinforced concrete pillar cores.',
     tips: [
-      'Sweep beams horizontally across building base columns to trigger structural failure.',
-      'Detonates patrol vehicle fuel tanks instantly for massive secondary explosive damage.',
-      'Can be sustained while flying to execute aerial strafing runs across Starbridge convoys.'
+      'Sweep beams horizontally across building base columns to trigger immediate structural collapse.',
+      'Target patrol vehicle fuel tanks from high altitude for instant chain explosions.',
+      'Sustain continuous fire while flying to execute aerial strafing runs across Starbridge convoys.'
     ]
   },
   {
     id: 'cryo',
     code: '02',
     title: 'Cryo Freeze Ray',
-    category: 'Sub-Zero Crowd Control',
+    category: 'Sub-Zero Crowd Control & Shatter',
     badge: 'Area Freeze',
+    colorTheme: {
+      text: 'text-cyan-400',
+      border: 'border-cyan-500/50',
+      bg: 'bg-cyan-500/10',
+      bar: 'from-cyan-400 to-blue-500',
+      glow: 'shadow-[0_0_30px_rgba(6,182,212,0.15)]'
+    },
     image: '/images/cryo-freeze.jpg',
     imageAlt: 'OverPeak Cryo Freeze Ray freezing heavy mechs and drones in combat',
+    damagePct: 65,
+    rangePct: 60,
+    drainPct: 75,
+    cooldownPct: 35,
     stats: { damage: '65 / 100', range: '75 meters', consumption: 'High / sec', cooldown: '3.0 sec' },
     summary: 'Emits an endothermic thermal wave that drops ambient temperatures to absolute zero within fractions of a second. Immobilizes heavy combat mechs and freezes fleeing targets into brittle ice statues.',
     tips: [
-      'Frozen enemies take 300% increased damage from subsequent kinetic attacks or thrown objects.',
+      'Frozen enemies suffer 300% amplified damage from subsequent kinetic attacks or thrown objects.',
       'Freeze low-altitude attack choppers to stall their rotors, sending them spiraling into skyscrapers.',
-      'Excellent for crowd suppression when surrounded by Starbridge tactical SWAT teams.'
+      'Deploy when surrounded by Starbridge tactical SWAT squads to create instant safe breathing room.'
     ]
   },
   {
     id: 'kinetic',
     code: '03',
     title: 'Telekinetic Force Grip',
-    category: 'Physics & Environmental Weaponry',
+    category: 'Gravitational Physics Mass Weapon',
     badge: 'Physics Mass',
+    colorTheme: {
+      text: 'text-purple-400',
+      border: 'border-purple-500/50',
+      bg: 'bg-purple-500/10',
+      bar: 'from-purple-500 to-indigo-400',
+      glow: 'shadow-[0_0_30px_rgba(168,85,247,0.15)]'
+    },
     image: '/images/telekinesis.jpg',
     imageAlt: 'OverPeak Telekinetic Force Grip hurling vehicles and debris across city avenues',
+    damagePct: 90,
+    rangePct: 50,
+    drainPct: 40,
+    cooldownPct: 20,
     stats: { damage: 'Mass-Based', range: '50 meters', consumption: 'Low / throw', cooldown: '1.5 sec' },
     summary: 'Harnesses gravitational anomalies to levitate massive physical objects in the environment—from police cruisers and construction I-beams to giant slabs of fallen skyscraper masonry—and violently hurl them across city blocks.',
     tips: [
       'Heavier objects deal exponentially higher impact force and create wider debris shockwaves.',
-      'Can rip structural support beams directly out of building walls to cause spontaneous collapse.',
-      'Allows catching incoming enemy artillery shells and rockets in mid-air to redirect at the firing turret.'
+      'Rip structural support beams directly out of building walls to cause spontaneous collapse.',
+      'Catch incoming enemy artillery shells and rockets in mid-air to redirect at the firing turret.'
     ]
   },
   {
     id: 'flight',
     code: '04',
     title: 'Sonic Flight & Air Dash',
-    category: 'Three-Dimensional Traversal',
+    category: '3D Omnidirectional Supersonic Traversal',
     badge: 'Supersonic',
+    colorTheme: {
+      text: 'text-yellow-400',
+      border: 'border-yellow-500/50',
+      bg: 'bg-yellow-500/10',
+      bar: 'from-yellow-400 to-amber-300',
+      glow: 'shadow-[0_0_30px_rgba(234,179,8,0.15)]'
+    },
     image: '/images/hero-banner.jpg',
     imageAlt: 'OverPeak Sonic Flight above Prism City',
-    stats: { damage: '75 / 100', range: 'Unlimited', consumption: 'Passive Drain', cooldown: 'None' },
+    damagePct: 75,
+    rangePct: 100,
+    drainPct: 25,
+    cooldownPct: 5,
+    stats: { damage: '75 / 100', range: 'Unlimited', consumption: 'Passive Drain', cooldown: 'Instant' },
     summary: 'Bypasses Earth gravity through bio-magnetic propulsion. Subject OP can effortlessly hover at rooftop altitude, achieve Mach 2 supersonic sprint velocity, and create shockwave sonic booms that shatter surrounding storefront windows.',
     tips: [
       'Double-tap the Dash button mid-flight to perform an invulnerable 360-degree dodge roll.',
@@ -105,10 +149,21 @@ const abilities = [
     id: 'slam',
     code: '05',
     title: 'Cataclysmic Ground Slam',
-    category: 'Seismic Area of Effect',
+    category: 'Seismic Shockwave & Foundation Rupture',
     badge: 'Seismic Shock',
+    colorTheme: {
+      text: 'text-rose-400',
+      border: 'border-rose-500/50',
+      bg: 'bg-rose-500/10',
+      bar: 'from-rose-500 to-orange-500',
+      glow: 'shadow-[0_0_30px_rgba(244,63,94,0.15)]'
+    },
     image: '/images/telekinesis.jpg',
     imageAlt: 'OverPeak Cataclysmic Ground Slam',
+    damagePct: 100,
+    rangePct: 45,
+    drainPct: 100,
+    cooldownPct: 85,
     stats: { damage: '100 / 100', range: '35m Radius', consumption: '100% Burst', cooldown: '15.0 sec' },
     summary: 'Executing a terminal velocity dive from high altitude, Subject OP channels all kinetic potential into a single catastrophic fist-strike upon impact. Creates a 35-meter radial crater that triggers subterranean tremors and destabilizes nearby architectural foundations.',
     tips: [
@@ -122,68 +177,96 @@ const abilities = [
 
 <Layout title={pageTitle} description={pageDescription} schema={powersSchema}>
 
-  <!-- Page Header with Game Atmosphere -->
-  <section class="border-b border-op-border bg-op-darkest relative overflow-hidden py-12">
-    <div class="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none" style="background-image: url('/images/hero-banner.jpg');"></div>
+  <!-- Atmospheric Hero Header with Laser Energy Theme -->
+  <section class="relative border-b border-op-border bg-op-darkest overflow-hidden py-14 sm:py-16">
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-b from-orange-500/15 via-rose-500/5 to-transparent blur-3xl pointer-events-none"></div>
+    <div class="absolute inset-0 opacity-15 bg-cover bg-center pointer-events-none" style="background-image: url('/images/hero-banner.jpg');"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-op-darkest/90 to-transparent"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
+      <!-- Breadcrumb -->
       <nav class="font-mono text-xs text-slate-400 mb-6 flex items-center gap-2">
-        <a href="/" class="hover:text-white transition-colors">Home</a>
-        <span>/</span>
-        <span class="text-white">Superpowers &amp; Destruction</span>
+        <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-slate-500" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+          </svg>
+          <span>Home</span>
+        </a>
+        <span class="text-slate-600">/</span>
+        <span class="text-white font-medium">Superpowers &amp; Destruction Guide</span>
       </nav>
 
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-xs font-mono text-slate-300 mb-3">
-          <span>Subject OP Arsenal</span>
-          <span>• Combat Specifications</span>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-orange-500/10 border border-orange-500/30 text-xs font-mono text-orange-300 mb-3">
+          <span class="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse"></span>
+          <span class="font-bold tracking-wide">SUBJECT OP GENETIC COMBAT DOSSIER</span>
+          <span class="text-slate-500">|</span>
+          <span class="text-slate-300">5 Combat Abilities</span>
         </div>
+
         <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-4">
           OverPeak Superpowers &amp; Physics Guide
         </h1>
+
         <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-          Master the genetic abilities of Jason Fieldway. Explore damage ratings, energy consumption profiles, and proprietary architectural demolition techniques in Prism City.
+          Unleash the full genetic arsenal of Jason Fieldway (Subject OP). Explore damage ratings, energy consumption profiles, tactical combos, and proprietary architectural demolition techniques in Prism City.
         </p>
       </div>
 
     </div>
   </section>
 
-  <!-- Editorial Arsenal Summary Box (Clean Wiki Briefing) -->
+  <!-- Editorial Arsenal Summary Box -->
   <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border">
-      <span class="font-mono text-xs text-slate-400 uppercase tracking-wider block mb-1">
-        ARSENAL BRIEFING // ABILITY MATRIX
-      </span>
-      <h2 class="text-xl sm:text-2xl font-black text-white font-display mb-2">
-        Subject OP Superpowers Breakdown
-      </h2>
-      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
-        In OverPeak, protagonist Jason Fieldway (Subject OP) wields five genetically engineered abilities: <strong>Thermal Laser Vision</strong> (high-precision cutting beam), <strong>Cryo Freeze Ray</strong> (absolute-zero crowd control), <strong>Telekinetic Force Grip</strong> (real-time physics mass throw), <strong>Sonic Flight</strong> (Mach-2 aerial traversal), and <strong>Cataclysmic Ground Slam</strong> (seismic area devastation). Each ability interacts dynamically with Prism City's unscripted voxel physics engine to collapse skyscrapers and neutralize Starbridge military forces.
+    <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-op-card via-op-card to-op-dark border border-op-border relative overflow-hidden shadow-xl">
+      <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-orange-500 via-rose-500 to-transparent"></div>
+
+      <div class="flex items-center gap-2.5 mb-3">
+        <div class="w-8 h-8 rounded-lg bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div>
+          <span class="font-mono text-[11px] text-orange-400 font-bold uppercase tracking-wider block">
+            ARSENAL BRIEFING // ABILITY MATRIX
+          </span>
+          <h2 class="text-lg sm:text-xl font-black text-white font-display">
+            Subject OP Superpowers Breakdown
+          </h2>
+        </div>
+      </div>
+
+      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+        Protagonist Jason Fieldway harnesses five bio-engineered abilities: <strong>Thermal Laser Vision</strong> (precision structural cutting), <strong>Cryo Freeze Ray</strong> (absolute-zero crowd control), <strong>Telekinetic Force Grip</strong> (real-time physics mass hurling), <strong>Sonic Flight</strong> (Mach 2 3D traversal), and <strong>Cataclysmic Ground Slam</strong> (seismic area shockwaves). Unlike scripted destruction in other mobile games, OverPeak's voxel physics engine calculates stress fractures and building collapses dynamically based on real-time load distribution.
       </p>
-      <div class="flex flex-wrap gap-4 font-mono text-xs text-slate-400 pt-3 border-t border-op-border/50">
-        <div><strong class="text-slate-200">Core Synergy:</strong> Freeze + Kinetic Throw (300% Shatter Damage)</div>
-        <div><strong class="text-slate-200">Demolition:</strong> Targeted severance of foundational load-bearing columns</div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-3 border-t border-op-border/60 font-mono text-xs text-slate-300">
+        <div><strong class="text-white">Core Synergy:</strong> Freeze + Kinetic Throw (300% Shatter Damage)</div>
+        <div><strong class="text-white">Destruction:</strong> Foundational pillar severance induces collapse</div>
+        <div><strong class="text-white">Mobility:</strong> Mach 2 flight with omnidirectional dodge roll</div>
       </div>
     </div>
   </section>
 
-  <!-- Superpower Cards Detail List (Clean Monochrome Gaming Style) -->
-  <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+  <!-- Superpower Cards Detail List with Dynamic Stat Meters -->
+  <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
     {abilities.map((ability) => (
-      <div id={ability.id} class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border hover:border-white/20 transition-all shadow-lg">
+      <div id={ability.id} class={`p-6 sm:p-8 rounded-2xl bg-op-card border-2 ${ability.colorTheme.border} ${ability.colorTheme.glow} transition-all duration-300 shadow-xl relative overflow-hidden group`}>
+        
+        <!-- Header Row -->
         <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-6">
-          
           <div class="flex items-start gap-4">
-            <div class="w-12 h-12 rounded-xl bg-op-dark border border-op-border flex items-center justify-center font-mono font-black text-sm text-slate-300 flex-shrink-0">
+            <div class={`w-14 h-14 rounded-2xl ${ability.colorTheme.bg} border ${ability.colorTheme.border} flex items-center justify-center font-mono font-black text-base ${ability.colorTheme.text} flex-shrink-0 shadow-inner`}>
               {ability.code}
             </div>
             <div>
               <div class="flex items-center gap-3 flex-wrap mb-1">
-                <h2 class="text-2xl font-black text-white font-display uppercase tracking-tight">{ability.title}</h2>
-                <span class="px-2.5 py-0.5 rounded border border-white/10 bg-white/5 text-[11px] font-mono font-bold uppercase text-slate-300">
+                <h2 class="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight">
+                  {ability.title}
+                </h2>
+                <span class={`px-2.5 py-0.5 rounded-full ${ability.colorTheme.bg} border ${ability.colorTheme.border} text-[11px] font-mono font-black uppercase ${ability.colorTheme.text} tracking-wide`}>
                   {ability.badge}
                 </span>
               </div>
@@ -191,64 +274,95 @@ const abilities = [
             </div>
           </div>
 
-          <!-- Quick Stats Pill Grid (Monochrome) -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 font-mono text-xs">
-            <div class="p-2.5 rounded-lg bg-op-dark border border-op-border">
-              <span class="text-[10px] text-slate-500 block uppercase">Damage</span>
-              <span class="text-white font-bold">{ability.stats.damage}</span>
+          <!-- Dynamic Visual Stat Gauges (Game HUD Style) -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 font-mono text-xs min-w-[320px] lg:min-w-[420px]">
+            <!-- Damage Gauge -->
+            <div class="p-3 rounded-xl bg-op-dark/90 border border-op-border">
+              <div class="flex justify-between items-center text-[10px] text-slate-400 mb-1.5 uppercase">
+                <span>Damage</span>
+                <span class="text-white font-bold">{ability.stats.damage}</span>
+              </div>
+              <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                <div class={`h-full bg-gradient-to-r ${ability.colorTheme.bar} rounded-full`} style={`width: ${ability.damagePct}%`}></div>
+              </div>
             </div>
-            <div class="p-2.5 rounded-lg bg-op-dark border border-op-border">
-              <span class="text-[10px] text-slate-500 block uppercase">Range</span>
-              <span class="text-white font-bold">{ability.stats.range}</span>
+
+            <!-- Range Gauge -->
+            <div class="p-3 rounded-xl bg-op-dark/90 border border-op-border">
+              <div class="flex justify-between items-center text-[10px] text-slate-400 mb-1.5 uppercase">
+                <span>Range</span>
+                <span class="text-white font-bold">{ability.stats.range}</span>
+              </div>
+              <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                <div class={`h-full bg-gradient-to-r ${ability.colorTheme.bar} rounded-full`} style={`width: ${ability.rangePct}%`}></div>
+              </div>
             </div>
-            <div class="p-2.5 rounded-lg bg-op-dark border border-op-border">
-              <span class="text-[10px] text-slate-500 block uppercase">Energy</span>
-              <span class="text-white font-bold">{ability.stats.consumption}</span>
+
+            <!-- Energy Drain Gauge -->
+            <div class="p-3 rounded-xl bg-op-dark/90 border border-op-border">
+              <div class="flex justify-between items-center text-[10px] text-slate-400 mb-1.5 uppercase">
+                <span>Consumption</span>
+                <span class="text-white font-bold">{ability.stats.consumption}</span>
+              </div>
+              <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                <div class={`h-full bg-gradient-to-r ${ability.colorTheme.bar} rounded-full`} style={`width: ${ability.drainPct}%`}></div>
+              </div>
             </div>
-            <div class="p-2.5 rounded-lg bg-op-dark border border-op-border">
-              <span class="text-[10px] text-slate-500 block uppercase">Cooldown</span>
-              <span class="text-white font-bold">{ability.stats.cooldown}</span>
+
+            <!-- Cooldown Gauge -->
+            <div class="p-3 rounded-xl bg-op-dark/90 border border-op-border">
+              <div class="flex justify-between items-center text-[10px] text-slate-400 mb-1.5 uppercase">
+                <span>Cooldown</span>
+                <span class="text-white font-bold">{ability.stats.cooldown}</span>
+              </div>
+              <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                <div class={`h-full bg-gradient-to-r ${ability.colorTheme.bar} rounded-full`} style={`width: ${ability.cooldownPct}%`}></div>
+              </div>
             </div>
           </div>
-
         </div>
 
         <p class="text-slate-300 text-sm leading-relaxed mb-6">
           {ability.summary}
         </p>
 
+        <!-- Gameplay Visual Capture Frame -->
         {ability.image && (
-          <div class="mb-6 rounded-2xl overflow-hidden border border-op-border shadow-lg relative group">
+          <div class="mb-6 rounded-2xl overflow-hidden border border-op-border shadow-xl relative group">
             <img
               src={ability.image}
               alt={ability.imageAlt}
               width="1024"
               height="576"
-              class="w-full h-56 sm:h-72 object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
+              class="w-full h-64 sm:h-80 object-cover object-center transform group-hover:scale-102 transition-transform duration-700"
               loading="lazy"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-op-darkest/90 via-transparent to-transparent"></div>
-            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[11px]">
-              <div class="bg-black/80 backdrop-blur-md px-3 py-1 rounded-lg border border-white/10 text-white">
+            <div class="absolute inset-0 bg-gradient-to-t from-op-darkest/95 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between font-mono text-xs">
+              <div class="bg-black/85 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 text-white flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                 <span>IN-ENGINE COMBAT CAPTURE</span>
-                <span class="text-slate-400 ml-2">• {ability.title}</span>
+                <span class="text-slate-400">• {ability.title}</span>
               </div>
-              <span class="hidden sm:inline-block px-2 py-0.5 rounded bg-white/10 border border-white/10 text-slate-300 text-[10px] uppercase font-bold">
-                Voxel Physics
+              <span class="hidden sm:inline-block px-2.5 py-1 rounded bg-white/10 border border-white/10 text-slate-300 text-[10px] uppercase font-bold">
+                Unscripted Voxel Physics
               </span>
             </div>
           </div>
         )}
 
-        <!-- Combat Tips Box -->
-        <div class="p-4 rounded-xl bg-op-dark border border-op-border">
-          <h4 class="font-mono text-xs font-bold text-white uppercase tracking-wider mb-2">
-            TACTICAL SYNERGIES &amp; EXECUTION
-          </h4>
-          <ul class="space-y-1.5 text-xs text-slate-300 font-mono">
+        <!-- Tactical Combat Directives -->
+        <div class="p-5 rounded-xl bg-op-dark/70 border border-op-border">
+          <h3 class={`text-xs font-mono font-black uppercase tracking-wider mb-3 flex items-center gap-2 ${ability.colorTheme.text}`}>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+            Tactical Directives &amp; Synergy
+          </h3>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
             {ability.tips.map((tip) => (
-              <li class="flex items-start gap-2">
-                <span class="text-slate-500 flex-shrink-0">›</span>
+              <li class="flex items-start gap-2.5">
+                <span class={`${ability.colorTheme.text} font-mono mt-0.5 font-bold`}>▶</span>
                 <span>{tip}</span>
               </li>
             ))}
@@ -259,43 +373,54 @@ const abilities = [
     ))}
   </section>
 
-  <!-- Skyscraper Demolition Physics Breakdown (Clean Technical Analysis) -->
+  <!-- Skyscraper Demolition Physics Engine Section -->
   <section id="destruction" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
-    <div class="p-8 rounded-2xl bg-op-card border border-op-border">
-      
+    <div class="p-8 sm:p-10 rounded-2xl bg-gradient-to-b from-op-card to-op-dark border border-op-border relative overflow-hidden shadow-2xl">
       <div class="max-w-3xl mb-8">
-        <span class="px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300 font-mono text-xs font-bold uppercase mb-3 inline-block">
-          PHYSICS ENGINE ARCHITECTURE
-        </span>
+        <div class="font-mono text-xs text-orange-400 font-bold uppercase tracking-wider mb-2">
+          ENGINE ARCHITECTURE // VOXEL COLLAPSE
+        </div>
         <h2 class="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight mb-3">
-          How Prism City Skyscraper Demolition Works
+          How Building Destruction Physics Work in OverPeak
         </h2>
-        <p class="text-slate-300 text-sm leading-relaxed">
-          OverPeak does not rely on pre-baked scripted destruction animations. Every building in Prism City is mathematically segmented into load-bearing stress vertices calculated in real time:
+        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          Unlike most open-world action titles that utilize pre-baked cinematic destruction animations, OverPeak calculates real-time volumetric stress tensors across architectural columns, crossbeams, and facade slabs.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs">
-        <div class="p-5 rounded-xl bg-op-dark border border-op-border">
-          <div class="text-white font-bold text-sm mb-2">1. Structural Load Points</div>
-          <p class="text-slate-400 leading-relaxed">
-            Targeting exterior decorative walls only causes localized cosmetic damage. To destabilize a structure, focus Thermal Lasers or Telekinetic throws directly on ground-level corner columns.
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-5 rounded-xl bg-op-dark border border-op-border relative">
+          <div class="w-8 h-8 rounded-lg bg-orange-500/20 text-orange-400 font-mono font-bold flex items-center justify-center mb-3">
+            01
+          </div>
+          <h3 class="text-white font-bold text-sm mb-2 font-display">1. Column Severance</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Use <strong>Thermal Laser Vision</strong> or <strong>Telekinesis</strong> to destroy the 4 ground-floor corner columns. When structural integrity drops below 25%, gravity takes over.
           </p>
         </div>
-        <div class="p-5 rounded-xl bg-op-dark border border-op-border">
-          <div class="text-white font-bold text-sm mb-2">2. Gravity Vector Stress</div>
-          <p class="text-slate-400 leading-relaxed">
-            When more than 60% of foundational support is eliminated on one side, gravitational torque forces the entire skyscraper to tilt and collapse toward the weakened quadrant.
-          </p>
-        </div>
-        <div class="p-5 rounded-xl bg-op-dark border border-op-border">
-          <div class="text-white font-bold text-sm mb-2">3. Secondary Debris Impact</div>
-          <p class="text-slate-400 leading-relaxed">
-            Falling masonry actively interacts with street-level objects. Collapsing towers crush Starbridge barricades, ignite parked vehicles, and cause adjacent buildings to sustain structural shock.
-          </p>
-        </div>
-      </div>
 
+        <div class="p-5 rounded-xl bg-op-dark border border-op-border relative">
+          <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 font-mono font-bold flex items-center justify-center mb-3">
+            02
+          </div>
+          <h3 class="text-white font-bold text-sm mb-2 font-display">2. Dynamic Weight Shift</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            The skyscraper visibly tilts in real-time toward the weakened axis. Secondary explosions occur as electrical grids, elevators, and gas pipelines rupture inside the building.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-op-dark border border-op-border relative">
+          <div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 font-mono font-bold flex items-center justify-center mb-3">
+            03
+          </div>
+          <h3 class="text-white font-bold text-sm mb-2 font-display">3. Catastrophic Collapse</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Tens of thousands of physics debris chunks crush enemy tanks and barricades below, generating massive dust shockwaves that blind surrounding sniper units.
+          </p>
+        </div>
+
+      </div>
     </div>
   </section>
 

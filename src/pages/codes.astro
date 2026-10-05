@@ -47,91 +47,168 @@ const codesSchema = {
     }
   ]
 };
+
+const unlockRoadmap = [
+  { item: 'Thermal Laser Vision', method: 'Complete Mission 01: Breakout & Escape', type: 'Superpower' },
+  { item: 'Cryo Freeze Ray', method: 'Infiltrate Starbridge Sub-Level Cryo Lab', type: 'Superpower' },
+  { item: 'Telekinetic Force Grip', method: 'Liberate Industrial Sector 07 Outpost', type: 'Superpower' },
+  { item: 'Sonic Mach-2 Flight', method: 'Scale and Overcharge the Prism Broadcast Spire', type: 'Superpower' },
+  { item: 'Vanguard Tactical Armor', method: 'Find 10 Hidden Underground Resistance Crates', type: 'Suit Cosmetic' },
+  { item: 'Crimson Fury Shroud', method: 'Achieve Tier 5 Notoriety on the Villain Alignment Path', type: 'Suit Cosmetic' },
+];
 ---
 
 <Layout title={pageTitle} description={pageDescription} schema={codesSchema}>
 
-  <!-- Page Header with Game Atmosphere -->
-  <section class="border-b border-op-border bg-op-darkest relative overflow-hidden py-12">
-    <div class="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none" style="background-image: url('/images/hero-banner.jpg');"></div>
+  <!-- Atmospheric Hero Header with Security Audit Theme -->
+  <section class="relative border-b border-op-border bg-op-darkest overflow-hidden py-14 sm:py-16">
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-b from-amber-500/15 via-orange-500/5 to-transparent blur-3xl pointer-events-none"></div>
+    <div class="absolute inset-0 opacity-15 bg-cover bg-center pointer-events-none" style="background-image: url('/images/hero-banner.jpg');"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-op-darkest/90 to-transparent"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
+      <!-- Breadcrumb -->
       <nav class="font-mono text-xs text-slate-400 mb-6 flex items-center gap-2">
-        <a href="/" class="hover:text-white transition-colors">Home</a>
-        <span>/</span>
-        <span class="text-white">Promo Codes &amp; Cheats</span>
+        <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-slate-500" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+          </svg>
+          <span>Home</span>
+        </a>
+        <span class="text-slate-600">/</span>
+        <span class="text-white font-medium">Promo Codes &amp; Cheats</span>
       </nav>
 
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-xs font-mono text-slate-300 mb-3">
-          <span>Verification Status</span>
-          <span>• October 2026 Audit</span>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-xs font-mono text-amber-300 mb-3">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+          <span class="font-bold tracking-wide">REAL-TIME CODE VERIFICATION AUDIT</span>
+          <span class="text-slate-500">|</span>
+          <span class="text-slate-300">October 2026 Cycle</span>
         </div>
+
         <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-4">
           OverPeak Promo Codes &amp; Cheats
         </h1>
+
         <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-          Verify the current status of in-game promo codes, redeem buttons, and cheat commands in <strong>OverPeak: Action Game</strong>. Learn how rewards are distributed and how to protect your device from fake code generators.
+          Verify the current status of in-game promo codes, redeem buttons, and cheat commands in <strong>OverPeak: Action Game</strong>. Discover legit unlock pathways and protect your device against fake code generators.
         </p>
       </div>
 
     </div>
   </section>
 
-  <!-- Status Card (Clean Wiki Verification) -->
+  <!-- Live Security Verification Card -->
   <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border">
-      <div class="flex items-center justify-between flex-wrap gap-4 mb-3">
-        <div>
-          <span class="font-mono text-xs text-slate-400 uppercase tracking-wider block mb-1">
-            SECURITY AUDIT // PROMO CODES STATUS
-          </span>
-          <h2 class="text-xl sm:text-2xl font-black text-white font-display">
-            Are There Working Promo Codes for OverPeak?
-          </h2>
+    <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-op-card via-op-card to-op-dark border border-op-border relative overflow-hidden shadow-xl">
+      <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-amber-500 via-orange-500 to-transparent"></div>
+
+      <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <div>
+            <span class="font-mono text-[11px] text-amber-400 font-bold uppercase tracking-wider block">
+              SECURITY AUDIT // PROMO CODES SYSTEM
+            </span>
+            <h2 class="text-lg sm:text-xl font-black text-white font-display">
+              Are There Working Promo Codes for OverPeak?
+            </h2>
+          </div>
         </div>
-        <div class="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-300 font-mono text-xs font-bold uppercase">
-          ● No Code System Active
+
+        <div class="px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-300 font-mono text-xs font-bold uppercase flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>No Redemption System Active</span>
         </div>
       </div>
-      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
-        No. As of October 2026 (Version 0.6 Early Access), developer <strong>R-USER Games</strong> has confirmed there is <strong>no promo code redemption feature</strong> or text entry console in OverPeak. All in-game superpowers, upgrades, and cosmetics are unlocked through story mission progression and open-world exploration. Websites advertising <em>"unlimited money cheat codes"</em> or <em>"gem generators"</em> are unverified third-party scams.
+
+      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+        As of October 2026 (Version 0.6 Early Access build), developer <strong>R-USER Games</strong> has confirmed there is <strong>no promo code redemption dialog</strong> or console command window inside OverPeak. All abilities, suit upgrades, and vehicle modifications are obtained 100% naturally by finishing story missions and exploring hidden caches in Prism City.
       </p>
-      <div class="flex flex-wrap gap-4 font-mono text-xs text-slate-400 pt-3 border-t border-op-border/50">
-        <div><strong class="text-slate-200">Audit Date:</strong> October 2026</div>
-        <div><strong class="text-slate-200">Progression Method:</strong> Offline story missions &amp; cache discoveries</div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t border-op-border/60 font-mono text-xs text-slate-300">
+        <div><strong class="text-white">Audit Timestamp:</strong> October 2026 Live Audit</div>
+        <div><strong class="text-white">Redeem Button:</strong> Not present in client v0.6</div>
+        <div><strong class="text-white">Progression Type:</strong> Pure gameplay-driven</div>
       </div>
     </div>
   </section>
 
-  <!-- Warning Box: Avoiding Code Scams (Neutral Design) -->
+  <!-- Legit Unlock Roadmap Table (What Players Actually Want to Know) -->
   <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border">
-      <h3 class="text-base sm:text-lg font-bold text-white mb-3 font-display uppercase tracking-tight">
-        Advisory: Avoiding Fake "Unlimited Money" Code Scams
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
+      <div>
+        <div class="font-mono text-xs text-amber-400 font-bold uppercase tracking-wider mb-1">
+          ORGANIC PROGRESSION GUIDE
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight">
+          How to Unlock Powers &amp; Skins for Free
+        </h2>
+      </div>
+      <p class="font-mono text-xs text-slate-400">
+        No payment, no fake cheat codes required
+      </p>
+    </div>
+
+    <div class="overflow-x-auto rounded-2xl border border-op-border bg-op-card shadow-2xl">
+      <table class="w-full text-left font-mono text-xs border-collapse">
+        <thead class="bg-op-dark border-b border-op-border text-slate-400 uppercase text-[11px]">
+          <tr>
+            <th class="p-4 sm:p-5 w-1/3">Ability / Skin Reward</th>
+            <th class="p-4 sm:p-5 w-1/4">Category</th>
+            <th class="p-4 sm:p-5 w-5/12 text-amber-300">Verified Gameplay Unlock Requirement</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-op-border/50 text-slate-300">
+          {unlockRoadmap.map((item) => (
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="p-4 sm:p-5 text-white font-bold">{item.item}</td>
+              <td class="p-4 sm:p-5">
+                <span class="px-2 py-0.5 rounded bg-op-dark border border-op-border text-slate-300 text-[11px]">
+                  {item.type}
+                </span>
+              </td>
+              <td class="p-4 sm:p-5 text-slate-200">{item.method}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Security Advisory: Fake Code Generators -->
+  <section class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
+    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border shadow-xl">
+      <div class="font-mono text-xs text-rose-400 font-bold uppercase tracking-wider mb-2">
+        CYBERSECURITY ADVISORY
+      </div>
+      <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 font-display uppercase tracking-tight">
+        Warning: Avoiding Fake "Unlimited Money" Scam Sites
       </h3>
       <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
-        Multiple third-party websites and social media channels claim to offer <em>"secret cheat codes for OverPeak"</em> (e.g., codes like <code>OVERPEAK100K</code> or <code>GODMODE99</code>).
+        Several fraudulent portals claim to provide <em>"OverPeak Gift Codes"</em> (e.g., strings like <code>PEAK999</code> or <code>OPUNLIMITED</code>). Gamers should note:
       </p>
-      <ul class="space-y-2 text-xs font-mono text-slate-400 mb-4 border-t border-op-border/50 pt-3">
-        <li class="flex items-start gap-2">
-          <span class="text-slate-500">›</span>
-          <span>These codes do not exist within the compiled game code.</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-slate-500">›</span>
-          <span>Clicking links on fake code generator sites triggers redirects to survey traps and malware APK downloads.</span>
-        </li>
-        <li class="flex items-start gap-2">
-          <span class="text-slate-500">›</span>
-          <span>Never enter your Google Play or Apple ID credentials into any external site promising free OverPeak currency.</span>
-        </li>
-      </ul>
-      <p class="text-slate-500 text-xs font-mono">
-        This page is monitored daily. The moment R-USER Games implements an official redemption feature in an upcoming patch, verified codes and step-by-step tutorials will be published here immediately.
-      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono text-slate-300 pt-3 border-t border-op-border/50">
+        <div class="p-4 rounded-xl bg-op-dark border border-op-border">
+          <div class="text-rose-400 font-bold mb-1.5 font-sans">No Code API Exists</div>
+          <p class="text-slate-400 font-sans text-xs">The OverPeak game executable contains no code validation subroutine. Any site claiming otherwise is completely fabricated.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-op-dark border border-op-border">
+          <div class="text-rose-400 font-bold mb-1.5 font-sans">Malware Redirection</div>
+          <p class="text-slate-400 font-sans text-xs">Clicking "Generate Code" redirects users through aggressive ad networks, survey paywalls, or trojanized APK downloads.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-op-dark border border-op-border">
+          <div class="text-rose-400 font-bold mb-1.5 font-sans">Never Enter Account Info</div>
+          <p class="text-slate-400 font-sans text-xs">Never provide Google Play credentials, passwords, or personal phone numbers to any third-party code generator.</p>
+        </div>
+      </div>
     </div>
   </section>
 

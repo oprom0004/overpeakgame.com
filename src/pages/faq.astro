@@ -8,32 +8,38 @@ const faqs = [
   {
     q: 'Is OverPeak an offline game or does it require constant internet?',
     a: 'OverPeak CAN be played fully offline without Wi-Fi or cellular data! The core Prism City open-world sandbox, story missions, and building destruction physics all run locally on your device. An internet connection is only needed when downloading initial game data, saving cloud backups to your Google account, or checking for Version 0.6 patch updates.',
-    badge: 'OFFLINE CAPABILITY'
+    category: 'Connectivity',
+    badge: '100% Offline Capable'
   },
   {
     q: 'When is the official OverPeak release date for Apple iOS (iPhone/iPad)?',
     a: 'OverPeak launched its official Android early access (Version 0.6) on September 27, 2026. The iOS version is currently in developer review with Apple and is slated to release on the Apple App Store in late 2026 following Android optimization cycles.',
-    badge: 'RELEASE SCHEDULE'
+    category: 'Platforms',
+    badge: 'Late 2026 Release'
   },
   {
     q: 'Who is Jason Fieldway (Subject OP)? What is the story of OverPeak?',
     a: 'Jason Fieldway is a former civilian who was abducted and genetically modified by the mega-corporation Starbridge in an attempt to engineer the ultimate living biological weapon—codenamed Subject OP. After awakening from cryogenic stasis, Jason vows revenge against Starbridge executives and their private military force in Prism City.',
-    badge: 'STORY & LORE'
+    category: 'Lore',
+    badge: 'Subject OP Origin'
   },
   {
     q: 'How does the Reputation System work in OverPeak?',
     a: 'Every action in Prism City influences your reputation meter. Rescuing civilians from Starbridge drones, stopping bank heists, and avoiding destruction of civilian infrastructure turns you into a Hero (citizens cheer and offer support). Recklessly demolishing apartment blocks and attacking police turns you into a feared Villain, summoning heavier Starbridge military gunships.',
-    badge: 'GAMEPLAY MECHANIC'
+    category: 'Gameplay',
+    badge: 'Hero vs Villain'
   },
   {
     q: 'Is OverPeak planned for a native Steam or PC release?',
     a: 'R-USER Games has indicated interest in bringing OverPeak to PC and consoles in the future. However, there is no official Steam release date currently. PC players can seamlessly play right now using Android emulators like MuMuPlayer 12 or BlueStacks 5 at 60–120 FPS.',
-    badge: 'PC AVAILABILITY'
+    category: 'Platforms',
+    badge: '120 FPS Emulation'
   },
   {
     q: 'How much free storage does OverPeak require on Android?',
-    a: 'The initial Google Play download package is approximately 1.2 GB. After first boot and shader pre-compilation, the game consumes approximately 2.2 GB of total internal storage. We recommend having at least 3 GB of free space for smooth performance.',
-    badge: 'STORAGE & SPECS'
+    a: 'The initial Google Play download package is approximately 1.2 GB. After first boot and shader pre-compilation, the game consumes approximately 2.2 GB of total internal storage. We recommend having at least 3.0 GB of free space for smooth performance.',
+    category: 'Hardware',
+    badge: '~2.2 GB Final Size'
   }
 ];
 
@@ -74,92 +80,149 @@ const faqSchema = {
 
 <Layout title={pageTitle} description={pageDescription} schema={faqSchema}>
 
-  <!-- Header -->
-  <section class="border-b border-op-border bg-gradient-to-b from-op-dark to-op-darkest py-12 sm:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Atmospheric Hero Header with Deep Lighting -->
+  <section class="relative border-b border-op-border bg-op-darkest overflow-hidden py-14 sm:py-16">
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-b from-cyan-500/15 via-orange-500/5 to-transparent blur-3xl pointer-events-none"></div>
+    <div class="absolute inset-0 opacity-15 bg-cover bg-center pointer-events-none" style="background-image: url('/images/hero-banner.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-op-darkest/90 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <nav class="font-mono text-xs text-op-muted mb-4 flex items-center gap-2">
-        <a href="/" class="hover:text-white transition-colors">Home</a>
-        <span>/</span>
-        <span class="text-white">FAQ &amp; Offline Guide</span>
+      <!-- Breadcrumb -->
+      <nav class="font-mono text-xs text-slate-400 mb-6 flex items-center gap-2">
+        <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-slate-500" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+          </svg>
+          <span>Home</span>
+        </a>
+        <span class="text-slate-600">/</span>
+        <span class="text-white font-medium">FAQ &amp; Offline Guide</span>
       </nav>
 
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-op-card border border-op-border text-xs font-mono text-slate-300 mb-3">
-          <span>Community Q&amp;A</span>
-          <span>• Gameplay &amp; Connectivity</span>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/30 text-xs font-mono text-cyan-300 mb-3">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+          <span class="font-bold tracking-wide">PLAYER KNOWLEDGE BASE</span>
+          <span class="text-slate-500">|</span>
+          <span class="text-slate-300">Verified Technical Answers</span>
         </div>
+
         <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-4">
           OverPeak FAQ &amp; Offline Status
         </h1>
+
         <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-          Get direct, authoritative answers to the most common questions regarding <strong>OverPeak: Action Game</strong>, including offline gameplay confirmation, iOS release timeline, and story lore.
+          Get direct, authoritative answers regarding <strong>OverPeak: Action Game</strong>. Learn about offline playability, Apple iOS release scheduling, PC 120 FPS emulation, and gameplay mechanics.
         </p>
       </div>
 
     </div>
   </section>
 
-  <!-- Offline Confirmation Box (Clean Wiki Briefing) -->
+  <!-- Offline Confirmation Box (High Contrast & Verified Status) -->
   <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border">
-      <span class="font-mono text-xs text-slate-400 uppercase tracking-wider block mb-1">
-        CONNECTIVITY AUDIT // OFFLINE SINGLE-PLAYER
-      </span>
-      <h2 class="text-xl sm:text-2xl font-black text-white font-display mb-2">
-        Can OverPeak Be Played Offline Without Internet?
-      </h2>
-      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
+    <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-op-card via-op-card to-op-dark border border-op-border relative overflow-hidden shadow-xl">
+      <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-emerald-500 via-cyan-400 to-transparent"></div>
+
+      <div class="flex items-center justify-between flex-wrap gap-4 mb-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <span class="font-mono text-[11px] text-emerald-400 font-bold uppercase tracking-wider block">
+              CONNECTIVITY AUDIT // OFFLINE SINGLE-PLAYER
+            </span>
+            <h2 class="text-lg sm:text-xl font-black text-white font-display">
+              Can OverPeak Be Played Completely Offline?
+            </h2>
+          </div>
+        </div>
+
+        <div class="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-bold uppercase flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span>100% Offline Capable</span>
+        </div>
+      </div>
+
+      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
         <strong>Yes, OverPeak can be played 100% offline.</strong> You do not need Wi-Fi or mobile cellular data to explore Prism City, fight Starbridge mercenaries, or trigger real-time building collapses. All physics simulations and story campaigns run locally on your device's processor.
       </p>
-      <div class="font-mono text-xs text-slate-400 pt-3 border-t border-op-border/50">
-        * Note: An active internet connection is only needed when backing up save files to Google Play Cloud or downloading new content patches.
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t border-op-border/60 font-mono text-xs text-slate-300">
+        <div><strong class="text-white">Offline Missions:</strong> All Story Chapters Playable</div>
+        <div><strong class="text-white">Physics Simulation:</strong> 100% On-Device CPU/GPU</div>
+        <div><strong class="text-white">Internet Requirement:</strong> Cloud Backup &amp; Patch DL Only</div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ Accordion / Grid -->
+  <!-- FAQ Grid -->
   <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-    <h2 class="text-xl sm:text-2xl font-black text-white font-display uppercase tracking-tight mb-6">
-      Frequently Asked Questions
-    </h2>
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-4">
+      <div>
+        <div class="font-mono text-xs text-cyan-400 font-bold uppercase tracking-wider mb-1">
+          QUESTIONS &amp; ANSWERS
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight">
+          Common Gameplay &amp; Technical Inquiries
+        </h2>
+      </div>
+      <p class="font-mono text-xs text-slate-400">
+        Continuously updated for Version 0.6
+      </p>
+    </div>
 
-    <div class="grid grid-cols-1 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {faqs.map((faq) => (
-        <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-white/20 transition-all">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="px-2 py-0.5 rounded bg-op-dark border border-op-border text-[10px] font-mono font-bold text-slate-300 uppercase">
-              {faq.badge}
-            </span>
+        <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-slate-500 transition-all shadow-lg flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-[11px] font-mono font-bold text-cyan-300 uppercase">
+                {faq.badge}
+              </span>
+              <span class="font-mono text-[11px] text-slate-500 uppercase">{faq.category}</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3 font-display">
+              {faq.q}
+            </h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+              {faq.a}
+            </p>
           </div>
-          <h3 class="text-lg sm:text-xl font-bold text-white mb-3 font-display">
-            {faq.q}
-          </h3>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-            {faq.a}
-          </p>
+
+          <div class="pt-3 border-t border-op-border/50 text-[11px] font-mono text-slate-500">
+            Verified by OverPeak Strategy Team
+          </div>
         </div>
       ))}
     </div>
   </section>
 
-  <!-- Cross Navigation to Download & Powers -->
+  <!-- Cross-Nav Hub -->
   <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 p-8 rounded-2xl bg-op-card border border-op-border">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 p-8 rounded-2xl bg-gradient-to-r from-op-card via-op-card to-op-dark border border-op-border shadow-2xl">
       <div>
-        <h3 class="text-xl font-black text-white font-display uppercase mb-1">Ready to Play OverPeak?</h3>
-        <p class="text-slate-400 text-xs font-mono">Download the official Google Play build or configure PC 120 FPS emulation.</p>
+        <h3 class="text-2xl font-black text-white font-display uppercase tracking-tight mb-1">
+          Ready to Enter Prism City?
+        </h3>
+        <p class="text-slate-300 text-xs sm:text-sm font-mono">
+          Download the official Google Play build or configure 120 FPS PC desktop controls.
+        </p>
       </div>
-      <div class="flex gap-3">
+      <div class="flex gap-3 flex-wrap">
         <a
           href="/download/"
-          class="px-5 py-2.5 rounded-lg bg-white text-op-darkest font-mono font-bold text-xs uppercase tracking-wider hover:bg-slate-200 transition-colors"
+          class="px-5 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-mono font-bold text-xs uppercase tracking-wider transition-all shadow-lg"
         >
           Download Hub →
         </a>
         <a
           href="/powers/"
-          class="px-5 py-2.5 rounded-lg bg-op-dark border border-op-border text-white font-mono font-semibold text-xs uppercase tracking-wider hover:border-white/40 transition-colors"
+          class="px-5 py-3 rounded-xl bg-op-dark border border-op-border text-white font-mono font-bold text-xs uppercase tracking-wider hover:border-slate-400 transition-colors"
         >
           Superpowers Guide
         </a>
