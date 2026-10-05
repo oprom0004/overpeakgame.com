@@ -122,7 +122,7 @@ const powers = [
         </div>
 
         <!-- Live Google Play Metrics Callout -->
-        <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto text-left font-mono">
+        <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto text-left font-mono mb-12">
           <div class="p-3.5 rounded-xl bg-op-card/80 border border-op-border">
             <div class="text-[11px] text-op-muted uppercase">Global Rating</div>
             <div class="text-xl font-bold text-op-gold">4.2 ★</div>
@@ -145,6 +145,54 @@ const powers = [
           </div>
         </div>
 
+        <!-- Hero Cinematic Visual Image Banner -->
+        <div class="relative rounded-2xl overflow-hidden border border-op-border/80 shadow-2xl group max-w-5xl mx-auto">
+          <img
+            src="/images/hero-banner.jpg"
+            alt="OverPeak Gameplay: Subject OP flying with Thermal Laser Vision destroying Prism City skyscraper"
+            width="1280"
+            height="720"
+            class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-left font-mono text-xs">
+            <div class="bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+              <span class="text-op-laser font-bold">PRISM CITY DESTINATIONS</span>
+              <span class="text-slate-400 ml-2">• Real-Time Stress Physics Demolition</span>
+            </div>
+            <span class="hidden sm:inline-block px-2.5 py-1 rounded bg-op-laser text-white font-bold text-[10px] uppercase">
+              4K UHD Key Visual
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GEO AI Overview Direct Answer Box -->
+  <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
+    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-laser/30 shadow-2xl bg-gradient-to-r from-op-laser/10 via-op-card to-op-dark">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-op-laser/20 border border-op-laser/40 text-op-laser text-2xl flex items-center justify-center flex-shrink-0 font-mono font-black">
+          ⚡
+        </div>
+        <div>
+          <span class="font-mono text-xs text-op-laser font-bold uppercase tracking-wider block mb-1">
+            GEO DIRECT ANSWER • AT-A-GLANCE SUMMARY (OVERPEAK: ACTION GAME)
+          </span>
+          <h2 class="text-xl sm:text-2xl font-black text-white font-display mb-2">
+            What is OverPeak: Action Game?
+          </h2>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
+            <strong>OverPeak</strong> is a free-to-play open-world superhero action RPG developed by <strong>R-USER Games</strong>, officially released on Android (Google Play) on September 27, 2026. Players control <strong>Jason Fieldway (Subject OP)</strong>, a genetically modified survivor seeking retribution against the corrupt Starbridge Corporation in Prism City. The game features real-time building destruction physics, five elemental superpowers (thermal lasers, freeze rays, telekinesis, sonic flight, ground slams), complete offline solo play, and dynamic hero-versus-villain reputation paths.
+          </p>
+          <div class="flex flex-wrap gap-4 font-mono text-xs text-slate-400">
+            <span>• <strong>Platforms:</strong> Android (Live), iOS (In Review), PC (via Emulator)</span>
+            <span>• <strong>Developer:</strong> R-USER Games</span>
+            <span>• <strong>Connectivity:</strong> 100% Offline Compatible</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -189,25 +237,42 @@ const powers = [
       </div>
 
       <!-- Video / Interactive Showcase Card -->
-      <div class="p-6 rounded-2xl bg-op-card border border-op-border shadow-2xl relative group">
-        <div class="aspect-video w-full rounded-xl bg-op-darkest border border-op-border overflow-hidden relative flex flex-col justify-center items-center text-center p-6">
-          <div class="w-16 h-16 rounded-full bg-op-laser/20 border border-op-laser/50 flex items-center justify-center text-op-laser text-2xl mb-4 group-hover:scale-110 transition-transform">
-            ▶
-          </div>
-          <div class="font-mono font-bold text-white text-base mb-1">
-            OverPeak Official Gameplay &amp; Destruction
-          </div>
-          <p class="text-op-muted text-xs max-w-sm">
-            Experience building collapse physics, laser beam sweeps, and superhero flight mechanics.
-          </p>
-          <div class="mt-4 flex gap-2">
-            <span class="px-2 py-0.5 rounded bg-op-dark border border-op-border text-[10px] font-mono text-op-cryo">Vulkan 60 FPS</span>
-            <span class="px-2 py-0.5 rounded bg-op-dark border border-op-border text-[10px] font-mono text-op-gold">Prism City</span>
+      <!-- Visual Gameplay Image Showcase Card -->
+      <div class="space-y-4">
+        <div class="rounded-2xl bg-op-card border border-op-border p-3 shadow-2xl relative overflow-hidden group">
+          <div class="aspect-video w-full rounded-xl overflow-hidden relative">
+            <img
+              src="/images/telekinesis.jpg"
+              alt="OverPeak Telekinetic power: Throwing sedans and concrete in Prism City street"
+              width="1280"
+              height="720"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center text-xs font-mono">
+              <span class="px-2 py-0.5 rounded bg-op-kinetic/80 text-white font-bold text-[10px] uppercase">
+                Telekinesis Combat
+              </span>
+              <span class="text-slate-300 bg-black/60 px-2 py-0.5 rounded">60 FPS Action</span>
+            </div>
           </div>
         </div>
-        <div class="mt-4 flex justify-between items-center text-xs font-mono text-slate-400">
-          <span>Trailer &amp; Walkthrough Reference</span>
-          <a href="/download/" class="text-op-cryo hover:underline">Get Download Links →</a>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-xl bg-op-card border border-op-border p-2 group">
+            <div class="aspect-video rounded-lg overflow-hidden relative mb-2">
+              <img src="/images/cryo-freeze.jpg" alt="OverPeak Cryo Freeze Ray" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="font-mono text-[11px] text-op-cryo font-bold">Sub-Zero Cryo Ray</div>
+            <div class="text-[10px] text-slate-400">Freeze drones &amp; armored trucks</div>
+          </div>
+          <div class="rounded-xl bg-op-card border border-op-border p-2 group">
+            <div class="aspect-video rounded-lg overflow-hidden relative mb-2">
+              <img src="/images/pc-setup.jpg" alt="OverPeak PC 120 FPS Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="font-mono text-[11px] text-op-gold font-bold">PC &amp; Ultrawide 120Hz</div>
+            <div class="text-[10px] text-slate-400">Keyboard &amp; mouse precision</div>
+          </div>
         </div>
       </div>
 

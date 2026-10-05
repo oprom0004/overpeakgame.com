@@ -44,6 +44,8 @@ const abilities = [
     icon: '🔥',
     badge: 'High Precision / Piercing',
     accent: 'border-op-laser/40 bg-op-laser/10 text-op-laser',
+    image: '/images/hero-banner.jpg',
+    imageAlt: 'OverPeak Thermal Laser Vision destroying skyscraper support columns in Prism City',
     stats: { damage: '95 / 100', range: '120 meters', consumption: 'Medium Energy/sec', cooldown: 'Instant Toggle' },
     summary: 'Subject OP unleashes twin high-temperature concentrated optical beams from the retinas, generating pinpoint thermal erosion that instantly cuts through titanium armor plates, fuel drums, and reinforced concrete pillar cores.',
     tips: [
@@ -59,6 +61,8 @@ const abilities = [
     icon: '❄️',
     badge: 'Area Freeze / Shatter',
     accent: 'border-op-cryo/40 bg-op-cryo/10 text-op-cryo',
+    image: '/images/cryo-freeze.jpg',
+    imageAlt: 'OverPeak Cryo Freeze Ray freezing heavy mechs and drones in combat',
     stats: { damage: '65 / 100', range: '75 meters', consumption: 'High Energy/sec', cooldown: '3 Seconds' },
     summary: 'Emits an endothermic thermal wave that drops ambient temperatures to absolute zero within fractions of a second. Immobilizes heavy combat mechs and freezes fleeing targets into brittle ice statues.',
     tips: [
@@ -74,6 +78,8 @@ const abilities = [
     icon: '🌀',
     badge: 'Physics Manipulation',
     accent: 'border-op-kinetic/40 bg-op-kinetic/10 text-op-kinetic',
+    image: '/images/telekinesis.jpg',
+    imageAlt: 'OverPeak Telekinetic Force Grip hurling vehicles and debris across city avenues',
     stats: { damage: 'Variable (Mass-based)', range: '50 meters', consumption: 'Low Energy/throw', cooldown: '1.5 Seconds' },
     summary: 'Harnesses gravitational anomalies to levitate massive physical objects in the environment—from police cruisers and construction I-beams to giant slabs of fallen skyscraper masonry—and violently hurl them across city blocks.',
     tips: [
@@ -143,6 +149,32 @@ const abilities = [
     </div>
   </section>
 
+  <!-- GEO AI Overview Direct Answer Box -->
+  <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
+    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-laser/30 shadow-2xl bg-gradient-to-r from-op-laser/10 via-op-card to-op-dark">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-op-laser/20 border border-op-laser/40 text-op-laser text-2xl flex items-center justify-center flex-shrink-0 font-mono font-black">
+          ⚡
+        </div>
+        <div>
+          <span class="font-mono text-xs text-op-laser font-bold uppercase tracking-wider block mb-1">
+            GEO DIRECT ANSWER • OVERPEAK SUPERPOWERS &amp; ABILITIES OVERVIEW
+          </span>
+          <h2 class="text-xl sm:text-2xl font-black text-white font-display mb-2">
+            What Superpowers Does Subject OP Have in OverPeak?
+          </h2>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
+            In OverPeak, protagonist Jason Fieldway (Subject OP) wields five genetically engineered abilities: <strong>Thermal Laser Vision</strong> (high-precision cutting beam), <strong>Cryo Freeze Ray</strong> (absolute-zero crowd control), <strong>Telekinetic Force Grip</strong> (real-time physics mass throw), <strong>Sonic Flight</strong> (Mach-2 aerial traversal), and <strong>Cataclysmic Ground Slam</strong> (seismic area devastation). Each ability interacts dynamically with Prism City's unscripted voxel physics engine to collapse skyscrapers and neutralize Starbridge military forces.
+          </p>
+          <div class="flex flex-wrap gap-4 font-mono text-xs text-slate-400">
+            <span>• <strong>Core Synergies:</strong> Freeze + Kinetic Throw (300% Shatter Damage)</span>
+            <span>• <strong>Demolition Method:</strong> Beam severance of base structural load points</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Superpower Cards Detail List -->
   <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
     {abilities.map((ability) => (
@@ -189,6 +221,29 @@ const abilities = [
         <p class="text-slate-300 text-sm leading-relaxed mb-6">
           {ability.summary}
         </p>
+
+        {ability.image && (
+          <div class="mb-6 rounded-2xl overflow-hidden border border-op-border/80 shadow-2xl relative group">
+            <img
+              src={ability.image}
+              alt={ability.imageAlt}
+              width="1024"
+              height="576"
+              class="w-full h-56 sm:h-72 object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[11px]">
+              <div class="bg-black/80 backdrop-blur-md px-3 py-1 rounded-lg border border-white/10 text-white">
+                <span class="text-op-laser font-bold">IN-ENGINE COMBAT CAPTURE</span>
+                <span class="text-slate-400 ml-2">• {ability.title}</span>
+              </div>
+              <span class="hidden sm:inline-block px-2 py-0.5 rounded bg-op-laser/20 border border-op-laser/40 text-op-laser font-bold text-[10px] uppercase">
+                Physics Voxel Render
+              </span>
+            </div>
+          </div>
+        )}
 
         <!-- Combat Tips Box -->
         <div class="p-4 rounded-xl bg-op-dark/60 border border-op-border/70">
