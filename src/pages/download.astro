@@ -356,19 +356,19 @@ const downloadSchema = {
         </div>
       </div>
 
-      <!-- Card 3: Apple iOS (In Active Pipeline) -->
+      <!-- Card 3: Apple iOS (Evergreen Platform Notice) -->
       <div id="ios" class="relative rounded-2xl bg-gradient-to-b from-op-card via-op-card to-op-dark border border-op-border hover:border-slate-500 transition-all duration-300 flex flex-col justify-between shadow-lg group overflow-hidden">
-        <!-- Top Radiant Glow Strip -->
+        <!-- Top Accent Strip -->
         <div class="h-1.5 w-full bg-slate-700"></div>
 
         <div class="p-6 sm:p-7 flex-grow">
           <!-- Card Header & Badge -->
           <div class="flex items-center justify-between mb-4">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/15 font-mono text-[11px] text-slate-300 uppercase font-black tracking-wide">
-              <span>Apple iOS • Coming Soon</span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/15 font-mono text-[11px] text-slate-300 uppercase font-bold tracking-wide">
+              <span>Apple iOS Platform</span>
             </span>
-            <div class="font-mono text-xs text-amber-400 bg-black/40 px-2 py-0.5 rounded border border-white/10">
-              In Review
+            <div class="font-mono text-xs text-slate-400 bg-black/40 px-2 py-0.5 rounded border border-white/10">
+              iPhone / iPad
             </div>
           </div>
 
@@ -377,49 +377,38 @@ const downloadSchema = {
           </h3>
 
           <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
-            The iOS version is undergoing final Apple App Store review and TestFlight internal optimization. Built on Apple Metal 3 for iPhone 11 through iPhone 16 Pro Max.
+            The native iOS build is currently under development by R-USER Games for iPhone and iPad devices powered by Apple Metal 3. Players on iOS can play immediately on PC or Mac via desktop emulation.
           </p>
 
-          <!-- Release Pipeline Tracker -->
-          <div class="p-4 rounded-xl bg-op-dark/60 border border-op-border mb-8">
-            <span class="font-mono text-[10px] text-slate-400 uppercase tracking-wider block mb-3 font-bold">
-              iOS Release Pipeline Progress
-            </span>
-            <div class="space-y-2 font-mono text-xs">
-              <div class="flex items-center justify-between text-emerald-400">
-                <span class="flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                  1. Metal 3 Engine Port
-                </span>
-                <span class="text-[10px] uppercase font-bold text-slate-400">Completed</span>
-              </div>
-              <div class="flex items-center justify-between text-amber-400">
-                <span class="flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
-                  2. Closed TestFlight Beta
-                </span>
-                <span class="text-[10px] uppercase font-bold text-amber-400">Active</span>
-              </div>
-              <div class="flex items-center justify-between text-slate-500">
-                <span>3. App Store Review</span>
-                <span class="text-[10px] uppercase">Queued</span>
-              </div>
-              <div class="flex items-center justify-between text-slate-500">
-                <span>4. Global Public Launch</span>
-                <span class="text-[10px] uppercase">Late 2026</span>
-              </div>
+          <!-- Evergreen Spec Overview -->
+          <div class="space-y-2.5 font-mono text-xs mb-8 bg-op-dark/60 p-4 rounded-xl border border-op-border text-slate-300">
+            <div class="flex items-center justify-between pb-2 border-b border-op-border/50">
+              <span class="text-slate-400">Target Devices:</span>
+              <span class="text-white font-bold">iPhone 11 through 16 Pro, iPad</span>
+            </div>
+            <div class="flex items-center justify-between pb-2 border-b border-op-border/50">
+              <span class="text-slate-400">Graphics Engine:</span>
+              <span class="text-white font-bold">Apple Metal 3</span>
+            </div>
+            <div class="flex items-center justify-between pb-2 border-b border-op-border/50">
+              <span class="text-slate-400">Availability:</span>
+              <span class="text-amber-400 font-bold">Developer Distribution</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-slate-400">Desktop Alternative:</span>
+              <span class="text-cyan-300 font-bold">macOS & Windows Emulators</span>
             </div>
           </div>
         </div>
 
         <!-- Action Button Section -->
         <div class="p-6 sm:p-7 pt-0">
-          <button
-            disabled
-            class="w-full py-3.5 px-4 rounded-xl bg-op-dark border border-op-border text-slate-400 font-mono font-black text-xs uppercase tracking-wider text-center block cursor-not-allowed opacity-75"
+          <a
+            href="/pc/"
+            class="w-full py-3.5 px-4 rounded-xl bg-op-dark border border-op-border hover:border-slate-500 text-slate-300 hover:text-white font-mono font-bold text-xs uppercase tracking-wider text-center block transition-all"
           >
-            <span>iOS Pre-Order Launching Soon</span>
-          </button>
+            <span>Play on Desktop PC / Mac Now →</span>
+          </a>
         </div>
       </div>
 
