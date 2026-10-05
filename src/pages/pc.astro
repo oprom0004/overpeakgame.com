@@ -69,101 +69,52 @@ const keybinds = [
 
 <Layout title={pageTitle} description={pageDescription} schema={pcSchema}>
 
-  <!-- Atmospheric Hero Header with Vulkan Neon Cyan Theme -->
-  <section class="relative border-b border-op-border bg-op-darkest overflow-hidden py-14 sm:py-16">
-    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-b from-cyan-500/15 via-blue-500/5 to-transparent blur-3xl pointer-events-none"></div>
-    <div class="absolute inset-0 opacity-15 bg-cover bg-center pointer-events-none" style="background-image: url('/images/pc-setup.jpg');"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-op-darkest/90 to-transparent"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <!-- Clean Page Header (Matching Homepage Style) -->
+  <section class="border-b border-op-border bg-gradient-to-b from-op-darkest via-op-dark to-op-darkest py-10 sm:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Breadcrumb -->
-      <nav class="font-mono text-xs text-slate-400 mb-6 flex items-center gap-2">
-        <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5">
-          <svg class="w-3.5 h-3.5 text-slate-500" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-          </svg>
-          <span>Home</span>
-        </a>
-        <span class="text-slate-600">/</span>
-        <span class="text-white font-medium">PC Setup &amp; Controls</span>
+      <nav class="font-mono text-xs text-slate-400 mb-4 flex items-center gap-2">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-white">PC Setup &amp; Controls</span>
       </nav>
 
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/30 text-xs font-mono text-cyan-300 mb-3">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-          <span class="font-bold tracking-wide">DESKTOP PERFORMANCE MANUAL</span>
-          <span class="text-slate-500">|</span>
-          <span class="text-slate-300">60 to 120 FPS Vulkan</span>
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-op-card border border-op-border text-[11px] font-mono text-slate-300 uppercase tracking-wider mb-4">
+          <span class="w-2 h-2 rounded-full bg-op-green"></span>
+          <span>Desktop Emulation &amp; Keybinds</span>
         </div>
 
-        <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-4">
+        <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-3">
           How to Play OverPeak on PC &amp; Mac
         </h1>
 
         <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-          While developer R-USER Games prepares a native PC port, desktop players can experience <strong>OverPeak</strong> with precision mouse aiming, ultrawide monitor resolutions, and silky-smooth 120Hz refresh rates today.
+          Step-by-step instructions for running OverPeak on Windows and macOS with dedicated WASD movement, free mouse camera aiming, and smooth 60 to 120 FPS performance.
         </p>
       </div>
 
     </div>
   </section>
 
-  <!-- Editorial Performance Briefing Box -->
-  <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-op-card via-op-card to-op-dark border border-op-border relative overflow-hidden shadow-xl">
-      <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-cyan-500 via-sky-400 to-transparent"></div>
-
-      <div class="flex items-center gap-2.5 mb-3">
-        <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-        </div>
-        <div>
-          <span class="font-mono text-[11px] text-cyan-400 font-bold uppercase tracking-wider block">
-            TECHNICAL SPECIFICATION // EMULATION &amp; BENCHMARK
-          </span>
-          <h2 class="text-lg sm:text-xl font-black text-white font-display">
-            Desktop Emulation Architecture
-          </h2>
-        </div>
-      </div>
-
-      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
-        OverPeak runs seamlessly on Windows 10/11 and macOS using 64-bit Android emulators like <strong>MuMuPlayer 12</strong> or <strong>BlueStacks 5</strong>. Desktop players achieve <strong>60 to 120 FPS</strong> at 1440p/4K resolutions using the modern Vulkan graphics backend, complete with native support for WASD keyboard/mouse free-look aiming and Xbox/DualSense controller vibration.
-      </p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t border-op-border/60 font-mono text-xs text-slate-300">
-        <div><strong class="text-white">Recommended Emulator:</strong> MuMuPlayer 12 (Vulkan API)</div>
-        <div><strong class="text-white">Target Hardware:</strong> 4+ CPU Cores, 8GB RAM, GTX 1660+</div>
-        <div><strong class="text-white">Input Architecture:</strong> Direct Mouse Pointer Lock</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Step-by-Step Installation Tutorial (High-Tech 4-Step Cards) -->
-  <section class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-8">
-      <div>
-        <div class="font-mono text-xs text-cyan-400 font-bold uppercase tracking-wider mb-1">
-          STEP-BY-STEP WORKFLOW
-        </div>
-        <h2 class="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight">
-          4-Step Desktop Configuration
-        </h2>
-      </div>
-      <p class="font-mono text-xs text-slate-400">
-        Setup time: Approximately 3–5 minutes
+  <!-- Step-by-Step Installation Tutorial (Clean Numbered Cards) -->
+  <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-8">
+      <h2 class="text-2xl font-black text-white font-display uppercase tracking-tight mb-1">
+        4-Step Configuration Guide
+      </h2>
+      <p class="text-slate-400 text-xs font-mono">
+        Standard setup workflow for 64-bit desktop emulators
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 font-mono text-xs">
       
       <!-- Step 1 -->
-      <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-cyan-500/50 transition-all flex flex-col justify-between shadow-lg group">
+      <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-slate-500 transition-all flex flex-col justify-between shadow-lg">
         <div>
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 font-bold flex items-center justify-center mb-4 text-sm group-hover:scale-105 transition-transform">
+          <div class="w-8 h-8 rounded-lg bg-op-dark border border-op-border text-white font-bold flex items-center justify-center mb-4">
             01
           </div>
           <h3 class="text-white font-bold text-sm mb-2 font-sans">Choose Emulator</h3>
@@ -171,15 +122,12 @@ const keybinds = [
             Download <strong>MuMuPlayer 12</strong> (recommended for Android 12 + Vulkan backend) or <strong>BlueStacks 5</strong> (create a 64-bit Pie or Android 11 instance).
           </p>
         </div>
-        <div class="mt-4 pt-3 border-t border-op-border/50 text-[11px] text-cyan-400">
-          ✓ Vulkan 1.3 Compatible
-        </div>
       </div>
 
       <!-- Step 2 -->
-      <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-cyan-500/50 transition-all flex flex-col justify-between shadow-lg group">
+      <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-slate-500 transition-all flex flex-col justify-between shadow-lg">
         <div>
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 font-bold flex items-center justify-center mb-4 text-sm group-hover:scale-105 transition-transform">
+          <div class="w-8 h-8 rounded-lg bg-op-dark border border-op-border text-white font-bold flex items-center justify-center mb-4">
             02
           </div>
           <h3 class="text-white font-bold text-sm mb-2 font-sans">Install OverPeak</h3>
@@ -187,31 +135,25 @@ const keybinds = [
             Launch Google Play Store inside the emulator, sign in with your Google account, and install the official build: <em>"OverPeak : Action Game"</em> by R-USER Games.
           </p>
         </div>
-        <div class="mt-4 pt-3 border-t border-op-border/50 text-[11px] text-emerald-400">
-          ✓ Verified Play Store Build
-        </div>
       </div>
 
       <!-- Step 3 -->
-      <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-cyan-500/50 transition-all flex flex-col justify-between shadow-lg group">
+      <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-slate-500 transition-all flex flex-col justify-between shadow-lg">
         <div>
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 font-bold flex items-center justify-center mb-4 text-sm group-hover:scale-105 transition-transform">
+          <div class="w-8 h-8 rounded-lg bg-op-dark border border-op-border text-white font-bold flex items-center justify-center mb-4">
             03
           </div>
-          <h3 class="text-white font-bold text-sm mb-2 font-sans">Unlock 120 FPS</h3>
+          <h3 class="text-white font-bold text-sm mb-2 font-sans">Configure 120 FPS</h3>
           <p class="text-slate-300 leading-relaxed font-sans text-xs">
-            In emulator Settings &gt; Performance: assign <strong>4 Cores CPU</strong>, <strong>6GB+ RAM</strong>, select <strong>Vulkan</strong> renderer, and check "Enable High Frame Rate (120 FPS)".
+            In emulator Settings &gt; Performance: assign <strong>4 Cores CPU</strong>, <strong>6GB+ RAM</strong>, select <strong>Vulkan</strong> renderer, and enable High Frame Rate.
           </p>
-        </div>
-        <div class="mt-4 pt-3 border-t border-op-border/50 text-[11px] text-cyan-400">
-          ✓ Eliminates Physics Stutter
         </div>
       </div>
 
       <!-- Step 4 -->
-      <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-cyan-500/50 transition-all flex flex-col justify-between shadow-lg group">
+      <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-slate-500 transition-all flex flex-col justify-between shadow-lg">
         <div>
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 font-bold flex items-center justify-center mb-4 text-sm group-hover:scale-105 transition-transform">
+          <div class="w-8 h-8 rounded-lg bg-op-dark border border-op-border text-white font-bold flex items-center justify-center mb-4">
             04
           </div>
           <h3 class="text-white font-bold text-sm mb-2 font-sans">Map Keybinds</h3>
@@ -219,15 +161,12 @@ const keybinds = [
             Open the emulator Keyboard Mapping overlay and load the tactical FPS keybind profile below to lock mouse cursor for direct crosshair aiming.
           </p>
         </div>
-        <div class="mt-4 pt-3 border-t border-op-border/50 text-[11px] text-amber-400">
-          ✓ Tactical FPS Profile
-        </div>
       </div>
 
     </div>
 
-    <!-- Visual Showcase Banner: PC Battlestation & 120 FPS Setup -->
-    <div class="mt-10 rounded-2xl overflow-hidden border border-op-border shadow-2xl relative group">
+    <!-- Visual Showcase Banner: PC Battlestation -->
+    <div class="mt-10 rounded-2xl overflow-hidden border border-op-border shadow-lg relative group">
       <img
         src="/images/pc-setup.jpg"
         alt="OverPeak PC Gaming Battlestation running at 120 FPS Ultrawide resolution with keyboard and mouse"
@@ -239,41 +178,29 @@ const keybinds = [
       <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-transparent to-transparent"></div>
       <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between font-mono text-xs">
         <div class="bg-black/85 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-white/10 text-white flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
-          <span>DESKTOP BATTLESTATION BENCHMARK</span>
-          <span class="text-slate-400">• 120 FPS Ultra-Wide Setup (WASD + Free Mouse Aim)</span>
+          <span>Desktop Battlestation Benchmark</span>
+          <span class="text-slate-400">• 120 FPS Ultrawide (WASD + Free Mouse Aim)</span>
         </div>
-        <span class="hidden sm:inline-block px-2.5 py-1 rounded bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 font-bold text-[10px] uppercase">
-          Vulkan 120Hz Verified
-        </span>
       </div>
     </div>
   </section>
 
-  <!-- Complete Keybinds Mapping Table with Tactile 3D Keycaps -->
+  <!-- Complete Keybinds Mapping Table -->
   <section id="controls" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-      <div>
-        <div class="font-mono text-xs text-cyan-400 font-bold uppercase tracking-wider mb-1">
-          TACTICAL CONTROL MAPPING
-        </div>
-        <h2 class="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight">
-          Optimized PC Keybinds &amp; Controller Profile
-        </h2>
-        <p class="text-slate-300 text-xs font-mono mt-1">Recommended layout for mouse/keyboard and Xbox Wireless / DualSense controllers.</p>
-      </div>
-      <span class="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 font-mono text-xs font-bold self-start">
-        Pre-Configured FPS Profile
-      </span>
+    <div class="mb-6">
+      <h2 class="text-2xl font-black text-white font-display uppercase tracking-tight mb-1">
+        PC Keybinds &amp; Controller Profile
+      </h2>
+      <p class="text-slate-400 text-xs font-mono">Recommended control layout for mouse/keyboard and Xbox Wireless / DualSense gamepads</p>
     </div>
 
-    <div class="overflow-x-auto rounded-2xl border border-op-border bg-op-card shadow-2xl">
+    <div class="overflow-x-auto rounded-2xl border border-op-border bg-op-card shadow-lg">
       <table class="w-full text-left font-mono text-xs border-collapse">
         <thead class="bg-op-dark border-b border-op-border text-slate-400 uppercase text-[11px]">
           <tr>
-            <th class="p-4 sm:p-5 w-1/3">Game Combat Action</th>
-            <th class="p-4 sm:p-5 w-1/3 text-cyan-300">PC Keyboard &amp; Mouse Keycap</th>
-            <th class="p-4 sm:p-5 w-1/3 text-amber-300">Gamepad Controller</th>
+            <th class="p-4 sm:p-5 w-1/3">Combat Action</th>
+            <th class="p-4 sm:p-5 w-1/3 text-white">Keyboard &amp; Mouse</th>
+            <th class="p-4 sm:p-5 w-1/3 text-white">Gamepad Controller</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-op-border/50 text-slate-300">
@@ -283,16 +210,14 @@ const keybinds = [
               <td class="p-4 sm:p-5">
                 <div class="flex flex-wrap gap-1.5 items-center">
                   {bind.keys.map((k) => (
-                    <kbd class="px-2.5 py-1 rounded-md bg-slate-800 border-t border-x border-slate-600 border-b-2 border-b-slate-950 font-mono font-bold text-white shadow-sm inline-block text-xs">
+                    <kbd class="px-2 py-1 rounded bg-op-dark border border-op-border font-mono font-bold text-white text-xs">
                       {k}
                     </kbd>
                   ))}
                 </div>
               </td>
-              <td class="p-4 sm:p-5 text-slate-200">
-                <span class="px-2.5 py-1 rounded-md bg-op-dark border border-op-border text-slate-300 inline-block font-mono text-xs">
-                  {bind.controller}
-                </span>
+              <td class="p-4 sm:p-5 text-slate-300 font-mono text-xs">
+                {bind.controller}
               </td>
             </tr>
           ))}
@@ -303,30 +228,25 @@ const keybinds = [
 
   <!-- PC Performance Tuning Tips -->
   <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
-    <div class="p-8 rounded-2xl bg-op-card border border-op-border shadow-xl">
-      <div class="font-mono text-xs text-cyan-400 font-bold uppercase tracking-wider mb-2">
-        TROUBLESHOOTING &amp; OPTIMIZATION
-      </div>
+    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border shadow-lg">
       <h3 class="text-xl sm:text-2xl font-bold text-white mb-6 font-display uppercase tracking-tight">
-        Fixing Stuttering &amp; Latency on Desktop
+        Troubleshooting Stuttering &amp; Latency on Desktop
       </h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs font-mono text-slate-300">
         <div class="p-5 rounded-xl bg-op-dark border border-op-border">
-          <h4 class="text-white font-bold text-sm mb-2 font-sans flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <h4 class="text-white font-bold text-sm mb-2 font-sans">
             1. Switch Graphics Engine to Vulkan
           </h4>
           <p class="text-slate-300 leading-relaxed font-sans text-xs">
-            OverPeak's particle-heavy building collapse physics can bottleneck OpenGL drivers on Windows. Switching to the <strong>Vulkan rendering engine</strong> inside emulator settings reduces frame drops by up to 45% during multi-column skyscraper demolitions.
+            OverPeak's particle-heavy building collapse physics can bottleneck OpenGL drivers on Windows. Switching to the <strong>Vulkan rendering engine</strong> inside emulator settings reduces frame drops during multi-column skyscraper demolitions.
           </p>
         </div>
         <div class="p-5 rounded-xl bg-op-dark border border-op-border">
-          <h4 class="text-white font-bold text-sm mb-2 font-sans flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+          <h4 class="text-white font-bold text-sm mb-2 font-sans">
             2. Enable Hardware Virtualization (VT-x / AMD-V)
           </h4>
           <p class="text-slate-300 leading-relaxed font-sans text-xs">
-            Ensure CPU virtualization is enabled in your motherboard BIOS. Without VT-x enabled, Android emulation is restricted to single-thread software interpretation, causing massive stutter even on high-end Ryzen 7 or Intel Core i7 systems.
+            Ensure CPU virtualization is enabled in your motherboard BIOS. Without VT-x enabled, Android emulation is restricted to single-thread software interpretation, causing stutter.
           </p>
         </div>
       </div>

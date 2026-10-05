@@ -80,82 +80,64 @@ const faqSchema = {
 
 <Layout title={pageTitle} description={pageDescription} schema={faqSchema}>
 
-  <!-- Atmospheric Hero Header with Deep Lighting -->
-  <section class="relative border-b border-op-border bg-op-darkest overflow-hidden py-14 sm:py-16">
-    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-b from-cyan-500/15 via-orange-500/5 to-transparent blur-3xl pointer-events-none"></div>
-    <div class="absolute inset-0 opacity-15 bg-cover bg-center pointer-events-none" style="background-image: url('/images/hero-banner.jpg');"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-op-darkest/90 to-transparent"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <!-- Clean Page Header (Matching Homepage Style) -->
+  <section class="border-b border-op-border bg-gradient-to-b from-op-darkest via-op-dark to-op-darkest py-10 sm:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Breadcrumb -->
-      <nav class="font-mono text-xs text-slate-400 mb-6 flex items-center gap-2">
-        <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5">
-          <svg class="w-3.5 h-3.5 text-slate-500" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-          </svg>
-          <span>Home</span>
-        </a>
-        <span class="text-slate-600">/</span>
-        <span class="text-white font-medium">FAQ &amp; Offline Guide</span>
+      <nav class="font-mono text-xs text-slate-400 mb-4 flex items-center gap-2">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-white">FAQ &amp; Offline Guide</span>
       </nav>
 
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/30 text-xs font-mono text-cyan-300 mb-3">
-          <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-          <span class="font-bold tracking-wide">PLAYER KNOWLEDGE BASE</span>
-          <span class="text-slate-500">|</span>
-          <span class="text-slate-300">Verified Technical Answers</span>
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-op-card border border-op-border text-[11px] font-mono text-slate-300 uppercase tracking-wider mb-4">
+          <span class="w-2 h-2 rounded-full bg-op-green"></span>
+          <span>Technical &amp; Gameplay FAQ</span>
         </div>
 
-        <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-4">
-          OverPeak FAQ &amp; Offline Status
+        <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-3">
+          OverPeak FAQ &amp; Offline Guide
         </h1>
 
         <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-          Get direct, authoritative answers regarding <strong>OverPeak: Action Game</strong>. Learn about offline playability, Apple iOS release scheduling, PC 120 FPS emulation, and gameplay mechanics.
+          Frequently asked questions regarding OverPeak: Action Game. Comprehensive details on offline gameplay, platform compatibility, PC emulation setup, and gameplay mechanics.
         </p>
       </div>
 
     </div>
   </section>
 
-  <!-- Offline Confirmation Box (High Contrast & Verified Status) -->
+  <!-- Offline Capabilities Overview -->
   <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-op-card via-op-card to-op-dark border border-op-border relative overflow-hidden shadow-xl">
-      <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-emerald-500 via-cyan-400 to-transparent"></div>
-
-      <div class="flex items-center justify-between flex-wrap gap-4 mb-3">
-        <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <div>
-            <span class="font-mono text-[11px] text-emerald-400 font-bold uppercase tracking-wider block">
-              CONNECTIVITY AUDIT // OFFLINE SINGLE-PLAYER
-            </span>
-            <h2 class="text-lg sm:text-xl font-black text-white font-display">
-              Can OverPeak Be Played Completely Offline?
-            </h2>
-          </div>
-        </div>
-
-        <div class="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 font-mono text-xs font-bold uppercase flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-          <span>100% Offline Capable</span>
-        </div>
+    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border shadow-lg">
+      <div class="flex items-center justify-between flex-wrap gap-4 mb-4">
+        <h2 class="text-xl sm:text-2xl font-bold text-white font-display">
+          Can OverPeak Be Played Completely Offline?
+        </h2>
+        <span class="px-3 py-1 rounded-full bg-op-dark border border-op-border text-slate-300 font-mono text-xs">
+          Offline Capable
+        </span>
       </div>
 
-      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
-        <strong>Yes, OverPeak can be played 100% offline.</strong> You do not need Wi-Fi or mobile cellular data to explore Prism City, fight Starbridge mercenaries, or trigger real-time building collapses. All physics simulations and story campaigns run locally on your device's processor.
+      <p class="text-slate-300 text-sm leading-relaxed mb-6">
+        OverPeak can be played completely offline. You do not need Wi-Fi or mobile cellular data to explore Prism City, fight Starbridge mercenaries, or trigger real-time building collapses. All physics simulations and story campaigns run locally on your device's processor.
       </p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t border-op-border/60 font-mono text-xs text-slate-300">
-        <div><strong class="text-white">Offline Missions:</strong> All Story Chapters Playable</div>
-        <div><strong class="text-white">Physics Simulation:</strong> 100% On-Device CPU/GPU</div>
-        <div><strong class="text-white">Internet Requirement:</strong> Cloud Backup &amp; Patch DL Only</div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-op-border text-xs font-mono text-slate-300">
+        <div class="p-3 rounded-lg bg-op-dark border border-op-border">
+          <span class="text-white font-bold block mb-1">Offline Story Missions</span>
+          <span class="text-slate-400">All campaign chapters playable offline</span>
+        </div>
+        <div class="p-3 rounded-lg bg-op-dark border border-op-border">
+          <span class="text-white font-bold block mb-1">Physics Simulation</span>
+          <span class="text-slate-400">100% on-device CPU/GPU processing</span>
+        </div>
+        <div class="p-3 rounded-lg bg-op-dark border border-op-border">
+          <span class="text-white font-bold block mb-1">Network Access</span>
+          <span class="text-slate-400">Required only for cloud backups and game updates</span>
+        </div>
       </div>
     </div>
   </section>
@@ -164,16 +146,13 @@ const faqSchema = {
   <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-4">
       <div>
-        <div class="font-mono text-xs text-cyan-400 font-bold uppercase tracking-wider mb-1">
-          QUESTIONS &amp; ANSWERS
-        </div>
         <h2 class="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight">
-          Common Gameplay &amp; Technical Inquiries
+          Common Questions &amp; Answers
         </h2>
+        <p class="text-slate-400 text-sm mt-1">
+          Detailed answers regarding installation, gameplay systems, and platform status.
+        </p>
       </div>
-      <p class="font-mono text-xs text-slate-400">
-        Continuously updated for Version 0.6
-      </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -181,10 +160,10 @@ const faqSchema = {
         <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-slate-500 transition-all shadow-lg flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-3">
-              <span class="px-2.5 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-[11px] font-mono font-bold text-cyan-300 uppercase">
-                {faq.badge}
+              <span class="px-2.5 py-0.5 rounded bg-op-dark border border-op-border text-[11px] font-mono text-slate-300 uppercase">
+                {faq.category}
               </span>
-              <span class="font-mono text-[11px] text-slate-500 uppercase">{faq.category}</span>
+              <span class="font-mono text-[11px] text-slate-500">{faq.badge}</span>
             </div>
             <h3 class="text-lg font-bold text-white mb-3 font-display">
               {faq.q}
@@ -193,10 +172,6 @@ const faqSchema = {
               {faq.a}
             </p>
           </div>
-
-          <div class="pt-3 border-t border-op-border/50 text-[11px] font-mono text-slate-500">
-            Verified by OverPeak Strategy Team
-          </div>
         </div>
       ))}
     </div>
@@ -204,25 +179,25 @@ const faqSchema = {
 
   <!-- Cross-Nav Hub -->
   <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 p-8 rounded-2xl bg-gradient-to-r from-op-card via-op-card to-op-dark border border-op-border shadow-2xl">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 p-8 rounded-2xl bg-op-card border border-op-border shadow-xl">
       <div>
         <h3 class="text-2xl font-black text-white font-display uppercase tracking-tight mb-1">
-          Ready to Enter Prism City?
+          Explore OverPeak Guides
         </h3>
-        <p class="text-slate-300 text-xs sm:text-sm font-mono">
-          Download the official Google Play build or configure 120 FPS PC desktop controls.
+        <p class="text-slate-300 text-xs sm:text-sm">
+          Download the official build or read detailed walkthroughs for PC configuration and superpowers.
         </p>
       </div>
       <div class="flex gap-3 flex-wrap">
         <a
           href="/download/"
-          class="px-5 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-mono font-bold text-xs uppercase tracking-wider transition-all shadow-lg"
+          class="px-5 py-2.5 rounded-lg bg-white hover:bg-slate-200 text-black font-semibold text-xs uppercase tracking-wider transition-colors"
         >
-          Download Hub →
+          Download Hub
         </a>
         <a
           href="/powers/"
-          class="px-5 py-3 rounded-xl bg-op-dark border border-op-border text-white font-mono font-bold text-xs uppercase tracking-wider hover:border-slate-400 transition-colors"
+          class="px-5 py-2.5 rounded-lg bg-op-dark border border-op-border text-white hover:border-slate-400 font-semibold text-xs uppercase tracking-wider transition-colors"
         >
           Superpowers Guide
         </a>

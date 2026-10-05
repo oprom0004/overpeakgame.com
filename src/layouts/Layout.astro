@@ -54,14 +54,7 @@ const navLinks = [
       set:html={JSON.stringify(Array.isArray(schema) ? schema : [schema])}
     />
   )}
-<body class="bg-op-darkest text-slate-100 font-sans min-h-screen flex flex-col selection:bg-orange-500 selection:text-white relative overflow-x-hidden">
-
-  <!-- Ambient Game Portal Background Atmospheric Glow -->
-  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-gradient-to-b from-orange-500/10 via-amber-500/5 to-transparent blur-3xl opacity-60"></div>
-    <div class="absolute top-[800px] -left-40 w-[500px] h-[500px] bg-cyan-500/5 blur-3xl opacity-40"></div>
-    <div class="absolute top-[1600px] -right-40 w-[600px] h-[600px] bg-orange-600/5 blur-3xl opacity-30"></div>
-  </div>
+<body class="bg-op-darkest text-slate-100 font-sans min-h-screen flex flex-col selection:bg-white selection:text-black relative overflow-x-hidden">
 
   <!-- Top Release Alert Header (Clean Editorial Strip) -->
   <div class="bg-op-dark border-b border-op-border text-[11px] py-1.5 px-4 text-center text-slate-400 font-mono">
@@ -122,10 +115,10 @@ const navLinks = [
       <div class="flex items-center gap-3">
         <a
           href="/download/"
-          class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-mono font-black text-xs uppercase tracking-wider shadow-[0_2px_12px_rgba(249,115,22,0.3)] transition-all"
+          class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-op-card border border-op-border hover:border-slate-400 text-white font-mono font-bold text-xs uppercase tracking-wider transition-colors"
         >
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
           <span>Get Game</span>
         </a>

@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 
 const pageTitle = 'The Story of OverPeak – Subject OP, Starbridge Corporation & Lore';
-const pageDescription = 'Uncover the dark lore of OverPeak: Action Game. Learn how Jason Fieldway was transformed into Subject OP, the crimes of Starbridge Corp, and the open-world districts of Prism City.';
+const pageDescription = 'Uncover the lore of OverPeak: Action Game. Learn how Jason Fieldway was transformed into Subject OP, the crimes of Starbridge Corp, and the open-world districts of Prism City.';
 
 const storySchema = {
   "@context": "https://schema.org",
@@ -39,29 +39,25 @@ const storySchema = {
 const districts = [
   {
     name: 'Downtown Metropolis',
-    danger: 'Tier 3 Moderate Threat',
-    color: 'text-amber-400 border-amber-500/40 bg-amber-500/10',
+    threat: 'Moderate Threat',
     desc: 'The corporate heart of Prism City, dominated by 80-story glass skyscrapers, high-speed rail viaducts, and constant Starbridge surveillance blimps. Ideal for high-altitude sonic flight and structural column demolition.',
     threats: ['Attack Choppers', 'Sniper Nests', 'Tactical SWAT Barricades']
   },
   {
     name: 'Industrial Sector 07',
-    danger: 'Tier 4 High Danger',
-    color: 'text-orange-400 border-orange-500/40 bg-orange-500/10',
+    threat: 'High Danger',
     desc: 'Heavy manufacturing complex housing chemical storage tanks, shipping container yards, and Starbridge robotics testing proving grounds. Abundant heavy machinery available for telekinetic launches.',
     threats: ['Armored Walkers', 'Heavy Combat Mechs', 'Laser Defense Turrets']
   },
   {
     name: 'The Undergrid Slums',
-    danger: 'Tier 2 Low Threat',
-    color: 'text-cyan-400 border-cyan-500/40 bg-cyan-500/10',
+    threat: 'Low Threat',
     desc: 'Densely populated neon alleyways beneath the elevated highway system. Hostile toward Starbridge enforcers; players with positive Hero reputation will receive intelligence on hidden weapon caches from local resistance cells.',
     threats: ['Guerilla Drones', 'Private Security Patrols']
   },
   {
     name: 'Starbridge Citadel',
-    danger: 'Tier 5 Max Threat Level',
-    color: 'text-rose-400 border-rose-500/40 bg-rose-500/10',
+    threat: 'Max Threat Level',
     desc: 'The fortified corporate headquarters complex shielded by localized EMP barriers and automated surface-to-air missile batteries. The ultimate endgame confrontation zone for Subject OP.',
     threats: ['Apex Mech Bosses', 'Titanium Blast Doors', 'Energy Shields']
   }
@@ -70,36 +66,25 @@ const districts = [
 
 <Layout title={pageTitle} description={pageDescription} schema={storySchema}>
 
-  <!-- Atmospheric Hero Header with Classified Tactical Theme -->
-  <section class="relative border-b border-op-border bg-op-darkest overflow-hidden py-14 sm:py-16">
-    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-b from-purple-500/15 via-rose-500/5 to-transparent blur-3xl pointer-events-none"></div>
-    <div class="absolute inset-0 opacity-15 bg-cover bg-center pointer-events-none" style="background-image: url('/images/hero-banner.jpg');"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-op-darkest/90 to-transparent"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <!-- Clean Page Header (Matching Homepage Style) -->
+  <section class="border-b border-op-border bg-gradient-to-b from-op-darkest via-op-dark to-op-darkest py-10 sm:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Breadcrumb -->
-      <nav class="font-mono text-xs text-slate-400 mb-6 flex items-center gap-2">
-        <a href="/" class="hover:text-white transition-colors flex items-center gap-1.5">
-          <svg class="w-3.5 h-3.5 text-slate-500" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-          </svg>
-          <span>Home</span>
-        </a>
-        <span class="text-slate-600">/</span>
-        <span class="text-white font-medium">Story &amp; Lore</span>
+      <nav class="font-mono text-xs text-slate-400 mb-4 flex items-center gap-2">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-white">Story &amp; Lore</span>
       </nav>
 
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-purple-500/10 border border-purple-500/30 text-xs font-mono text-purple-300 mb-3">
-          <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
-          <span class="font-bold tracking-wide">CLASSIFIED ARCHIVE // LEVEL 5 CLEARANCE</span>
-          <span class="text-slate-500">|</span>
-          <span class="text-slate-300">Prism City Dossier</span>
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-op-card border border-op-border text-[11px] font-mono text-slate-300 uppercase tracking-wider mb-4">
+          <span class="w-2 h-2 rounded-full bg-op-green"></span>
+          <span>World Narrative &amp; Character Lore</span>
         </div>
 
-        <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-4">
-          The Story of OverPeak: Subject OP &amp; Starbridge
+        <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-3">
+          The Story of OverPeak: Subject OP
         </h1>
 
         <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
@@ -110,95 +95,54 @@ const districts = [
     </div>
   </section>
 
-  <!-- Lore Overview Box -->
-  <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-op-card via-op-card to-op-dark border border-op-border relative overflow-hidden shadow-xl">
-      <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-purple-500 via-rose-500 to-transparent"></div>
-
-      <div class="flex items-center gap-2.5 mb-3">
-        <div class="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-          </svg>
-        </div>
-        <div>
-          <span class="font-mono text-[11px] text-purple-400 font-bold uppercase tracking-wider block">
-            NARRATIVE FOUNDATION // BIOLOGICAL DOSSIER
-          </span>
-          <h2 class="text-lg sm:text-xl font-black text-white font-display">
-            Who is Jason Fieldway (Subject OP)?
-          </h2>
-        </div>
-      </div>
-
-      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
-        In <em>OverPeak: Action Game</em>, <strong>Jason Fieldway</strong> is the biological test subject designated <strong>Subject OP</strong>. Experimented on by the corrupt conglomerate <strong>Starbridge Corporation</strong> in Prism City, he was infused with gene-spliced gravitational anomalies, thermal optical radiation, and sub-zero cellular synthesis. After shattering stasis containment, players decide whether to seek surgical justice against corporate heads (Hero Path) or unleash total apocalyptic destruction upon the entire urban grid (Villain Path).
-      </p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3 border-t border-op-border/60 font-mono text-xs text-slate-300">
-        <div><strong class="text-white">Primary Antagonist:</strong> Starbridge PMC Security</div>
-        <div><strong class="text-white">Urban Setting:</strong> Prism City Metropolis</div>
-        <div><strong class="text-white">Morality Engine:</strong> Real-Time Dynamic Karma</div>
-      </div>
-    </div>
-  </section>
-
   <!-- Narrative Dossier & Character Profile -->
-  <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       
       <!-- Character Bio Card -->
-      <div class="p-6 rounded-2xl bg-op-card border border-op-border shadow-xl flex flex-col justify-between">
+      <div class="p-6 rounded-2xl bg-op-card border border-op-border shadow-lg flex flex-col justify-between">
         <div>
           <div class="w-full aspect-square rounded-xl bg-op-dark border border-op-border overflow-hidden mb-6 relative group">
-            <img src="/images/hero-banner.jpg" alt="Subject OP Jason Fieldway over Prism City" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
-            <div class="absolute bottom-2 left-2 px-2.5 py-1 rounded bg-black/85 backdrop-blur-md font-mono text-[10px] text-white font-bold border border-white/10 flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
-              <span>SUBJECT OP // BIO-RECORD</span>
+            <img src="/images/hero-banner.jpg" alt="Subject OP Jason Fieldway over Prism City" class="w-full h-full object-cover" />
+            <div class="absolute bottom-2 left-2 px-2.5 py-1 rounded bg-black/85 font-mono text-[10px] text-white font-bold border border-white/10">
+              Subject OP Profile
             </div>
           </div>
 
-          <h3 class="text-2xl font-black text-white font-display uppercase tracking-tight mb-1">
+          <h2 class="text-2xl font-black text-white font-display uppercase tracking-tight mb-1">
             Jason Fieldway
-          </h3>
-          <p class="font-mono text-xs text-orange-400 mb-4 uppercase font-bold tracking-wider">
+          </h2>
+          <p class="font-mono text-xs text-slate-400 mb-4 uppercase">
             Designation: Subject OP-001
           </p>
 
-          <div class="space-y-2.5 text-xs font-mono text-slate-300 border-t border-op-border/60 pt-4">
-            <div class="flex justify-between pb-1.5 border-b border-op-border/30">
+          <ul class="space-y-2 text-xs font-mono text-slate-300 border-t border-op-border/60 pt-4">
+            <li class="flex justify-between pb-1.5 border-b border-op-border/30">
               <span class="text-slate-400">Biological Age:</span>
-              <span class="text-white font-semibold">Unknown (Cryo Stasis)</span>
-            </div>
-            <div class="flex justify-between pb-1.5 border-b border-op-border/30">
+              <span class="text-white">Unknown (Cryo Stasis)</span>
+            </li>
+            <li class="flex justify-between pb-1.5 border-b border-op-border/30">
               <span class="text-slate-400">Thermal Output:</span>
-              <span class="text-orange-400 font-bold">3,200°C Focused Plasma</span>
-            </div>
-            <div class="flex justify-between pb-1.5 border-b border-op-border/30">
+              <span class="text-white">3,200°C Focused Plasma</span>
+            </li>
+            <li class="flex justify-between pb-1.5 border-b border-op-border/30">
               <span class="text-slate-400">Cryo Threshold:</span>
-              <span class="text-cyan-400 font-bold">-273.15°C Absolute Zero</span>
-            </div>
-            <div class="flex justify-between">
+              <span class="text-white">-273.15°C Absolute Zero</span>
+            </li>
+            <li class="flex justify-between">
               <span class="text-slate-400">Flight Velocity:</span>
-              <span class="text-yellow-400 font-bold">Mach 2.2 Terminal</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-6 pt-4 border-t border-op-border/50 text-[11px] font-mono text-slate-400">
-          Status: Fugitive Bio-Weapon at Large
+              <span class="text-white">Mach 2.2 Terminal</span>
+            </li>
+          </ul>
         </div>
       </div>
 
       <!-- Starbridge Conspiracy Background -->
-      <div class="lg:col-span-2 p-8 rounded-2xl bg-op-card border border-op-border shadow-xl flex flex-col justify-between">
+      <div class="lg:col-span-2 p-8 rounded-2xl bg-op-card border border-op-border shadow-lg flex flex-col justify-between">
         <div>
-          <span class="px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 font-mono text-xs font-bold uppercase mb-4 inline-block tracking-wider">
-            CORPORATE ANTAGONIST DOSSIER
-          </span>
-          <h3 class="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight mb-4">
+          <h2 class="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight mb-4">
             The Starbridge Corporation Syndicate
-          </h3>
+          </h2>
           <p class="text-slate-300 text-sm leading-relaxed mb-4">
             Prism City was promoted to the public as a futuristic smart-city powered by Starbridge clean-energy reactors. Behind the polished corporate glass facades, Starbridge was secretly contracting private military security forces (PMC) and conducting illegal bio-synthetic genetic trials on non-consenting citizens.
           </p>
@@ -207,20 +151,18 @@ const districts = [
           </p>
         </div>
 
-        <!-- Karma System Perks Comparison -->
+        <!-- Karma System Comparison -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-op-border/60 pt-6 font-mono text-xs">
-          <div class="p-5 rounded-xl bg-gradient-to-br from-cyan-950/20 to-op-dark border border-cyan-500/30">
-            <div class="text-cyan-300 font-bold text-sm mb-1.5 flex items-center gap-1.5 font-sans">
-              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <div class="p-5 rounded-xl bg-op-dark border border-op-border">
+            <div class="text-white font-bold text-sm mb-1.5 font-sans">
               Heroic Protector Path
             </div>
             <p class="text-slate-300 text-xs leading-relaxed font-sans">
               Civilians actively assist with intelligence, unlocking hidden resistance weapon caches. City authorities generate less hostility, allowing surgical strikes on corporate facilities.
             </p>
           </div>
-          <div class="p-5 rounded-xl bg-gradient-to-br from-rose-950/20 to-op-dark border border-rose-500/30">
-            <div class="text-rose-300 font-bold text-sm mb-1.5 flex items-center gap-1.5 font-sans">
-              <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+          <div class="p-5 rounded-xl bg-op-dark border border-op-border">
+            <div class="text-white font-bold text-sm mb-1.5 font-sans">
               Villainous Destroyer Path
             </div>
             <p class="text-slate-300 text-xs leading-relaxed font-sans">
@@ -233,19 +175,14 @@ const districts = [
     </div>
   </section>
 
-  <!-- Prism City Open-World Map Districts -->
+  <!-- Prism City Districts -->
   <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
-    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-8">
-      <div>
-        <div class="font-mono text-xs text-purple-400 font-bold uppercase tracking-wider mb-1">
-          TACTICAL CARTOGRAPHY
-        </div>
-        <h2 class="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight">
-          Prism City Open-World Sectors
-        </h2>
-      </div>
-      <p class="font-mono text-xs text-slate-400">
-        4 fully destructible urban zones
+    <div class="mb-8">
+      <h2 class="text-2xl font-black text-white font-display uppercase tracking-tight mb-1">
+        Prism City Open-World Sectors
+      </h2>
+      <p class="text-slate-400 text-xs font-mono">
+        Explore destructible urban districts across the metropolitan grid
       </p>
     </div>
 
@@ -255,18 +192,18 @@ const districts = [
           <div>
             <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
               <h3 class="text-xl font-bold text-white font-display">{district.name}</h3>
-              <span class={`font-mono text-xs font-bold px-2.5 py-1 rounded-full border ${district.color}`}>
-                {district.danger}
+              <span class="font-mono text-xs px-2.5 py-0.5 rounded bg-op-dark border border-op-border text-slate-300">
+                {district.threat}
               </span>
             </div>
             <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">{district.desc}</p>
           </div>
 
           <div class="border-t border-op-border/60 pt-4">
-            <span class="font-mono text-[11px] text-slate-400 uppercase block mb-2 font-bold">Tactical Threats Encountered:</span>
+            <span class="font-mono text-[11px] text-slate-400 uppercase block mb-2">Tactical Threats:</span>
             <div class="flex flex-wrap gap-2">
               {district.threats.map((threat) => (
-                <span class="px-2.5 py-1 rounded-md bg-op-dark border border-op-border font-mono text-xs text-slate-300">
+                <span class="px-2.5 py-1 rounded bg-op-dark border border-op-border font-mono text-xs text-slate-300">
                   {threat}
                 </span>
               ))}
