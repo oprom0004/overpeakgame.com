@@ -1,0 +1,253 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = 'OverPeak Superpowers & Destruction Guide – Thermal Laser, Cryo, Telekinesis & Flight';
+const pageDescription = 'Master all Subject OP genetic superpowers in OverPeak. In-depth analysis of Thermal Laser Vision, Cryo Freeze, Telekinesis, Sonic Flight, and real-time skyscraper destruction physics.';
+
+const powersSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://overpeakgame.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Superpowers",
+          "item": "https://overpeakgame.com/powers/"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "OverPeak Superpowers & Building Destruction Physics Guide",
+      "description": "Comprehensive tactical guide covering all five Subject OP abilities, building collapse mechanics, and combat synergies in Prism City.",
+      "author": {
+        "@type": "Organization",
+        "name": "OverPeak Strategy Team"
+      }
+    }
+  ]
+};
+
+const abilities = [
+  {
+    id: 'laser',
+    title: 'Thermal Laser Vision',
+    category: 'Sustained Energy Projectile',
+    icon: '🔥',
+    badge: 'High Precision / Piercing',
+    accent: 'border-op-laser/40 bg-op-laser/10 text-op-laser',
+    stats: { damage: '95 / 100', range: '120 meters', consumption: 'Medium Energy/sec', cooldown: 'Instant Toggle' },
+    summary: 'Subject OP unleashes twin high-temperature concentrated optical beams from the retinas, generating pinpoint thermal erosion that instantly cuts through titanium armor plates, fuel drums, and reinforced concrete pillar cores.',
+    tips: [
+      'Sweep beams horizontally across building base columns to trigger structural failure.',
+      'Detonates patrol vehicle fuel tanks instantly for massive secondary explosive damage.',
+      'Can be sustained while flying to execute aerial strafing runs across Starbridge convoys.'
+    ]
+  },
+  {
+    id: 'cryo',
+    title: 'Cryo Freeze Ray',
+    category: 'Sub-Zero Crowd Control',
+    icon: '❄️',
+    badge: 'Area Freeze / Shatter',
+    accent: 'border-op-cryo/40 bg-op-cryo/10 text-op-cryo',
+    stats: { damage: '65 / 100', range: '75 meters', consumption: 'High Energy/sec', cooldown: '3 Seconds' },
+    summary: 'Emits an endothermic thermal wave that drops ambient temperatures to absolute zero within fractions of a second. Immobilizes heavy combat mechs and freezes fleeing targets into brittle ice statues.',
+    tips: [
+      'Frozen enemies take 300% increased damage from subsequent kinetic attacks or thrown objects.',
+      'Freeze low-altitude attack choppers to stall their rotors, sending them spiraling into skyscrapers.',
+      'Excellent for crowd suppression when surrounded by Starbridge tactical SWAT teams.'
+    ]
+  },
+  {
+    id: 'kinetic',
+    title: 'Telekinetic Force Grip',
+    category: 'Physics & Environmental Weaponry',
+    icon: '🌀',
+    badge: 'Physics Manipulation',
+    accent: 'border-op-kinetic/40 bg-op-kinetic/10 text-op-kinetic',
+    stats: { damage: 'Variable (Mass-based)', range: '50 meters', consumption: 'Low Energy/throw', cooldown: '1.5 Seconds' },
+    summary: 'Harnesses gravitational anomalies to levitate massive physical objects in the environment—from police cruisers and construction I-beams to giant slabs of fallen skyscraper masonry—and violently hurl them across city blocks.',
+    tips: [
+      'Heavier objects deal exponentially higher impact force and create wider debris shockwaves.',
+      'Can rip structural support beams directly out of building walls to cause spontaneous collapse.',
+      'Allows catching incoming enemy artillery shells and rockets in mid-air to redirect at the firing turret.'
+    ]
+  },
+  {
+    id: 'flight',
+    title: 'Sonic Flight & Air Dash',
+    category: 'Three-Dimensional Traversal',
+    icon: '⚡',
+    badge: 'Supersonic Velocity',
+    accent: 'border-op-gold/40 bg-op-gold/10 text-op-gold',
+    stats: { damage: '75 / 100 (Shockwave)', range: 'Unlimited', consumption: 'Passive Flight Drain', cooldown: 'None' },
+    summary: 'Bypasses Earth gravity through bio-magnetic propulsion. Subject OP can effortlessly hover at rooftop altitude, achieve Mach 2 supersonic sprint velocity, and create shockwave sonic booms that shatter surrounding storefront windows.',
+    tips: [
+      'Double-tap the Dash button mid-flight to perform an invulnerable 360-degree dodge roll.',
+      'Combine flight with downward dive to build extreme kinetic velocity for ground-pound slams.',
+      'Provides total tactical superiority by evading ground-based barricades and minefields.'
+    ]
+  },
+  {
+    id: 'slam',
+    title: 'Cataclysmic Ground Slam',
+    category: 'Seismic Area of Effect',
+    icon: '💥',
+    badge: 'Structural Seismic Shock',
+    accent: 'border-rose-500/40 bg-rose-500/10 text-rose-400',
+    stats: { damage: '100 / 100', range: '35 meter radius', consumption: '100% Burst Gauge', cooldown: '15 Seconds' },
+    summary: 'Executing a terminal velocity dive from high altitude, Subject OP channels all kinetic potential into a single catastrophic fist-strike upon impact. Creates a 35-meter radial crater that triggers subterranean tremors and destabilizes nearby architectural foundations.',
+    tips: [
+      'The higher your starting altitude before initiating the dive, the wider the devastation crater.',
+      'Instantly obliterates all light vehicles and infantry units within the primary blast ring.',
+      'Causes adjacent buildings with pre-existing laser damage to immediately experience fatal collapse.'
+    ]
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription} schema={powersSchema}>
+
+  <!-- Page Header -->
+  <section class="border-b border-op-border bg-gradient-to-b from-op-dark to-op-darkest py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <nav class="font-mono text-xs text-op-muted mb-4 flex items-center gap-2">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-op-laser">Superpowers &amp; Destruction</span>
+      </nav>
+
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-op-laser/15 border border-op-laser/30 text-xs font-mono text-op-laser mb-4">
+          <span>⚡ Subject OP Genetic Arsenal</span>
+          <span>• Complete Combat Matrix</span>
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-4">
+          OverPeak Superpowers &amp; Physics Guide
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Unlock the full destructive potential of Jason Fieldway. Explore individual superpower mechanics, energy consumption profiles, and proprietary architectural demolition techniques in Prism City.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Superpower Cards Detail List -->
+  <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    {abilities.map((ability) => (
+      <div id={ability.id} class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border hover:border-op-border/80 transition-all shadow-xl">
+        <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-6">
+          
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-op-dark border border-op-border flex items-center justify-center text-3xl shadow-inner flex-shrink-0">
+              {ability.icon}
+            </div>
+            <div>
+              <div class="flex items-center gap-3 flex-wrap mb-1">
+                <h2 class="text-2xl font-black text-white font-display uppercase tracking-tight">{ability.title}</h2>
+                <span class={`px-2.5 py-0.5 rounded border text-[11px] font-mono font-bold uppercase ${ability.accent}`}>
+                  {ability.badge}
+                </span>
+              </div>
+              <p class="font-mono text-xs text-op-muted uppercase tracking-wider">{ability.category}</p>
+            </div>
+          </div>
+
+          <!-- Quick Stats Pill Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 font-mono text-xs">
+            <div class="p-2 rounded-lg bg-op-dark/80 border border-op-border/60">
+              <span class="text-[10px] text-op-dim block">Damage</span>
+              <span class="text-white font-bold">{ability.stats.damage}</span>
+            </div>
+            <div class="p-2 rounded-lg bg-op-dark/80 border border-op-border/60">
+              <span class="text-[10px] text-op-dim block">Effective Range</span>
+              <span class="text-white font-bold">{ability.stats.range}</span>
+            </div>
+            <div class="p-2 rounded-lg bg-op-dark/80 border border-op-border/60">
+              <span class="text-[10px] text-op-dim block">Energy Cost</span>
+              <span class="text-white font-bold">{ability.stats.consumption}</span>
+            </div>
+            <div class="p-2 rounded-lg bg-op-dark/80 border border-op-border/60">
+              <span class="text-[10px] text-op-dim block">Cooldown</span>
+              <span class="text-white font-bold">{ability.stats.cooldown}</span>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+          {ability.summary}
+        </p>
+
+        <!-- Combat Tips Box -->
+        <div class="p-4 rounded-xl bg-op-dark/60 border border-op-border/70">
+          <h4 class="font-mono text-xs font-bold text-white uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <span>💡</span>
+            <span>Tactical Synergies &amp; Pro Tips</span>
+          </h4>
+          <ul class="space-y-1.5 text-xs text-slate-300 font-mono">
+            {ability.tips.map((tip) => (
+              <li class="flex items-start gap-2">
+                <span class="text-op-green flex-shrink-0">›</span>
+                <span>{tip}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+      </div>
+    ))}
+  </section>
+
+  <!-- Skyscraper Demolition Physics Breakdown -->
+  <section id="destruction" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
+    <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-op-dark to-op-card border border-op-border">
+      
+      <div class="max-w-3xl mb-8">
+        <span class="px-2.5 py-1 rounded bg-op-fire/15 border border-op-fire/30 text-op-fire font-mono text-xs font-bold uppercase mb-4 inline-block">
+          PHYSICS ENGINE MECHANICS
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white font-display uppercase tracking-tight mb-4">
+          How Prism City Skyscraper Demolition Works
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          OverPeak does not rely on pre-baked scripted destruction animations. Every building in Prism City is mathematically segmented into load-bearing stress vertices calculated in real time:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs">
+        <div class="p-5 rounded-xl bg-op-darkest border border-op-border">
+          <div class="text-op-laser font-bold text-sm mb-2">1. Structural Load Points</div>
+          <p class="text-slate-400 leading-relaxed">
+            Targeting exterior decorative walls only causes localized cosmetic damage. To destabilize a structure, focus Thermal Lasers or Telekinetic throws directly on ground-level corner columns.
+          </p>
+        </div>
+        <div class="p-5 rounded-xl bg-op-darkest border border-op-border">
+          <div class="text-op-fire font-bold text-sm mb-2">2. Gravity Vector Stress</div>
+          <p class="text-slate-400 leading-relaxed">
+            When more than 60% of foundational support is eliminated on one side, gravitational torque forces the entire skyscraper to tilt and collapse toward the weakened quadrant.
+          </p>
+        </div>
+        <div class="p-5 rounded-xl bg-op-darkest border border-op-border">
+          <div class="text-op-gold font-bold text-sm mb-2">3. Secondary Debris Impact</div>
+          <p class="text-slate-400 leading-relaxed">
+            Falling masonry actively interacts with street-level objects. Collapsing towers crush Starbridge barricades, ignite parked vehicles, and cause adjacent buildings to sustain structural shock.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

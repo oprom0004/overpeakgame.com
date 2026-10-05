@@ -1,0 +1,219 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = 'How to Play OverPeak on PC – 60 FPS Setup, Controls & Keybinds (Official)';
+const pageDescription = 'Complete guide on running OverPeak: Action Game on PC and Mac. Best emulator settings for 60-120 FPS, keyboard & mouse layout, and Xbox/DualSense controller mapping.';
+
+const pcSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://overpeakgame.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "PC Setup",
+          "item": "https://overpeakgame.com/pc/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Configure and Play OverPeak on PC at 60-120 FPS",
+      "description": "Step-by-step instructions for configuring Android emulation, Vulkan graphics, and custom keyboard/mouse keybindings for OverPeak on desktop.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Install a 64-bit Android Emulator",
+          "text": "Download and install MuMuPlayer 12 (recommended for Vulkan) or BlueStacks 5 (Pie 64-bit instance)."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Download OverPeak from Google Play",
+          "text": "Sign in to your Google Account inside the emulator, search for OverPeak: Action Game by R-USER Games, and click Install."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Configure Performance and Graphics Engine",
+          "text": "Allocate 4 CPU cores and 6GB+ RAM, select Vulkan rendering, and enable 120 FPS High Frame Rate mode."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Map Keyboard & Mouse Keybindings",
+          "text": "Assign WASD for movement, Right-Click for free mouse look aim, and Spacebar for flight and jumps."
+        }
+      ]
+    }
+  ]
+};
+
+const keybinds = [
+  { action: 'Movement (Sprint / Walk)', pcKey: 'W / A / S / D', controller: 'Left Analog Stick (L3)' },
+  { action: 'Camera Free Look', pcKey: 'Mouse Movement', controller: 'Right Analog Stick (R3)' },
+  { action: 'Basic Punch / Melee', pcKey: 'Left Mouse Button', controller: 'Right Trigger (RT / R2)' },
+  { action: 'Thermal Laser Aim & Fire', pcKey: 'Right Mouse Button (Hold)', controller: 'Left Trigger (LT / L2)' },
+  { action: 'Super Jump / Ascend Flight', pcKey: 'Spacebar', controller: 'A / Cross Button' },
+  { action: 'Air Dash / Ground Slam', pcKey: 'Left Shift (Double-Tap)', controller: 'B / Circle Button' },
+  { action: 'Cryo Freeze Ray', pcKey: 'Q Key', controller: 'X / Square Button' },
+  { action: 'Telekinetic Object Grab', pcKey: 'E Key', controller: 'Y / Triangle Button' },
+  { action: 'Pause / Options Menu', pcKey: 'Escape (ESC)', controller: 'Start / Menu Button' },
+];
+---
+
+<Layout title={pageTitle} description={pageDescription} schema={pcSchema}>
+
+  <!-- Page Header -->
+  <section class="border-b border-op-border bg-gradient-to-b from-op-dark to-op-darkest py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <nav class="font-mono text-xs text-op-muted mb-4 flex items-center gap-2">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>/</span>
+        <span class="text-op-laser">PC Setup &amp; Controls</span>
+      </nav>
+
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-op-laser/15 border border-op-laser/30 text-xs font-mono text-op-laser mb-4">
+          <span>🖥️ Desktop PC Performance Guide</span>
+          <span>• 60 to 120 FPS</span>
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-4">
+          How to Play OverPeak on PC &amp; Mac
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          While R-USER Games develops a native PC version, desktop players can experience <strong>OverPeak</strong> with precision mouse aiming, ultrawide monitor resolutions, and smooth 120Hz frame rates today.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Step-by-Step Installation Tutorial -->
+  <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-xl sm:text-2xl font-black text-white font-display uppercase tracking-tight mb-8 flex items-center gap-2">
+      <span>⚙️</span>
+      <span>4-Step PC Setup Guide</span>
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 font-mono text-xs">
+      
+      <!-- Step 1 -->
+      <div class="p-6 rounded-2xl bg-op-card border border-op-border">
+        <div class="w-8 h-8 rounded-lg bg-op-laser/20 border border-op-laser/40 text-op-laser font-bold flex items-center justify-center mb-4">
+          01
+        </div>
+        <h3 class="text-white font-bold text-sm mb-2 font-sans">Choose Emulator</h3>
+        <p class="text-slate-400 leading-relaxed">
+          Download <strong>MuMuPlayer 12</strong> (recommended for Android 12 + Vulkan backend) or <strong>BlueStacks 5</strong> (create a 64-bit Pie or Android 11 instance).
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="p-6 rounded-2xl bg-op-card border border-op-border">
+        <div class="w-8 h-8 rounded-lg bg-op-cryo/20 border border-op-cryo/40 text-op-cryo font-bold flex items-center justify-center mb-4">
+          02
+        </div>
+        <h3 class="text-white font-bold text-sm mb-2 font-sans">Install OverPeak</h3>
+        <p class="text-slate-400 leading-relaxed">
+          Launch Google Play Store inside the emulator, log in with your Google account, and search for <em>"OverPeak : Action Game"</em> by R-USER Games.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="p-6 rounded-2xl bg-op-card border border-op-border">
+        <div class="w-8 h-8 rounded-lg bg-op-kinetic/20 border border-op-kinetic/40 text-op-kinetic font-bold flex items-center justify-center mb-4">
+          03
+        </div>
+        <h3 class="text-white font-bold text-sm mb-2 font-sans">Set 60–120 FPS</h3>
+        <p class="text-slate-400 leading-relaxed">
+          In emulator Settings &gt; Performance: assign <strong>4 Cores CPU</strong>, <strong>6GB+ RAM</strong>, select <strong>Vulkan</strong> renderer, and enable High Frame Rate.
+        </p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="p-6 rounded-2xl bg-op-card border border-op-border">
+        <div class="w-8 h-8 rounded-lg bg-op-gold/20 border border-op-gold/40 text-op-gold font-bold flex items-center justify-center mb-4">
+          04
+        </div>
+        <h3 class="text-white font-bold text-sm mb-2 font-sans">Configure Controls</h3>
+        <p class="text-slate-400 leading-relaxed">
+          Open the emulator Keyboard Mapping overlay and load the tactical FPS keybind profile below to lock mouse cursor for direct crosshair aiming.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Complete Keybinds Mapping Table -->
+  <section id="controls" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-black text-white font-display uppercase tracking-tight flex items-center gap-2">
+          <span>🎮</span>
+          <span>Optimized PC Keybinds &amp; Controller Profile</span>
+        </h2>
+        <p class="text-slate-400 text-xs font-mono mt-1">Recommended layout for mouse/keyboard and Xbox Wireless / DualSense controllers.</p>
+      </div>
+      <span class="px-2.5 py-1 rounded bg-op-green/15 border border-op-green/30 text-op-green font-mono text-xs font-bold self-start">
+        ● Pre-Configured Profile
+      </span>
+    </div>
+
+    <div class="overflow-x-auto rounded-2xl border border-op-border bg-op-card/60">
+      <table class="w-full text-left font-mono text-xs">
+        <thead class="bg-op-dark border-b border-op-border text-op-muted uppercase">
+          <tr>
+            <th class="p-4">Game Combat Action</th>
+            <th class="p-4">PC Keyboard &amp; Mouse</th>
+            <th class="p-4">Gamepad Controller</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-op-border/50 text-slate-300">
+          {keybinds.map((bind) => (
+            <tr class="hover:bg-op-hover/40 transition-colors">
+              <td class="p-4 text-white font-semibold">{bind.action}</td>
+              <td class="p-4">
+                <code class="px-2 py-1 rounded bg-op-dark border border-op-border text-op-laser font-bold">
+                  {bind.pcKey}
+                </code>
+              </td>
+              <td class="p-4 text-op-cryo font-bold">{bind.controller}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- PC Performance Tuning Tips -->
+  <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
+    <div class="p-8 rounded-2xl bg-op-card border border-op-border">
+      <h3 class="text-lg font-bold text-white mb-4 font-display uppercase tracking-tight flex items-center gap-2">
+        <span>💡</span>
+        <span>Fixing Stuttering &amp; Lag on Desktop</span>
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs font-mono text-slate-300">
+        <div>
+          <h4 class="text-op-cryo font-bold mb-1">1. Switch from OpenGL to Vulkan</h4>
+          <p class="text-slate-400 leading-relaxed">
+            OverPeak's particle-heavy building collapse physics can bottleneck OpenGL drivers on Windows. Switching to the Vulkan rendering engine inside emulator settings reduces frame drops by up to 45%.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-op-gold font-bold mb-1">2. Enable Hardware Virtualization (VT-x / AMD-V)</h4>
+          <p class="text-slate-400 leading-relaxed">
+            Ensure CPU virtualization is enabled in your motherboard BIOS. Without VT-x enabled, Android emulation is restricted to single-thread software interpretation, causing massive stutter.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

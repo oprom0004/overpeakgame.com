@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://overpeakgame.com/sitemap.xml
+Sitemap: https://overpeakgame.com/sitemap-index.xml

@@ -1,0 +1,301 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = 'OverPeak Game: Action Game Guide, Superpowers, PC & Download Hub';
+const pageDescription = 'The complete companion guide for OverPeak: Action Game by R-USER Games. Master Subject OP superpowers, building destruction physics, PC 60 FPS setup, and official Google Play download.';
+
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://overpeakgame.com/#site",
+      "name": "OverPeak Game Guide",
+      "url": "https://overpeakgame.com/",
+      "description": "Comprehensive knowledge base and download portal for OverPeak: Action Game."
+    },
+    {
+      "@type": "VideoGame",
+      "name": "OverPeak: Action Game",
+      "operatingSystem": "Android, iOS (Coming Soon), PC (via Emulator)",
+      "applicationCategory": "Game",
+      "genre": ["Open World", "Action RPG", "Superhero Sandbox"],
+      "author": {
+        "@type": "Organization",
+        "name": "R-USER Games"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.2",
+        "reviewCount": "8253",
+        "bestRating": "5"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
+};
+
+const powers = [
+  {
+    name: 'Thermal Laser Vision',
+    type: 'Offensive Ranged',
+    icon: '🔥',
+    color: 'from-op-laser/20 border-op-laser/40 text-op-laser',
+    desc: 'Focus high-energy thermal beams to slice armored transport vehicles, incinerate Starbridge shock troops, and weaken concrete structural supports.',
+  },
+  {
+    name: 'Cryo Freeze Ray',
+    type: 'Crowd Control',
+    icon: '❄️',
+    color: 'from-op-cryo/20 border-op-cryo/40 text-op-cryo',
+    desc: 'Flash-freeze enemy security drones and fleeing suspects into solid ice before shattering them with kinetic force.',
+  },
+  {
+    name: 'Telekinetic Force Push',
+    type: 'Physics Manipulation',
+    icon: '🌀',
+    color: 'from-op-kinetic/20 border-op-kinetic/40 text-op-kinetic',
+    desc: 'Levitate sedans, concrete barricades, and steel girders to hurl across Prism City streets with devastating pinpoint momentum.',
+  },
+  {
+    name: 'Sonic Flight & Ground Slam',
+    type: 'Mobility & Area of Effect',
+    icon: '⚡',
+    color: 'from-op-gold/20 border-op-gold/40 text-op-gold',
+    desc: 'Break the sound barrier soaring above skyscrapers, then execute a catastrophic supersonic ground slam that topples nearby structures.',
+  },
+];
+---
+
+<Layout title={pageTitle} description={pageDescription} schema={homeSchema}>
+  
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden border-b border-op-border bg-gradient-to-b from-op-dark to-op-darkest py-16 sm:py-24">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-op-laser/10 via-transparent to-transparent pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-op-cryo/10 via-transparent to-transparent pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        
+        <!-- Status Pill -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-op-card border border-op-border text-xs font-mono text-op-muted mb-6 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-op-laser animate-pulse"></span>
+          <span>Prism City Sandbox • Version 0.6 Released</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white uppercase font-display mb-6">
+          UNLEASH PURE <span class="bg-gradient-to-r from-op-laser via-op-fire to-op-gold bg-clip-text text-transparent">DESTRUCTION</span> IN OVERPEAK
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
+          Play as <strong>Jason Fieldway (Subject OP)</strong>, a super-powered experiment awakened for vengeance against the Starbridge Corporation. Topple skyscrapers with real-time physics destruction, fly at supersonic speeds, and decide whether Prism City fears you as a savior or a monster.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/download/"
+            class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-op-laser to-rose-600 text-white font-mono font-bold text-sm uppercase tracking-wider shadow-glow-laser hover:brightness-110 transition-all flex items-center gap-2"
+          >
+            <span>📥</span>
+            <span>Download &amp; Play Guide →</span>
+          </a>
+          <a
+            href="/powers/"
+            class="px-6 py-3.5 rounded-xl bg-op-card border border-op-border text-slate-200 hover:text-white hover:border-op-cryo/50 font-mono font-semibold text-sm uppercase tracking-wider transition-all flex items-center gap-2"
+          >
+            <span>⚡</span>
+            <span>Explore Superpowers</span>
+          </a>
+          <a
+            href="/pc/"
+            class="px-6 py-3.5 rounded-xl bg-op-card border border-op-border text-slate-200 hover:text-white hover:border-op-kinetic/50 font-mono font-semibold text-sm uppercase tracking-wider transition-all flex items-center gap-2"
+          >
+            <span>🖥️</span>
+            <span>PC 60 FPS Setup</span>
+          </a>
+        </div>
+
+        <!-- Live Google Play Metrics Callout -->
+        <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto text-left font-mono">
+          <div class="p-3.5 rounded-xl bg-op-card/80 border border-op-border">
+            <div class="text-[11px] text-op-muted uppercase">Global Rating</div>
+            <div class="text-xl font-bold text-op-gold">4.2 ★</div>
+            <div class="text-[10px] text-slate-500">8,200+ Reviews</div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-op-card/80 border border-op-border">
+            <div class="text-[11px] text-op-muted uppercase">Developer</div>
+            <div class="text-xl font-bold text-white">R-USER</div>
+            <div class="text-[10px] text-slate-500">Action Studio</div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-op-card/80 border border-op-border">
+            <div class="text-[11px] text-op-muted uppercase">Engine</div>
+            <div class="text-xl font-bold text-op-cryo">Unity 3D</div>
+            <div class="text-[10px] text-slate-500">Voxel Physics</div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-op-card/80 border border-op-border">
+            <div class="text-[11px] text-op-muted uppercase">Pricing</div>
+            <div class="text-xl font-bold text-op-green">100% Free</div>
+            <div class="text-[10px] text-slate-500">Google Play Store</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Gameplay Showcase & Lore -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <div>
+        <div class="inline-block px-2.5 py-1 rounded bg-op-laser/10 border border-op-laser/30 text-op-laser font-mono text-xs font-bold uppercase mb-4">
+          PRISM CITY OPEN-WORLD
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white font-display uppercase tracking-tight mb-6">
+          A Living City Built for Total Structural Demolition
+        </h2>
+        <p class="text-slate-300 leading-relaxed text-sm sm:text-base mb-4">
+          Unlike static mobile sandboxes, <strong>OverPeak</strong> features a proprietary dynamic destruction mesh. Fire lasers at architectural support pillars, and witness real-time structural stress cause entire multi-story complexes to crumble onto the boulevard below.
+        </p>
+        <p class="text-slate-300 leading-relaxed text-sm sm:text-base mb-6">
+          As <strong>Subject OP</strong>, your genetic modifications grant unprecedented mobility. Seamlessly transition from high-velocity pedestrian sprinting to vertical wall-runs, hypersonic air dashes, and full 360-degree freeflight above the city smog.
+        </p>
+
+        <!-- Feature List -->
+        <div class="space-y-3 font-mono text-xs text-slate-300">
+          <div class="flex items-center gap-2">
+            <span class="text-op-green">✓</span>
+            <span>Full Ragdoll &amp; Dynamic Fracture Physics</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-op-green">✓</span>
+            <span>Multi-Tier Reputation System (Civilian Ally vs Dreaded Enforcer)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-op-green">✓</span>
+            <span>Starbridge Tactical Drones &amp; Heavy Mechs Escalation</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-op-green">✓</span>
+            <span>Playable Offline (No constant internet required)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video / Interactive Showcase Card -->
+      <div class="p-6 rounded-2xl bg-op-card border border-op-border shadow-2xl relative group">
+        <div class="aspect-video w-full rounded-xl bg-op-darkest border border-op-border overflow-hidden relative flex flex-col justify-center items-center text-center p-6">
+          <div class="w-16 h-16 rounded-full bg-op-laser/20 border border-op-laser/50 flex items-center justify-center text-op-laser text-2xl mb-4 group-hover:scale-110 transition-transform">
+            ▶
+          </div>
+          <div class="font-mono font-bold text-white text-base mb-1">
+            OverPeak Official Gameplay &amp; Destruction
+          </div>
+          <p class="text-op-muted text-xs max-w-sm">
+            Experience building collapse physics, laser beam sweeps, and superhero flight mechanics.
+          </p>
+          <div class="mt-4 flex gap-2">
+            <span class="px-2 py-0.5 rounded bg-op-dark border border-op-border text-[10px] font-mono text-op-cryo">Vulkan 60 FPS</span>
+            <span class="px-2 py-0.5 rounded bg-op-dark border border-op-border text-[10px] font-mono text-op-gold">Prism City</span>
+          </div>
+        </div>
+        <div class="mt-4 flex justify-between items-center text-xs font-mono text-slate-400">
+          <span>Trailer &amp; Walkthrough Reference</span>
+          <a href="/download/" class="text-op-cryo hover:underline">Get Download Links →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: Superpowers Teaser Grid -->
+  <section class="py-16 border-t border-op-border bg-op-dark/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-block px-2.5 py-1 rounded bg-op-cryo/10 border border-op-cryo/30 text-op-cryo font-mono text-xs font-bold uppercase mb-3">
+          ARSENAL OF DESTRUCTION
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-white font-display uppercase tracking-tight mb-4">
+          Master the Five Genetic Superpowers
+        </h2>
+        <p class="text-slate-400 text-sm">
+          Customize your loadout to dominate both aerial combat drones and ground-level armored convoys.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {powers.map((power) => (
+          <div class={`p-6 rounded-2xl bg-gradient-to-b ${power.color} bg-op-card border transition-all hover:-translate-y-1`}>
+            <div class="text-3xl mb-4">{power.icon}</div>
+            <div class="font-mono text-[11px] text-op-muted uppercase mb-1">{power.type}</div>
+            <h3 class="text-lg font-bold text-white mb-2">{power.name}</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">{power.desc}</p>
+            <a href="/powers/" class="font-mono text-xs font-semibold hover:underline flex items-center gap-1">
+              <span>Read Ability Mechanics</span>
+              <span>→</span>
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-8 text-center">
+        <a
+          href="/powers/"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-op-card border border-op-border text-white font-mono text-xs uppercase font-bold hover:border-op-cryo transition-all"
+        >
+          <span>View Complete Superpowers Tier List &amp; Combos →</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Platform & Download Quick Card -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-op-card via-op-darkest to-op-dark border border-op-border relative overflow-hidden">
+      <div class="max-w-3xl">
+        <div class="inline-block px-2.5 py-1 rounded bg-op-green/10 border border-op-green/30 text-op-green font-mono text-xs font-bold uppercase mb-4">
+          CROSS-PLATFORM DIRECTORY
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-black text-white font-display uppercase tracking-tight mb-4">
+          Where and How to Play OverPeak
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+          OverPeak is currently live on <strong>Android via Google Play</strong>. Apple iOS players can track official App Store review status, and desktop users can configure 60–120 FPS high-refresh emulation with customized keybinds.
+        </p>
+
+        <div class="flex flex-wrap gap-4 font-mono text-xs">
+          <a
+            href="/download/#android"
+            class="px-4 py-2.5 rounded-lg bg-op-green/20 border border-op-green/40 text-op-green font-bold hover:bg-op-green/30 transition-all flex items-center gap-2"
+          >
+            <span>🤖</span>
+            <span>Android (Google Play)</span>
+          </a>
+          <a
+            href="/download/#ios"
+            class="px-4 py-2.5 rounded-lg bg-op-cryo/20 border border-op-cryo/40 text-op-cryo font-bold hover:bg-op-cryo/30 transition-all flex items-center gap-2"
+          >
+            <span>🍎</span>
+            <span>iOS App Store Status</span>
+          </a>
+          <a
+            href="/pc/"
+            class="px-4 py-2.5 rounded-lg bg-op-laser/20 border border-op-laser/40 text-op-laser font-bold hover:bg-op-laser/30 transition-all flex items-center gap-2"
+          >
+            <span>🖥️</span>
+            <span>PC 60 FPS Setup Guide</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
