@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = 'How to Play OverPeak on PC – 60 FPS Setup, Controls & Keybinds (Official)';
+const pageTitle = 'How to Play OverPeak on PC – 60-120 FPS Setup, Controls & Keybinds';
 const pageDescription = 'Complete guide on running OverPeak: Action Game on PC and Mac. Best emulator settings for 60-120 FPS, keyboard & mouse layout, and Xbox/DualSense controller mapping.';
 
 const pcSchema = {
@@ -69,18 +69,21 @@ const keybinds = [
 
 <Layout title={pageTitle} description={pageDescription} schema={pcSchema}>
 
-  <!-- Page Header -->
-  <section class="border-b border-op-border bg-gradient-to-b from-op-darkest to-op-dark py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Page Header with Game Atmosphere -->
+  <section class="border-b border-op-border bg-op-darkest relative overflow-hidden py-12">
+    <div class="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none" style="background-image: url('/images/pc-setup.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-op-darkest/90 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <nav class="font-mono text-xs text-op-muted mb-4 flex items-center gap-2">
+      <nav class="font-mono text-xs text-slate-400 mb-6 flex items-center gap-2">
         <a href="/" class="hover:text-white transition-colors">Home</a>
         <span>/</span>
         <span class="text-white">PC Setup &amp; Controls</span>
       </nav>
 
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-op-card border border-op-border text-xs font-mono text-slate-300 mb-3">
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-xs font-mono text-slate-300 mb-3">
           <span>Desktop Performance Guide</span>
           <span>• 60 to 120 FPS</span>
         </div>
@@ -114,7 +117,7 @@ const keybinds = [
     </div>
   </section>
 
-  <!-- Step-by-Step Installation Tutorial -->
+  <!-- Step-by-Step Installation Tutorial (Clean Monochrome Numbered Cards) -->
   <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-xl sm:text-2xl font-black text-white font-display uppercase tracking-tight mb-8">
       4-Step PC Setup Guide
@@ -124,7 +127,7 @@ const keybinds = [
       
       <!-- Step 1 -->
       <div class="p-6 rounded-2xl bg-op-card border border-op-border">
-        <div class="w-8 h-8 rounded-lg bg-op-laser/20 border border-op-laser/40 text-op-laser font-bold flex items-center justify-center mb-4">
+        <div class="w-8 h-8 rounded-lg bg-op-dark border border-op-border text-white font-bold flex items-center justify-center mb-4">
           01
         </div>
         <h3 class="text-white font-bold text-sm mb-2 font-sans">Choose Emulator</h3>
@@ -135,7 +138,7 @@ const keybinds = [
 
       <!-- Step 2 -->
       <div class="p-6 rounded-2xl bg-op-card border border-op-border">
-        <div class="w-8 h-8 rounded-lg bg-op-cryo/20 border border-op-cryo/40 text-op-cryo font-bold flex items-center justify-center mb-4">
+        <div class="w-8 h-8 rounded-lg bg-op-dark border border-op-border text-white font-bold flex items-center justify-center mb-4">
           02
         </div>
         <h3 class="text-white font-bold text-sm mb-2 font-sans">Install OverPeak</h3>
@@ -146,7 +149,7 @@ const keybinds = [
 
       <!-- Step 3 -->
       <div class="p-6 rounded-2xl bg-op-card border border-op-border">
-        <div class="w-8 h-8 rounded-lg bg-op-kinetic/20 border border-op-kinetic/40 text-op-kinetic font-bold flex items-center justify-center mb-4">
+        <div class="w-8 h-8 rounded-lg bg-op-dark border border-op-border text-white font-bold flex items-center justify-center mb-4">
           03
         </div>
         <h3 class="text-white font-bold text-sm mb-2 font-sans">Set 60–120 FPS</h3>
@@ -157,7 +160,7 @@ const keybinds = [
 
       <!-- Step 4 -->
       <div class="p-6 rounded-2xl bg-op-card border border-op-border">
-        <div class="w-8 h-8 rounded-lg bg-op-gold/20 border border-op-gold/40 text-op-gold font-bold flex items-center justify-center mb-4">
+        <div class="w-8 h-8 rounded-lg bg-op-dark border border-op-border text-white font-bold flex items-center justify-center mb-4">
           04
         </div>
         <h3 class="text-white font-bold text-sm mb-2 font-sans">Configure Controls</h3>
@@ -169,7 +172,7 @@ const keybinds = [
     </div>
 
     <!-- Visual Showcase Banner: PC Battlestation & 120 FPS Setup -->
-    <div class="mt-12 rounded-2xl overflow-hidden border border-op-border/80 shadow-2xl relative group">
+    <div class="mt-12 rounded-2xl overflow-hidden border border-op-border shadow-lg relative group">
       <img
         src="/images/pc-setup.jpg"
         alt="OverPeak PC Gaming Battlestation running at 120 FPS Ultrawide resolution with keyboard and mouse"
@@ -180,18 +183,18 @@ const keybinds = [
       />
       <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-transparent to-transparent"></div>
       <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between font-mono text-xs">
-        <div class="bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
-          <span class="text-op-cryo font-bold">DESKTOP BATTLESTATION BENCHMARK</span>
+        <div class="bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 text-white">
+          <span>DESKTOP BATTLESTATION BENCHMARK</span>
           <span class="text-slate-400 ml-2">• 120 FPS Ultra-Wide Setup (WASD + Free Mouse Aim)</span>
         </div>
-        <span class="hidden sm:inline-block px-2.5 py-1 rounded bg-op-cryo text-op-dark font-bold text-[10px] uppercase">
+        <span class="hidden sm:inline-block px-2.5 py-1 rounded bg-white/10 border border-white/10 text-slate-300 font-bold text-[10px] uppercase">
           Vulkan 120Hz Verified
         </span>
       </div>
     </div>
   </section>
 
-  <!-- Complete Keybinds Mapping Table -->
+  <!-- Complete Keybinds Mapping Table (Clean Monochrome Table) -->
   <section id="controls" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
       <div>
@@ -200,14 +203,14 @@ const keybinds = [
         </h2>
         <p class="text-slate-400 text-xs font-mono mt-1">Recommended layout for mouse/keyboard and Xbox Wireless / DualSense controllers.</p>
       </div>
-      <span class="px-2.5 py-1 rounded bg-op-green/15 border border-op-green/30 text-op-green font-mono text-xs font-bold self-start">
-        ● Pre-Configured Profile
+      <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-300 font-mono text-xs font-bold self-start">
+        Pre-Configured Profile
       </span>
     </div>
 
-    <div class="overflow-x-auto rounded-2xl border border-op-border bg-op-card/60">
+    <div class="overflow-x-auto rounded-2xl border border-op-border bg-op-card">
       <table class="w-full text-left font-mono text-xs">
-        <thead class="bg-op-dark border-b border-op-border text-op-muted uppercase">
+        <thead class="bg-op-dark border-b border-op-border text-slate-400 uppercase">
           <tr>
             <th class="p-4">Game Combat Action</th>
             <th class="p-4">PC Keyboard &amp; Mouse</th>
@@ -216,14 +219,14 @@ const keybinds = [
         </thead>
         <tbody class="divide-y divide-op-border/50 text-slate-300">
           {keybinds.map((bind) => (
-            <tr class="hover:bg-op-hover/40 transition-colors">
+            <tr class="hover:bg-white/5 transition-colors">
               <td class="p-4 text-white font-semibold">{bind.action}</td>
               <td class="p-4">
-                <code class="px-2 py-1 rounded bg-op-dark border border-op-border text-op-laser font-bold">
+                <code class="px-2 py-1 rounded bg-op-dark border border-op-border text-white font-bold">
                   {bind.pcKey}
                 </code>
               </td>
-              <td class="p-4 text-op-cryo font-bold">{bind.controller}</td>
+              <td class="p-4 text-slate-300">{bind.controller}</td>
             </tr>
           ))}
         </tbody>
@@ -239,13 +242,13 @@ const keybinds = [
       </h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs font-mono text-slate-300">
         <div>
-          <h4 class="text-op-cryo font-bold mb-1">1. Switch from OpenGL to Vulkan</h4>
+          <h4 class="text-white font-bold mb-1">1. Switch from OpenGL to Vulkan</h4>
           <p class="text-slate-400 leading-relaxed">
             OverPeak's particle-heavy building collapse physics can bottleneck OpenGL drivers on Windows. Switching to the Vulkan rendering engine inside emulator settings reduces frame drops by up to 45%.
           </p>
         </div>
         <div>
-          <h4 class="text-op-gold font-bold mb-1">2. Enable Hardware Virtualization (VT-x / AMD-V)</h4>
+          <h4 class="text-white font-bold mb-1">2. Enable Hardware Virtualization (VT-x / AMD-V)</h4>
           <p class="text-slate-400 leading-relaxed">
             Ensure CPU virtualization is enabled in your motherboard BIOS. Without VT-x enabled, Android emulation is restricted to single-thread software interpretation, causing massive stutter.
           </p>

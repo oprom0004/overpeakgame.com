@@ -162,11 +162,11 @@ const powers = [
             </div>
             <div class="flex items-center justify-between pb-2 border-b border-op-border/60">
               <span class="text-slate-400">GAMEPLAY MODE</span>
-              <span class="text-op-green font-bold">100% Offline Single-Player</span>
+              <span class="text-white font-bold">100% Offline Single-Player</span>
             </div>
             <div class="flex items-center justify-between">
               <span class="text-slate-400">STORE SCORE</span>
-              <span class="text-op-gold font-bold">★ 4.2 / 5.0 (8,250+ Google Play Ratings)</span>
+              <span class="text-white font-bold">★ 4.2 / 5.0 (8,250+ Google Play Ratings)</span>
             </div>
           </div>
 
@@ -265,19 +265,19 @@ const powers = [
         <!-- Feature List -->
         <div class="space-y-2.5 font-mono text-xs text-slate-300">
           <div class="flex items-center gap-2">
-            <span class="text-op-green font-bold">›</span>
+            <span class="text-slate-500 font-bold">›</span>
             <span>Full Ragdoll &amp; Dynamic Fracture Physics</span>
           </div>
           <div class="flex items-center gap-2">
-            <span class="text-op-green font-bold">›</span>
+            <span class="text-slate-500 font-bold">›</span>
             <span>Multi-Tier Reputation System (Civilian Ally vs Dreaded Enforcer)</span>
           </div>
           <div class="flex items-center gap-2">
-            <span class="text-op-green font-bold">›</span>
+            <span class="text-slate-500 font-bold">›</span>
             <span>Starbridge Tactical Drones &amp; Heavy Mechs Escalation</span>
           </div>
           <div class="flex items-center gap-2">
-            <span class="text-op-green font-bold">›</span>
+            <span class="text-slate-500 font-bold">›</span>
             <span>Playable Offline (No mandatory internet connection required)</span>
           </div>
         </div>
@@ -324,17 +324,17 @@ const powers = [
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {powers.map((power) => (
-          <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-slate-500 transition-all">
+          <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-white/20 transition-all">
             <div class="flex items-center justify-between mb-4">
-              <span class={`font-mono text-[11px] font-bold px-2 py-0.5 rounded bg-op-dark border ${power.border}`}>
+              <span class="font-mono text-[11px] font-bold px-2 py-0.5 rounded bg-op-dark border border-white/10 text-slate-300">
                 [{power.tag}]
               </span>
-              <span class="font-mono text-xs text-op-dim font-bold">{power.num}</span>
+              <span class="font-mono text-xs text-slate-500 font-bold">{power.num}</span>
             </div>
-            <div class="font-mono text-[11px] text-op-muted uppercase mb-1">{power.type}</div>
+            <div class="font-mono text-[11px] text-slate-400 uppercase mb-1">{power.type}</div>
             <h3 class="text-lg font-bold text-white mb-2">{power.name}</h3>
             <p class="text-xs text-slate-300 leading-relaxed mb-4">{power.desc}</p>
-            <a href="/powers/" class="font-mono text-xs text-op-laser font-semibold hover:underline flex items-center gap-1">
+            <a href="/powers/" class="font-mono text-xs text-white font-semibold hover:underline flex items-center gap-1">
               <span>Read Ability Mechanics</span>
               <span>→</span>
             </a>
@@ -345,7 +345,7 @@ const powers = [
       <div class="mt-8 text-center">
         <a
           href="/powers/"
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-op-card border border-op-border text-white font-mono text-xs uppercase font-bold hover:border-slate-400 transition-all"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-op-card border border-op-border text-white font-mono text-xs uppercase font-bold hover:border-white/40 transition-all"
         >
           <span>View Complete Superpowers Tier List &amp; Demolition Guide →</span>
         </a>
@@ -371,21 +371,21 @@ const powers = [
         <div class="flex flex-wrap gap-4 font-mono text-xs">
           <a
             href="/download/#android"
-            class="px-4 py-2.5 rounded-lg bg-op-dark border border-op-border text-white hover:border-slate-400 transition-all flex items-center gap-2"
+            class="px-4 py-2.5 rounded-lg bg-op-dark border border-op-border text-white hover:border-white/40 transition-all flex items-center gap-2"
           >
-            <span class="w-2 h-2 rounded-full bg-op-green"></span>
+            <span class="w-2 h-2 rounded-full bg-white/40"></span>
             <span>Android (Google Play)</span>
           </a>
           <a
             href="/download/#ios"
             class="px-4 py-2.5 rounded-lg bg-op-dark border border-op-border text-slate-400 hover:text-white transition-all flex items-center gap-2"
           >
-            <span class="w-2 h-2 rounded-full bg-op-gold"></span>
+            <span class="w-2 h-2 rounded-full bg-white/40"></span>
             <span>iOS App Store Status</span>
           </a>
           <a
             href="/pc/"
-            class="px-4 py-2.5 rounded-lg bg-op-dark border border-op-border text-white hover:border-slate-400 transition-all flex items-center gap-2"
+            class="px-4 py-2.5 rounded-lg bg-op-dark border border-op-border text-white hover:border-white/40 transition-all flex items-center gap-2"
           >
             <span>PC 120 FPS Setup Guide</span>
             <span>→</span>

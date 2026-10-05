@@ -42,11 +42,10 @@ const abilities = [
     code: '01',
     title: 'Thermal Laser Vision',
     category: 'Sustained Energy Projectile',
-    badge: 'High Precision / Piercing',
-    accent: 'border-op-laser/40 bg-op-laser/10 text-op-laser',
+    badge: 'Piercing Cut',
     image: '/images/hero-banner.jpg',
     imageAlt: 'OverPeak Thermal Laser Vision destroying skyscraper support columns in Prism City',
-    stats: { damage: '95 / 100', range: '120 meters', consumption: 'Medium Energy/sec', cooldown: 'Instant Toggle' },
+    stats: { damage: '95 / 100', range: '120 meters', consumption: 'Medium / sec', cooldown: 'Instant' },
     summary: 'Subject OP unleashes twin high-temperature concentrated optical beams from the retinas, generating pinpoint thermal erosion that instantly cuts through titanium armor plates, fuel drums, and reinforced concrete pillar cores.',
     tips: [
       'Sweep beams horizontally across building base columns to trigger structural failure.',
@@ -59,11 +58,10 @@ const abilities = [
     code: '02',
     title: 'Cryo Freeze Ray',
     category: 'Sub-Zero Crowd Control',
-    badge: 'Area Freeze / Shatter',
-    accent: 'border-op-cryo/40 bg-op-cryo/10 text-op-cryo',
+    badge: 'Area Freeze',
     image: '/images/cryo-freeze.jpg',
     imageAlt: 'OverPeak Cryo Freeze Ray freezing heavy mechs and drones in combat',
-    stats: { damage: '65 / 100', range: '75 meters', consumption: 'High Energy/sec', cooldown: '3 Seconds' },
+    stats: { damage: '65 / 100', range: '75 meters', consumption: 'High / sec', cooldown: '3.0 sec' },
     summary: 'Emits an endothermic thermal wave that drops ambient temperatures to absolute zero within fractions of a second. Immobilizes heavy combat mechs and freezes fleeing targets into brittle ice statues.',
     tips: [
       'Frozen enemies take 300% increased damage from subsequent kinetic attacks or thrown objects.',
@@ -76,11 +74,10 @@ const abilities = [
     code: '03',
     title: 'Telekinetic Force Grip',
     category: 'Physics & Environmental Weaponry',
-    badge: 'Physics Manipulation',
-    accent: 'border-op-kinetic/40 bg-op-kinetic/10 text-op-kinetic',
+    badge: 'Physics Mass',
     image: '/images/telekinesis.jpg',
     imageAlt: 'OverPeak Telekinetic Force Grip hurling vehicles and debris across city avenues',
-    stats: { damage: 'Variable (Mass-based)', range: '50 meters', consumption: 'Low Energy/throw', cooldown: '1.5 Seconds' },
+    stats: { damage: 'Mass-Based', range: '50 meters', consumption: 'Low / throw', cooldown: '1.5 sec' },
     summary: 'Harnesses gravitational anomalies to levitate massive physical objects in the environment—from police cruisers and construction I-beams to giant slabs of fallen skyscraper masonry—and violently hurl them across city blocks.',
     tips: [
       'Heavier objects deal exponentially higher impact force and create wider debris shockwaves.',
@@ -93,9 +90,10 @@ const abilities = [
     code: '04',
     title: 'Sonic Flight & Air Dash',
     category: 'Three-Dimensional Traversal',
-    badge: 'Supersonic Velocity',
-    accent: 'border-op-gold/40 bg-op-gold/10 text-op-gold',
-    stats: { damage: '75 / 100 (Shockwave)', range: 'Unlimited', consumption: 'Passive Flight Drain', cooldown: 'None' },
+    badge: 'Supersonic',
+    image: '/images/hero-banner.jpg',
+    imageAlt: 'OverPeak Sonic Flight above Prism City',
+    stats: { damage: '75 / 100', range: 'Unlimited', consumption: 'Passive Drain', cooldown: 'None' },
     summary: 'Bypasses Earth gravity through bio-magnetic propulsion. Subject OP can effortlessly hover at rooftop altitude, achieve Mach 2 supersonic sprint velocity, and create shockwave sonic booms that shatter surrounding storefront windows.',
     tips: [
       'Double-tap the Dash button mid-flight to perform an invulnerable 360-degree dodge roll.',
@@ -108,9 +106,10 @@ const abilities = [
     code: '05',
     title: 'Cataclysmic Ground Slam',
     category: 'Seismic Area of Effect',
-    badge: 'Structural Seismic Shock',
-    accent: 'border-rose-500/40 bg-rose-500/10 text-rose-400',
-    stats: { damage: '100 / 100', range: '35 meter radius', consumption: '100% Burst Gauge', cooldown: '15 Seconds' },
+    badge: 'Seismic Shock',
+    image: '/images/telekinesis.jpg',
+    imageAlt: 'OverPeak Cataclysmic Ground Slam',
+    stats: { damage: '100 / 100', range: '35m Radius', consumption: '100% Burst', cooldown: '15.0 sec' },
     summary: 'Executing a terminal velocity dive from high altitude, Subject OP channels all kinetic potential into a single catastrophic fist-strike upon impact. Creates a 35-meter radial crater that triggers subterranean tremors and destabilizes nearby architectural foundations.',
     tips: [
       'The higher your starting altitude before initiating the dive, the wider the devastation crater.',
@@ -123,26 +122,29 @@ const abilities = [
 
 <Layout title={pageTitle} description={pageDescription} schema={powersSchema}>
 
-  <!-- Page Header -->
-  <section class="border-b border-op-border bg-gradient-to-b from-op-darkest to-op-dark py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Page Header with Game Atmosphere -->
+  <section class="border-b border-op-border bg-op-darkest relative overflow-hidden py-12">
+    <div class="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none" style="background-image: url('/images/hero-banner.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-op-darkest/90 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <nav class="font-mono text-xs text-op-muted mb-4 flex items-center gap-2">
+      <nav class="font-mono text-xs text-slate-400 mb-6 flex items-center gap-2">
         <a href="/" class="hover:text-white transition-colors">Home</a>
         <span>/</span>
         <span class="text-white">Superpowers &amp; Destruction</span>
       </nav>
 
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-op-card border border-op-border text-xs font-mono text-slate-300 mb-3">
-          <span>Subject OP Genetic Arsenal</span>
-          <span>• Combat Matrix</span>
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-xs font-mono text-slate-300 mb-3">
+          <span>Subject OP Arsenal</span>
+          <span>• Combat Specifications</span>
         </div>
         <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-4">
           OverPeak Superpowers &amp; Physics Guide
         </h1>
         <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-          Master the genetic arsenal of Jason Fieldway. Explore individual superpower mechanics, energy consumption profiles, and proprietary architectural demolition techniques in Prism City.
+          Master the genetic abilities of Jason Fieldway. Explore damage ratings, energy consumption profiles, and proprietary architectural demolition techniques in Prism City.
         </p>
       </div>
 
@@ -168,10 +170,10 @@ const abilities = [
     </div>
   </section>
 
-  <!-- Superpower Cards Detail List -->
-  <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+  <!-- Superpower Cards Detail List (Clean Monochrome Gaming Style) -->
+  <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
     {abilities.map((ability) => (
-      <div id={ability.id} class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border hover:border-op-border/80 transition-all shadow-xl">
+      <div id={ability.id} class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border hover:border-white/20 transition-all shadow-lg">
         <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-6">
           
           <div class="flex items-start gap-4">
@@ -181,30 +183,30 @@ const abilities = [
             <div>
               <div class="flex items-center gap-3 flex-wrap mb-1">
                 <h2 class="text-2xl font-black text-white font-display uppercase tracking-tight">{ability.title}</h2>
-                <span class={`px-2.5 py-0.5 rounded border text-[11px] font-mono font-bold uppercase ${ability.accent}`}>
+                <span class="px-2.5 py-0.5 rounded border border-white/10 bg-white/5 text-[11px] font-mono font-bold uppercase text-slate-300">
                   {ability.badge}
                 </span>
               </div>
-              <p class="font-mono text-xs text-op-muted uppercase tracking-wider">{ability.category}</p>
+              <p class="font-mono text-xs text-slate-400 uppercase tracking-wider">{ability.category}</p>
             </div>
           </div>
 
-          <!-- Quick Stats Pill Grid -->
+          <!-- Quick Stats Pill Grid (Monochrome) -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 font-mono text-xs">
-            <div class="p-2 rounded-lg bg-op-dark/80 border border-op-border/60">
-              <span class="text-[10px] text-op-dim block">Damage</span>
+            <div class="p-2.5 rounded-lg bg-op-dark border border-op-border">
+              <span class="text-[10px] text-slate-500 block uppercase">Damage</span>
               <span class="text-white font-bold">{ability.stats.damage}</span>
             </div>
-            <div class="p-2 rounded-lg bg-op-dark/80 border border-op-border/60">
-              <span class="text-[10px] text-op-dim block">Effective Range</span>
+            <div class="p-2.5 rounded-lg bg-op-dark border border-op-border">
+              <span class="text-[10px] text-slate-500 block uppercase">Range</span>
               <span class="text-white font-bold">{ability.stats.range}</span>
             </div>
-            <div class="p-2 rounded-lg bg-op-dark/80 border border-op-border/60">
-              <span class="text-[10px] text-op-dim block">Energy Cost</span>
+            <div class="p-2.5 rounded-lg bg-op-dark border border-op-border">
+              <span class="text-[10px] text-slate-500 block uppercase">Energy</span>
               <span class="text-white font-bold">{ability.stats.consumption}</span>
             </div>
-            <div class="p-2 rounded-lg bg-op-dark/80 border border-op-border/60">
-              <span class="text-[10px] text-op-dim block">Cooldown</span>
+            <div class="p-2.5 rounded-lg bg-op-dark border border-op-border">
+              <span class="text-[10px] text-slate-500 block uppercase">Cooldown</span>
               <span class="text-white font-bold">{ability.stats.cooldown}</span>
             </div>
           </div>
@@ -216,7 +218,7 @@ const abilities = [
         </p>
 
         {ability.image && (
-          <div class="mb-6 rounded-2xl overflow-hidden border border-op-border/80 shadow-2xl relative group">
+          <div class="mb-6 rounded-2xl overflow-hidden border border-op-border shadow-lg relative group">
             <img
               src={ability.image}
               alt={ability.imageAlt}
@@ -225,28 +227,28 @@ const abilities = [
               class="w-full h-56 sm:h-72 object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-transparent to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-op-darkest/90 via-transparent to-transparent"></div>
             <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between font-mono text-[11px]">
               <div class="bg-black/80 backdrop-blur-md px-3 py-1 rounded-lg border border-white/10 text-white">
-                <span class="text-op-laser font-bold">IN-ENGINE COMBAT CAPTURE</span>
+                <span>IN-ENGINE COMBAT CAPTURE</span>
                 <span class="text-slate-400 ml-2">• {ability.title}</span>
               </div>
-              <span class="hidden sm:inline-block px-2 py-0.5 rounded bg-op-laser/20 border border-op-laser/40 text-op-laser font-bold text-[10px] uppercase">
-                Physics Voxel Render
+              <span class="hidden sm:inline-block px-2 py-0.5 rounded bg-white/10 border border-white/10 text-slate-300 text-[10px] uppercase font-bold">
+                Voxel Physics
               </span>
             </div>
           </div>
         )}
 
         <!-- Combat Tips Box -->
-        <div class="p-4 rounded-xl bg-op-dark/60 border border-op-border/70">
-          <h4 class="font-mono text-xs font-bold text-white uppercase tracking-wider mb-2 flex items-center gap-1.5">
-            <span>TACTICAL SYNERGIES &amp; EXECUTION</span>
+        <div class="p-4 rounded-xl bg-op-dark border border-op-border">
+          <h4 class="font-mono text-xs font-bold text-white uppercase tracking-wider mb-2">
+            TACTICAL SYNERGIES &amp; EXECUTION
           </h4>
           <ul class="space-y-1.5 text-xs text-slate-300 font-mono">
             {ability.tips.map((tip) => (
               <li class="flex items-start gap-2">
-                <span class="text-op-green flex-shrink-0">›</span>
+                <span class="text-slate-500 flex-shrink-0">›</span>
                 <span>{tip}</span>
               </li>
             ))}
@@ -257,15 +259,15 @@ const abilities = [
     ))}
   </section>
 
-  <!-- Skyscraper Demolition Physics Breakdown -->
+  <!-- Skyscraper Demolition Physics Breakdown (Clean Technical Analysis) -->
   <section id="destruction" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
-    <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-op-dark to-op-card border border-op-border">
+    <div class="p-8 rounded-2xl bg-op-card border border-op-border">
       
       <div class="max-w-3xl mb-8">
-        <span class="px-2.5 py-1 rounded bg-op-fire/15 border border-op-fire/30 text-op-fire font-mono text-xs font-bold uppercase mb-4 inline-block">
-          PHYSICS ENGINE MECHANICS
+        <span class="px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300 font-mono text-xs font-bold uppercase mb-3 inline-block">
+          PHYSICS ENGINE ARCHITECTURE
         </span>
-        <h2 class="text-2xl sm:text-4xl font-black text-white font-display uppercase tracking-tight mb-4">
+        <h2 class="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight mb-3">
           How Prism City Skyscraper Demolition Works
         </h2>
         <p class="text-slate-300 text-sm leading-relaxed">
@@ -274,20 +276,20 @@ const abilities = [
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs">
-        <div class="p-5 rounded-xl bg-op-darkest border border-op-border">
-          <div class="text-op-laser font-bold text-sm mb-2">1. Structural Load Points</div>
+        <div class="p-5 rounded-xl bg-op-dark border border-op-border">
+          <div class="text-white font-bold text-sm mb-2">1. Structural Load Points</div>
           <p class="text-slate-400 leading-relaxed">
             Targeting exterior decorative walls only causes localized cosmetic damage. To destabilize a structure, focus Thermal Lasers or Telekinetic throws directly on ground-level corner columns.
           </p>
         </div>
-        <div class="p-5 rounded-xl bg-op-darkest border border-op-border">
-          <div class="text-op-fire font-bold text-sm mb-2">2. Gravity Vector Stress</div>
+        <div class="p-5 rounded-xl bg-op-dark border border-op-border">
+          <div class="text-white font-bold text-sm mb-2">2. Gravity Vector Stress</div>
           <p class="text-slate-400 leading-relaxed">
             When more than 60% of foundational support is eliminated on one side, gravitational torque forces the entire skyscraper to tilt and collapse toward the weakened quadrant.
           </p>
         </div>
-        <div class="p-5 rounded-xl bg-op-darkest border border-op-border">
-          <div class="text-op-gold font-bold text-sm mb-2">3. Secondary Debris Impact</div>
+        <div class="p-5 rounded-xl bg-op-dark border border-op-border">
+          <div class="text-white font-bold text-sm mb-2">3. Secondary Debris Impact</div>
           <p class="text-slate-400 leading-relaxed">
             Falling masonry actively interacts with street-level objects. Collapsing towers crush Starbridge barricades, ignite parked vehicles, and cause adjacent buildings to sustain structural shock.
           </p>

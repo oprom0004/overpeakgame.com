@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = 'OverPeak Story, Lore & Prism City Map – Subject OP vs Starbridge Corp';
-const pageDescription = 'Uncover the full lore of OverPeak: Action Game. Learn Jason Fieldway (Subject OP) origin story, Starbridge Corporation conspiracy, Prism City districts, and all boss encounters.';
+const pageTitle = 'The Story of OverPeak – Subject OP, Starbridge Corporation & Lore';
+const pageDescription = 'Uncover the dark lore of OverPeak: Action Game. Learn how Jason Fieldway was transformed into Subject OP, the crimes of Starbridge Corp, and the open-world districts of Prism City.';
 
 const storySchema = {
   "@context": "https://schema.org",
@@ -26,8 +26,8 @@ const storySchema = {
     },
     {
       "@type": "Article",
-      "headline": "OverPeak Story, Lore & Prism City Map Guide",
-      "description": "Exhaustive breakdown of Jason Fieldway (Subject OP), Starbridge Corporation genetic experiments, and Prism City open-world districts.",
+      "headline": "OverPeak Narrative Lore: Subject OP Origin & Starbridge Conspiracy",
+      "description": "Comprehensive narrative dossier exploring Jason Fieldway's genetic origins, the Starbridge Corporation PMC escalation, and the four districts of Prism City.",
       "author": {
         "@type": "Organization",
         "name": "OverPeak Lore Archive"
@@ -38,46 +38,49 @@ const storySchema = {
 
 const districts = [
   {
-    name: 'Downtown Neo-Prism',
-    danger: 'Tier 5 (Extreme)',
-    desc: 'The corporate heart of Prism City. Characterized by colossal glass skyscrapers, corporate headquarters, and heavy Starbridge mechanized patrol drones. High structural density ideal for skyscraper collapse chain-reactions.',
-    threats: ['Starbridge Quad-Rotor Gunships', 'Heavy Mech Walkers', 'Roof Snipers']
+    name: 'Downtown Metropolis',
+    danger: 'Tier 3 Danger',
+    desc: 'The corporate heart of Prism City, dominated by 80-story glass skyscrapers, high-speed rail viaducts, and constant Starbridge surveillance blimps. Ideal for high-altitude sonic flight and structural column demolition.',
+    threats: ['Attack Choppers', 'Sniper Nests', 'Tactical SWAT']
   },
   {
-    name: 'Industrial Foundry Sector',
-    danger: 'Tier 3 (Moderate)',
-    desc: 'The smelting and cybernetics fabrication district where Subject OP was manufactured. Packed with flammable chemical silos, high-voltage transformers, and heavy shipping containers perfect for telekinetic projectile throwing.',
-    threats: ['Armored Enforcers', 'Automated Laser Turrets', 'Chemical Hazards']
+    name: 'Industrial Sector 07',
+    danger: 'Tier 4 Danger',
+    desc: 'Heavy manufacturing complex housing chemical storage tanks, shipping container yards, and Starbridge robotics testing proving grounds. Abundant heavy machinery available for telekinetic launches.',
+    threats: ['Armored Walkers', 'Heavy Mechs', 'Laser Turrets']
   },
   {
-    name: 'The Slums (Lowlands)',
-    danger: 'Tier 2 (Low/Civilian)',
-    desc: 'Under-resourced residential sectors abandoned by Starbridge. Civilian presence is high; your actions here heavily dictate your Hero vs Villain reputation meter.',
-    threats: ['Corrupt Syndicate Mercenaries', 'Police Riot Patrols']
+    name: 'The Undergrid Slums',
+    danger: 'Tier 2 Danger',
+    desc: 'Densely populated neon alleyways beneath the elevated highway system. Hostile toward Starbridge enforcers; players with positive Hero reputation will receive intelligence on hidden weapon caches from local resistance cells.',
+    threats: ['Guerilla Drones', 'Private Security Patrols']
   },
   {
-    name: 'Starbridge Orbital Facility',
-    danger: 'Tier 6 (Endgame)',
-    desc: 'A heavily fortified subterranean bio-weapons bunker located beneath the city bay. Houses the executive council and the prototype apex cyber-soldiers.',
-    threats: ['Project Apex Bosses', 'Orbital Kinetic Satellites']
+    name: 'Starbridge Citadel',
+    danger: 'Tier 5 Max Threat',
+    desc: 'The fortified corporate headquarters complex shielded by localized EMP barriers and automated surface-to-air missile batteries. The ultimate endgame confrontation zone for Subject OP.',
+    threats: ['Apex Mech Bosses', 'Titanium Blast Doors', 'Energy Shields']
   }
 ];
 ---
 
 <Layout title={pageTitle} description={pageDescription} schema={storySchema}>
 
-  <!-- Header -->
-  <section class="border-b border-op-border bg-gradient-to-b from-op-dark to-op-darkest py-12 sm:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Page Header with Game Atmosphere -->
+  <section class="border-b border-op-border bg-op-darkest relative overflow-hidden py-12">
+    <div class="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none" style="background-image: url('/images/hero-banner.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-op-darkest/90 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <nav class="font-mono text-xs text-op-muted mb-4 flex items-center gap-2">
+      <nav class="font-mono text-xs text-slate-400 mb-6 flex items-center gap-2">
         <a href="/" class="hover:text-white transition-colors">Home</a>
         <span>/</span>
-        <span class="text-op-laser">Story &amp; Lore</span>
+        <span class="text-white">Story &amp; Lore</span>
       </nav>
 
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-op-card border border-op-border text-xs font-mono text-slate-300 mb-3">
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-xs font-mono text-slate-300 mb-3">
           <span>Official Lore &amp; World Dossier</span>
           <span>• Subject OP Archive</span>
         </div>
@@ -85,7 +88,7 @@ const districts = [
           The Story of OverPeak: Subject OP &amp; Starbridge
         </h1>
         <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-          Explore the dark narrative behind <strong>OverPeak</strong>. Discover how Jason Fieldway was transformed into a god-like bio-weapon, the corporate crimes of Starbridge, and the open-world districts of Prism City.
+          Explore the narrative behind <strong>OverPeak</strong>. Discover how Jason Fieldway was transformed into a bio-weapon, the corporate crimes of Starbridge, and the open-world sectors of Prism City.
         </p>
       </div>
 
@@ -112,20 +115,20 @@ const districts = [
     </div>
   </section>
 
-  <!-- Narrative Dossier & Character Profile -->
+  <!-- Narrative Dossier & Character Profile (Clean Monochrome) -->
   <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       
       <!-- Character Bio Card -->
       <div class="p-6 rounded-2xl bg-op-card border border-op-border">
-        <div class="w-full aspect-square rounded-xl bg-op-darkest border border-op-border overflow-hidden mb-6 relative">
+        <div class="w-full aspect-square rounded-xl bg-op-dark border border-op-border overflow-hidden mb-6 relative">
           <img src="/images/hero-banner.jpg" alt="Subject OP Jason Fieldway over Prism City" class="w-full h-full object-cover" />
-          <div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-black/80 font-mono text-[10px] text-op-laser font-bold">
+          <div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-black/80 font-mono text-[10px] text-white font-bold border border-white/10">
             SUBJECT OP // BIO-RECORD
           </div>
         </div>
         <h3 class="text-xl font-bold text-white font-display uppercase mb-1">Jason Fieldway</h3>
-        <p class="font-mono text-xs text-op-muted mb-4 uppercase">Designation: Subject OP-001</p>
+        <p class="font-mono text-xs text-slate-400 mb-4 uppercase">Designation: Subject OP-001</p>
         <div class="space-y-2 text-xs font-mono text-slate-300 border-t border-op-border/60 pt-4">
           <div class="flex justify-between">
             <span class="text-slate-400">Biological Age:</span>
@@ -133,15 +136,15 @@ const districts = [
           </div>
           <div class="flex justify-between">
             <span class="text-slate-400">Thermal Output:</span>
-            <span class="text-op-laser font-semibold">3,200°C Focused Beam</span>
+            <span class="text-white font-semibold">3,200°C Focused Beam</span>
           </div>
           <div class="flex justify-between">
             <span class="text-slate-400">Cryo Threshold:</span>
-            <span class="text-op-cryo font-semibold">-273.15°C (Absolute Zero)</span>
+            <span class="text-white font-semibold">-273.15°C (Absolute Zero)</span>
           </div>
           <div class="flex justify-between">
             <span class="text-slate-400">Flight Velocity:</span>
-            <span class="text-op-gold font-semibold">Mach 2.2 Terminal</span>
+            <span class="text-white font-semibold">Mach 2.2 Terminal</span>
           </div>
         </div>
       </div>
@@ -149,7 +152,7 @@ const districts = [
       <!-- Starbridge Conspiracy Background -->
       <div class="lg:col-span-2 p-8 rounded-2xl bg-op-card border border-op-border flex flex-col justify-between">
         <div>
-          <span class="px-2.5 py-1 rounded bg-op-dark border border-op-border text-op-gold font-mono text-xs font-bold uppercase mb-4 inline-block">
+          <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-300 font-mono text-xs font-bold uppercase mb-4 inline-block">
             CORPORATE ANTAGONIST
           </span>
           <h3 class="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight mb-4">
@@ -159,17 +162,17 @@ const districts = [
             Prism City was once promised as a utopian smart-city powered by Starbridge clean-energy reactors. Behind the polished architectural glass facades, Starbridge was secretly contracting private military security forces and conducting illegal genetic enhancement trials on non-consenting citizens.
           </p>
           <p class="text-slate-300 text-sm leading-relaxed mb-6">
-            When the facility containment failed during the Version 0.6 timeline, Jason Fieldway broke through blast doors, slaughtering the tier-1 research squad. Starbridge placed Prism City under complete martial law, deploying gunship fleets and mechanized combat walkers to recapture their billion-dollar investment.
+            When the facility containment failed during the Version 0.6 timeline, Jason Fieldway broke through blast doors, slaughtering the tier-1 research squad. Starbridge placed Prism City under complete martial law, deploying gunship fleets and mechanized combat walkers to recapture their investment.
           </p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-op-border/60 pt-6 font-mono text-xs">
-          <div class="p-4 rounded-xl bg-op-dark">
-            <div class="text-op-green font-bold mb-1">Heroic Path Perks</div>
+          <div class="p-4 rounded-xl bg-op-dark border border-op-border">
+            <div class="text-white font-bold mb-1">Heroic Path Perks</div>
             <p class="text-slate-400 text-[11px] leading-relaxed">Civilians actively assist with weapon caches and distract police; lower heat generation from city authorities.</p>
           </div>
-          <div class="p-4 rounded-xl bg-op-dark">
-            <div class="text-op-laser font-bold mb-1">Villainous Path Perks</div>
+          <div class="p-4 rounded-xl bg-op-dark border border-op-border">
+            <div class="text-white font-bold mb-1">Villainous Path Perks</div>
             <p class="text-slate-400 text-[11px] leading-relaxed">Uncapped destruction multipliers, unlock devastating apocalyptic rage ground-slams, Starbridge sends elite mechs.</p>
           </div>
         </div>
@@ -181,24 +184,24 @@ const districts = [
   <!-- Prism City Open-World Map Districts -->
   <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
     <div class="mb-8">
-      <span class="px-2.5 py-1 rounded bg-op-cryo/15 border border-op-cryo/30 text-op-cryo font-mono text-xs font-bold uppercase mb-3 inline-block">
+      <span class="px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300 font-mono text-xs font-bold uppercase mb-3 inline-block">
         TACTICAL CARTOGRAPHY
       </span>
-      <h2 class="text-2xl sm:text-4xl font-black text-white font-display uppercase tracking-tight">
+      <h2 class="text-2xl sm:text-3xl font-black text-white font-display uppercase tracking-tight">
         Prism City Open-World Sectors
       </h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {districts.map((district) => (
-        <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-op-border/80 transition-all">
+        <div class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-white/20 transition-all">
           <div class="flex items-center justify-between mb-3">
             <h3 class="text-xl font-bold text-white font-display">{district.name}</h3>
-            <span class="font-mono text-xs text-op-laser font-bold">{district.danger}</span>
+            <span class="font-mono text-xs text-slate-300 font-bold px-2 py-0.5 rounded bg-op-dark border border-op-border">{district.danger}</span>
           </div>
           <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">{district.desc}</p>
           <div class="border-t border-op-border/60 pt-3">
-            <span class="font-mono text-[11px] text-op-muted uppercase block mb-2">Tactical Threats:</span>
+            <span class="font-mono text-[11px] text-slate-400 uppercase block mb-2">Tactical Threats:</span>
             <div class="flex flex-wrap gap-2">
               {district.threats.map((threat) => (
                 <span class="px-2 py-0.5 rounded bg-op-dark border border-op-border font-mono text-[11px] text-slate-300">

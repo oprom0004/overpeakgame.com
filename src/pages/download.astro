@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const pageTitle = 'Download OverPeak: Action Game – Android (Google Play), iOS & PC (Official)';
-const pageDescription = 'Official download directory for OverPeak by R-USER Games. Direct Google Play Store link, iOS App Store pre-registration tracker, PC 60 FPS emulator guide, and safe APK advisories.';
+const pageTitle = 'Download OverPeak: Action Game – Android Google Play, PC & iOS';
+const pageDescription = 'Official download hub for OverPeak: Action Game. Access the verified Google Play Store listing, PC 120 FPS emulator setup, iOS availability status, and system requirements.';
 
 const downloadSchema = {
   "@context": "https://schema.org",
@@ -27,17 +27,13 @@ const downloadSchema = {
     {
       "@type": "SoftwareApplication",
       "name": "OverPeak: Action Game",
-      "operatingSystem": "Android 9.0+, iOS (Pending), Windows PC (via Emulator)",
+      "operatingSystem": "Android 9.0+, Windows 10/11 (via Emulator)",
       "applicationCategory": "GameApplication",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.rusergames.overpeak&hl=en",
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "R-USER Games",
-        "url": "https://www.rusergames.com/"
       }
     },
     {
@@ -45,26 +41,18 @@ const downloadSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Where can I officially download OverPeak: Action Game?",
+          "name": "Is OverPeak: Action Game completely free to play?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "OverPeak is officially available for free download on Android smartphones and tablets via the Google Play Store (developer: R-USER Games). Beware of unauthorized third-party APK websites."
+            "text": "Yes, OverPeak is 100% free to download and play from the Google Play Store with no mandatory paywalls to finish the storyline."
           }
         },
         {
           "@type": "Question",
-          "name": "When will OverPeak release on iPhone and iPad (iOS)?",
+          "name": "Can OverPeak be played offline without an internet connection?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The iOS version of OverPeak is currently in review and pre-registration with Apple. It is slated to launch on the Apple App Store shortly following the Android Version 0.6 beta phase."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I play OverPeak on a Windows PC or Mac?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! While there is no native Steam PC client yet, you can play OverPeak at 60 to 120 FPS on PC using modern Android emulators such as MuMuPlayer 12 or BlueStacks 5 with full keyboard and mouse mapping."
+            "text": "Yes, once downloaded and installed, all open-world sandbox mechanics, physics destruction, and story missions run completely offline on your device."
           }
         },
         {
@@ -72,7 +60,7 @@ const downloadSchema = {
           "name": "Are OverPeak Mod APK downloads with unlimited money safe?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Modified APK files from piracy sites like AN1 or ModCombo often bundle adware, spyware, and permission exploits. We strongly recommend sticking to the official Google Play build."
+            "text": "No. Modified APK files from piracy sites often bundle adware, spyware, and permission exploits. We strongly recommend sticking to the official Google Play build."
           }
         }
       ]
@@ -83,34 +71,56 @@ const downloadSchema = {
 
 <Layout title={pageTitle} description={pageDescription} schema={downloadSchema}>
 
-  <!-- Hero Header -->
-  <section class="border-b border-op-border bg-gradient-to-b from-op-dark to-op-darkest py-12 sm:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Hero Header with Integrated Game Atmosphere -->
+  <section class="border-b border-op-border bg-op-darkest relative overflow-hidden py-12">
+    <div class="absolute inset-0 opacity-10 bg-cover bg-center pointer-events-none" style="background-image: url('/images/hero-banner.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-op-darkest via-op-darkest/90 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Breadcrumb -->
-      <nav class="font-mono text-xs text-op-muted mb-4 flex items-center gap-2">
+      <nav class="font-mono text-xs text-slate-400 mb-6 flex items-center gap-2">
         <a href="/" class="hover:text-white transition-colors">Home</a>
         <span>/</span>
-        <span class="text-op-cryo">Download &amp; Platforms</span>
+        <span class="text-white">Download &amp; Platforms</span>
       </nav>
 
-      <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-op-green/15 border border-op-green/30 text-xs font-mono text-op-green mb-4">
-          <span>● Verified Storefront Directory</span>
-          <span>• Version 0.6 Active</span>
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div class="flex items-start gap-5">
+          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-op-card border border-white/10 overflow-hidden flex-shrink-0 shadow-lg">
+            <img src="/images/hero-banner.jpg" alt="OverPeak App Icon" class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <div class="inline-flex items-center gap-2 px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[11px] font-mono text-slate-300 mb-2">
+              <span>Verified Storefront Directory</span>
+              <span>• Version 0.6</span>
+            </div>
+            <h1 class="text-2xl sm:text-4xl font-black text-white font-display uppercase tracking-tight">
+              Download OverPeak: Action Game
+            </h1>
+            <p class="text-slate-400 text-xs sm:text-sm mt-1">
+              R-USER Games • Action Sandbox RPG • 100% Offline Compatible • 4.2 ★ (8,250+ Ratings)
+            </p>
+          </div>
         </div>
-        <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-4">
-          Download OverPeak: Action Game
-        </h1>
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-          Access the verified installation portals for <strong>OverPeak</strong>. Choose your hardware platform below to download from Google Play, track Apple iOS launch status, or configure PC emulation for high-refresh 120Hz gameplay.
-        </p>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.rusergames.overpeak&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-5 py-3 rounded-xl bg-white text-op-darkest font-mono font-bold text-xs uppercase tracking-wider hover:bg-slate-200 transition-colors shadow-sm inline-flex items-center gap-2"
+          >
+            <span>Google Play Store</span>
+            <span>↗</span>
+          </a>
+        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Editorial Distribution Summary Box (Clean Wiki Briefing) -->
+  <!-- Editorial Distribution Summary Box (Neutral & High-Density) -->
   <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border">
       <span class="font-mono text-xs text-slate-400 uppercase tracking-wider block mb-1">
@@ -120,7 +130,7 @@ const downloadSchema = {
         Where Can You Download OverPeak Officially?
       </h2>
       <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
-        OverPeak is officially available for free download on Android via the <strong>Google Play Store</strong> (official package ID: <code>com.rusergames.overpeak</code>, published by R-USER Games). The iOS App Store release is currently in active review by Apple. PC and Mac users can play immediately at 60–120 FPS through 64-bit Android emulators like MuMuPlayer 12. Unofficial Mod APK downloads from piracy sites are unverified and pose significant malware risks.
+        OverPeak is officially available for free download on Android via the <strong>Google Play Store</strong> (package ID: <code>com.rusergames.overpeak</code>, published by R-USER Games). The iOS App Store release is currently in active review by Apple. PC and Mac users can play immediately at 60–120 FPS through 64-bit Android emulators like MuMuPlayer 12. Unofficial Mod APK downloads from piracy sites are unverified and pose significant malware risks.
       </p>
       <div class="flex flex-wrap gap-4 font-mono text-xs text-slate-400 pt-3 border-t border-op-border/50">
         <div><strong class="text-slate-200">Current Build:</strong> 0.6 Early Access</div>
@@ -129,44 +139,47 @@ const downloadSchema = {
     </div>
   </section>
 
-  <!-- Platform Cards Grid (Prominent Store Links) -->
-  <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-xl sm:text-2xl font-black text-white font-display uppercase tracking-tight mb-8">
-      Official Platform Portals
-    </h2>
+  <!-- Platform Cards Grid (Clean Monochrome Gaming Cards) -->
+  <section class="py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-xl sm:text-2xl font-black text-white font-display uppercase tracking-tight">
+        Official Platform Portals
+      </h2>
+      <span class="font-mono text-xs text-slate-400">Select your hardware configuration</span>
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       
       <!-- Android Google Play (Primary Live Store) -->
-      <div id="android" class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border hover:border-op-green/50 transition-all flex flex-col justify-between relative shadow-xl">
+      <div id="android" class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-white/20 transition-all flex flex-col justify-between shadow-lg">
         <div>
           <div class="flex items-center justify-between mb-4">
-            <span class="px-2.5 py-1 rounded bg-op-green/15 border border-op-green/30 font-mono text-xs text-op-green font-bold uppercase">
-              ANDROID • OFFICIALLY LIVE
+            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-[11px] text-slate-300 uppercase font-bold">
+              Android • Live Store
             </span>
-            <span class="font-mono text-xs text-op-gold font-bold">4.2 ★ (8.2k)</span>
+            <span class="font-mono text-xs text-slate-300 font-bold">4.2 ★ (8.2k)</span>
           </div>
-          <h3 class="text-2xl font-black text-white font-display mb-2">Google Play Store</h3>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+          <h3 class="text-xl font-bold text-white font-display mb-2">Google Play Store</h3>
+          <p class="text-slate-400 text-xs leading-relaxed mb-6">
             The official release published by <strong>R-USER Games</strong>. Includes the full Prism City open-world, real-time destruction physics, and automated cloud saves.
           </p>
 
-          <ul class="space-y-2.5 font-mono text-xs text-slate-400 mb-8">
-            <li class="flex items-center gap-2">
-              <span class="text-op-green">✓</span>
-              <span>Package: com.rusergames.overpeak</span>
+          <ul class="space-y-2 font-mono text-xs text-slate-300 mb-8 border-t border-op-border/50 pt-4">
+            <li class="flex items-center justify-between">
+              <span class="text-slate-500">Package:</span>
+              <span class="text-slate-300">com.rusergames.overpeak</span>
             </li>
-            <li class="flex items-center gap-2">
-              <span class="text-op-green">✓</span>
-              <span>Version: 0.6 Early Access</span>
+            <li class="flex items-center justify-between">
+              <span class="text-slate-500">Version:</span>
+              <span class="text-slate-300">0.6 Early Access</span>
             </li>
-            <li class="flex items-center gap-2">
-              <span class="text-op-green">✓</span>
-              <span>OS Required: Android 9.0 (Pie) or later</span>
+            <li class="flex items-center justify-between">
+              <span class="text-slate-500">Compatibility:</span>
+              <span class="text-slate-300">Android 9.0+</span>
             </li>
-            <li class="flex items-center gap-2">
-              <span class="text-op-green">✓</span>
-              <span>Size: ~1.2 GB base + internal data</span>
+            <li class="flex items-center justify-between">
+              <span class="text-slate-500">Installation Size:</span>
+              <span class="text-slate-300">~1.2 GB</span>
             </li>
           </ul>
         </div>
@@ -176,87 +189,43 @@ const downloadSchema = {
             href="https://play.google.com/store/apps/details?id=com.rusergames.overpeak&hl=en"
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-op-green to-emerald-600 text-black font-mono font-bold text-xs uppercase tracking-wider text-center block shadow-lg hover:brightness-110 transition-all"
+            class="w-full py-3 px-4 rounded-xl bg-white text-op-darkest font-mono font-bold text-xs uppercase tracking-wider text-center block hover:bg-slate-200 transition-colors"
           >
             <span>Get it on Google Play ↗</span>
           </a>
         </div>
       </div>
 
-      <!-- iOS App Store (Pending Tracker) -->
-      <div id="ios" class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border hover:border-op-cryo/50 transition-all flex flex-col justify-between relative shadow-xl">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="px-2.5 py-1 rounded bg-op-cryo/15 border border-op-cryo/30 font-mono text-xs text-op-cryo font-bold uppercase">
-              APPLE IOS • COMING SOON
-            </span>
-            <span class="font-mono text-xs text-op-muted">In Review</span>
-          </div>
-          <h3 class="text-2xl font-black text-white font-display mb-2">Apple App Store</h3>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
-            The iOS version is undergoing final Apple App Store review and TestFlight testing. Supports iPhone 11 through iPhone 16 Pro Max and iPad Pro models.
-          </p>
-
-          <ul class="space-y-2.5 font-mono text-xs text-slate-400 mb-8">
-            <li class="flex items-center gap-2">
-              <span class="text-op-cryo font-bold">›</span>
-              <span>Status: Developer Pre-Release Phase</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="text-op-cryo font-bold">›</span>
-              <span>Target: iOS 14.0+ (A12 Bionic or higher)</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="text-op-cryo font-bold">›</span>
-              <span>Metal 3 Graphics Optimization</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="text-op-cryo font-bold">›</span>
-              <span>120Hz ProMotion Frame Rate Target</span>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <button
-            disabled
-            class="w-full py-3.5 px-4 rounded-xl bg-op-card border border-op-border text-slate-400 font-mono font-bold text-xs uppercase tracking-wider text-center block cursor-not-allowed opacity-80"
-          >
-            <span>iOS Pre-Order Launching Soon</span>
-          </button>
-        </div>
-      </div>
-
       <!-- PC & Mac (MuMu / BlueStacks Emulator Guide) -->
-      <div id="pc" class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border hover:border-op-laser/50 transition-all flex flex-col justify-between relative shadow-xl">
+      <div id="pc" class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-white/20 transition-all flex flex-col justify-between shadow-lg">
         <div>
           <div class="flex items-center justify-between mb-4">
-            <span class="px-2.5 py-1 rounded bg-op-laser/15 border border-op-laser/30 font-mono text-xs text-op-laser font-bold uppercase">
-              PC &amp; MAC • HIGH FPS
+            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-[11px] text-slate-300 uppercase font-bold">
+              PC &amp; Mac • 120 FPS
             </span>
-            <span class="font-mono text-xs text-op-green font-bold">120 FPS Mode</span>
+            <span class="font-mono text-xs text-slate-300 font-bold">Vulkan API</span>
           </div>
-          <h3 class="text-2xl font-black text-white font-display mb-2">Desktop PC Emulation</h3>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
-            Enjoy OverPeak with a dedicated keyboard, precision mouse camera aiming, and ultrawide monitor support using authorized Android desktop emulators.
+          <h3 class="text-xl font-bold text-white font-display mb-2">Desktop PC Emulation</h3>
+          <p class="text-slate-400 text-xs leading-relaxed mb-6">
+            Enjoy OverPeak with a dedicated keyboard, precision mouse camera aiming, and ultrawide monitor support using authorized 64-bit Android desktop emulators.
           </p>
 
-          <ul class="space-y-2.5 font-mono text-xs text-slate-400 mb-8">
-            <li class="flex items-center gap-2">
-              <span class="text-op-laser">✓</span>
-              <span>Recommended: MuMuPlayer 12 / BlueStacks 5</span>
+          <ul class="space-y-2 font-mono text-xs text-slate-300 mb-8 border-t border-op-border/50 pt-4">
+            <li class="flex items-center justify-between">
+              <span class="text-slate-500">Recommended:</span>
+              <span class="text-slate-300">MuMuPlayer 12 / BlueStacks 5</span>
             </li>
-            <li class="flex items-center gap-2">
-              <span class="text-op-laser">✓</span>
-              <span>Preset WASD + Mouse Right-Click Laser Aim</span>
+            <li class="flex items-center justify-between">
+              <span class="text-slate-500">Controls:</span>
+              <span class="text-slate-300">WASD + Mouse Look</span>
             </li>
-            <li class="flex items-center gap-2">
-              <span class="text-op-laser">✓</span>
-              <span>Native Xbox &amp; DualSense Gamepad Mapping</span>
+            <li class="flex items-center justify-between">
+              <span class="text-slate-500">Gamepad:</span>
+              <span class="text-slate-300">Xbox &amp; DualSense Native</span>
             </li>
-            <li class="flex items-center gap-2">
-              <span class="text-op-laser">✓</span>
-              <span>Direct DirectX / Vulkan Graphic Engine</span>
+            <li class="flex items-center justify-between">
+              <span class="text-slate-500">Target Framerate:</span>
+              <span class="text-slate-300">60 to 120 FPS</span>
             </li>
           </ul>
         </div>
@@ -264,80 +233,125 @@ const downloadSchema = {
         <div>
           <a
             href="/pc/"
-            class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-op-laser to-rose-600 text-white font-mono font-bold text-xs uppercase tracking-wider text-center block shadow-lg hover:brightness-110 transition-all"
+            class="w-full py-3 px-4 rounded-xl bg-op-dark border border-op-border text-white hover:border-white/40 font-mono font-bold text-xs uppercase tracking-wider text-center block transition-colors"
           >
             <span>Open PC Setup &amp; Keybinds →</span>
           </a>
         </div>
       </div>
 
+      <!-- iOS App Store (Pending Tracker) -->
+      <div id="ios" class="p-6 rounded-2xl bg-op-card border border-op-border hover:border-white/20 transition-all flex flex-col justify-between shadow-lg">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-[11px] text-slate-400 uppercase font-bold">
+              Apple iOS • Coming Soon
+            </span>
+            <span class="font-mono text-xs text-slate-400">In Review</span>
+          </div>
+          <h3 class="text-xl font-bold text-white font-display mb-2">Apple App Store</h3>
+          <p class="text-slate-400 text-xs leading-relaxed mb-6">
+            The iOS version is undergoing final Apple App Store review and TestFlight testing. Supports iPhone 11 through iPhone 16 Pro Max and iPad Pro models.
+          </p>
+
+          <ul class="space-y-2 font-mono text-xs text-slate-400 mb-8 border-t border-op-border/50 pt-4">
+            <li class="flex items-center justify-between">
+              <span class="text-slate-500">Status:</span>
+              <span class="text-slate-400">Developer Pre-Release</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-slate-500">Minimum iOS:</span>
+              <span class="text-slate-400">iOS 14.0+ (A12 Bionic)</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-slate-500">Graphics Engine:</span>
+              <span class="text-slate-400">Apple Metal 3</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="text-slate-500">Display Support:</span>
+              <span class="text-slate-400">120Hz ProMotion</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <button
+            disabled
+            class="w-full py-3 px-4 rounded-xl bg-op-dark border border-op-border text-slate-500 font-mono font-bold text-xs uppercase tracking-wider text-center block cursor-not-allowed opacity-60"
+          >
+            <span>iOS Pre-Order Launching Soon</span>
+          </button>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Technical Storage & Requirements Table -->
+  <!-- Technical Storage & Requirements Table (Clean Neutral Design) -->
   <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
-    <h2 class="text-xl sm:text-2xl font-black text-white font-display uppercase tracking-tight mb-6 flex items-center gap-2">
-      <span>💾</span>
-      <span>System Requirements &amp; Storage Specs</span>
+    <h2 class="text-xl sm:text-2xl font-black text-white font-display uppercase tracking-tight mb-6">
+      System Requirements &amp; Hardware Specs
     </h2>
 
-    <div class="overflow-x-auto rounded-2xl border border-op-border bg-op-card/60">
+    <div class="overflow-x-auto rounded-2xl border border-op-border bg-op-card">
       <table class="w-full text-left font-mono text-xs">
-        <thead class="bg-op-dark border-b border-op-border text-op-muted uppercase">
+        <thead class="bg-op-dark border-b border-op-border text-slate-400 uppercase">
           <tr>
             <th class="p-4">Hardware Component</th>
             <th class="p-4">Minimum Specifications</th>
-            <th class="p-4">Recommended (60 FPS Ultra)</th>
+            <th class="p-4 text-white">Recommended (60 FPS Ultra)</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-op-border/50 text-slate-300">
           <tr>
             <td class="p-4 text-white font-semibold">Operating System</td>
-            <td class="p-4">Android 9.0 (Pie) 64-bit</td>
-            <td class="p-4 text-op-green">Android 12.0 or newer</td>
+            <td class="p-4 text-slate-400">Android 9.0 (Pie) 64-bit</td>
+            <td class="p-4 text-white font-semibold">Android 12.0 or newer</td>
           </tr>
           <tr>
             <td class="p-4 text-white font-semibold">System Memory (RAM)</td>
-            <td class="p-4">4 GB RAM</td>
-            <td class="p-4 text-op-green">8 GB LPDDR5 RAM</td>
+            <td class="p-4 text-slate-400">4 GB RAM</td>
+            <td class="p-4 text-white font-semibold">8 GB LPDDR5 RAM</td>
           </tr>
           <tr>
             <td class="p-4 text-white font-semibold">Processor (SoC)</td>
-            <td class="p-4">Snapdragon 720G / Helio G95</td>
-            <td class="p-4 text-op-green">Snapdragon 8 Gen 1+ / Dimensity 9000</td>
+            <td class="p-4 text-slate-400">Snapdragon 720G / Helio G95</td>
+            <td class="p-4 text-white font-semibold">Snapdragon 8 Gen 1+ / Dimensity 9000</td>
           </tr>
           <tr>
             <td class="p-4 text-white font-semibold">Graphics API</td>
-            <td class="p-4">OpenGL ES 3.2</td>
-            <td class="p-4 text-op-green">Vulkan 1.2+</td>
+            <td class="p-4 text-slate-400">OpenGL ES 3.2</td>
+            <td class="p-4 text-white font-semibold">Vulkan 1.2+</td>
           </tr>
           <tr>
             <td class="p-4 text-white font-semibold">Free Storage Space</td>
-            <td class="p-4">2.5 GB free internal storage</td>
-            <td class="p-4 text-op-green">5.0 GB UFS 3.1 storage</td>
+            <td class="p-4 text-slate-400">2.5 GB free internal storage</td>
+            <td class="p-4 text-white font-semibold">5.0 GB UFS 3.1 storage</td>
           </tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- Security Alert: Mod APK / Piracy Warning -->
-  <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="p-6 sm:p-8 rounded-2xl bg-rose-950/20 border border-rose-500/30">
+  <!-- Security Alert: Mod APK / Piracy Advisory (Restrained, Professional Alert) -->
+  <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border">
       <div class="flex items-start gap-4">
-        <div class="text-3xl">⚠️</div>
+        <div class="w-10 h-10 rounded-xl bg-op-dark border border-op-border text-slate-400 flex items-center justify-center font-mono font-bold flex-shrink-0">
+          !
+        </div>
         <div>
-          <h3 class="text-lg font-bold text-rose-400 mb-2 font-display uppercase tracking-tight">
-            Security Warning: Avoid Fake "OverPeak Mod APK Unlimited Money" Downloads
+          <h3 class="text-base sm:text-lg font-bold text-white mb-2 font-display uppercase tracking-tight">
+            Security Advisory: Avoid Unauthorized "Mod APK" Downloads
           </h3>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
-            Because OverPeak has rapidly gained popularity, unauthorized third-party download portals (such as AN1, ModCombo, and HappyMod) are circulating cracked <code>.apk</code> packages claiming to provide <em>"OverPeak Unlimited Money &amp; God Mode"</em>.
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed mb-3">
+            Because OverPeak has rapidly gained popularity, unauthorized third-party download portals (such as AN1, ModCombo, and HappyMod) are circulating cracked packages claiming to provide <em>"OverPeak Unlimited Money &amp; God Mode"</em>.
           </p>
-          <p class="text-slate-400 text-xs leading-relaxed mb-4">
-            Security analysis reveals that these modified files frequently contain concealed Trojan droppers, background crypto-mining code, and malicious notification adware that bypasses Android permission filters.
+          <p class="text-slate-400 text-xs leading-relaxed mb-3">
+            Security analysis reveals that these modified files frequently contain concealed adware droppers and malicious notification payloads that bypass standard security filters.
           </p>
-          <div class="font-mono text-xs text-op-green font-bold">
-            🛡️ Always install OverPeak through the verified Google Play Store link above to ensure safe, automatic security updates.
+          <div class="font-mono text-xs text-slate-300">
+            • Always install OverPeak through the verified Google Play Store listing above to ensure authenticated files and automated security updates.
           </div>
         </div>
       </div>
