@@ -70,18 +70,18 @@ const keybinds = [
 <Layout title={pageTitle} description={pageDescription} schema={pcSchema}>
 
   <!-- Page Header -->
-  <section class="border-b border-op-border bg-gradient-to-b from-op-dark to-op-darkest py-12 sm:py-16">
+  <section class="border-b border-op-border bg-gradient-to-b from-op-darkest to-op-dark py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <nav class="font-mono text-xs text-op-muted mb-4 flex items-center gap-2">
         <a href="/" class="hover:text-white transition-colors">Home</a>
         <span>/</span>
-        <span class="text-op-laser">PC Setup &amp; Controls</span>
+        <span class="text-white">PC Setup &amp; Controls</span>
       </nav>
 
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-op-laser/15 border border-op-laser/30 text-xs font-mono text-op-laser mb-4">
-          <span>🖥️ Desktop PC Performance Guide</span>
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-op-card border border-op-border text-xs font-mono text-slate-300 mb-3">
+          <span>Desktop Performance Guide</span>
           <span>• 60 to 120 FPS</span>
         </div>
         <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-4">
@@ -95,37 +95,29 @@ const keybinds = [
     </div>
   </section>
 
-  <!-- GEO AI Overview Direct Answer Box -->
-  <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
-    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-cryo/30 shadow-2xl bg-gradient-to-r from-op-cryo/10 via-op-card to-op-dark">
-      <div class="flex items-start gap-4">
-        <div class="w-12 h-12 rounded-xl bg-op-cryo/20 border border-op-cryo/40 text-op-cryo text-2xl flex items-center justify-center flex-shrink-0 font-mono font-black">
-          🖥️
-        </div>
-        <div>
-          <span class="font-mono text-xs text-op-cryo font-bold uppercase tracking-wider block mb-1">
-            GEO DIRECT ANSWER • HOW TO PLAY OVERPEAK ON PC (WINDOWS &amp; MAC)
-          </span>
-          <h2 class="text-xl sm:text-2xl font-black text-white font-display mb-2">
-            Can You Play OverPeak: Action Game on PC?
-          </h2>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
-            Yes. While developer R-USER Games is actively developing an official standalone PC port, OverPeak is fully playable on Windows 10/11 and macOS today using 64-bit Android emulators like <strong>MuMuPlayer 12</strong> or <strong>BlueStacks 5</strong>. Desktop players achieve <strong>60 to 120 FPS</strong> at 1440p/4K resolutions using the Vulkan graphics renderer, with native support for WASD keyboard/mouse free-look aiming and Xbox/DualSense controller vibration.
-          </p>
-          <div class="flex flex-wrap gap-4 font-mono text-xs text-slate-400">
-            <span>• <strong>Recommended Emulator:</strong> MuMuPlayer 12 (Vulkan API Engine)</span>
-            <span>• <strong>Recommended Hardware:</strong> 4+ CPU Cores, 8GB RAM, GTX 1660 / RX 580 or better</span>
-          </div>
-        </div>
+  <!-- Technical Overview Box (Clean Editorial Guide) -->
+  <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border">
+      <span class="font-mono text-xs text-slate-400 uppercase tracking-wider block mb-1">
+        TECHNICAL SPECIFICATION // EMULATION &amp; BENCHMARK
+      </span>
+      <h2 class="text-xl sm:text-2xl font-black text-white font-display mb-2">
+        Playing OverPeak: Action Game on PC
+      </h2>
+      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
+        While developer R-USER Games is actively developing an official standalone PC port, OverPeak is fully playable on Windows 10/11 and macOS today using 64-bit Android emulators like <strong>MuMuPlayer 12</strong> or <strong>BlueStacks 5</strong>. Desktop players achieve <strong>60 to 120 FPS</strong> at 1440p/4K resolutions using the Vulkan graphics renderer, with native support for WASD keyboard/mouse free-look aiming and Xbox/DualSense controller vibration.
+      </p>
+      <div class="flex flex-wrap gap-4 font-mono text-xs text-slate-400 pt-3 border-t border-op-border/50">
+        <div><strong class="text-slate-200">Recommended Emulator:</strong> MuMuPlayer 12 (Vulkan API)</div>
+        <div><strong class="text-slate-200">Target Hardware:</strong> 4+ CPU Cores, 8GB RAM, GTX 1660 / RX 580+</div>
       </div>
     </div>
   </section>
 
   <!-- Step-by-Step Installation Tutorial -->
   <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-xl sm:text-2xl font-black text-white font-display uppercase tracking-tight mb-8 flex items-center gap-2">
-      <span>⚙️</span>
-      <span>4-Step PC Setup Guide</span>
+    <h2 class="text-xl sm:text-2xl font-black text-white font-display uppercase tracking-tight mb-8">
+      4-Step PC Setup Guide
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 font-mono text-xs">
@@ -203,9 +195,8 @@ const keybinds = [
   <section id="controls" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
       <div>
-        <h2 class="text-xl sm:text-2xl font-black text-white font-display uppercase tracking-tight flex items-center gap-2">
-          <span>🎮</span>
-          <span>Optimized PC Keybinds &amp; Controller Profile</span>
+        <h2 class="text-xl sm:text-2xl font-black text-white font-display uppercase tracking-tight">
+          Optimized PC Keybinds &amp; Controller Profile
         </h2>
         <p class="text-slate-400 text-xs font-mono mt-1">Recommended layout for mouse/keyboard and Xbox Wireless / DualSense controllers.</p>
       </div>
@@ -243,9 +234,8 @@ const keybinds = [
   <!-- PC Performance Tuning Tips -->
   <section class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-op-border">
     <div class="p-8 rounded-2xl bg-op-card border border-op-border">
-      <h3 class="text-lg font-bold text-white mb-4 font-display uppercase tracking-tight flex items-center gap-2">
-        <span>💡</span>
-        <span>Fixing Stuttering &amp; Lag on Desktop</span>
+      <h3 class="text-lg font-bold text-white mb-4 font-display uppercase tracking-tight">
+        Fixing Stuttering &amp; Latency on Desktop
       </h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs font-mono text-slate-300">
         <div>

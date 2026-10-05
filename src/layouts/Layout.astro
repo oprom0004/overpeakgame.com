@@ -11,12 +11,12 @@ const canonicalURL = new URL(currentPath, 'https://overpeakgame.com').toString()
 
 const navLinks = [
   { href: '/', label: 'Overview' },
-  { href: '/download/', label: '📥 Download' },
-  { href: '/powers/', label: '⚡ Superpowers' },
-  { href: '/pc/', label: '🖥️ PC Setup' },
-  { href: '/story/', label: '📖 Story & Lore' },
-  { href: '/faq/', label: '❓ FAQ & Offline' },
-  { href: '/codes/', label: '🎁 Codes' },
+  { href: '/download/', label: 'Download' },
+  { href: '/powers/', label: 'Abilities' },
+  { href: '/pc/', label: 'PC Setup' },
+  { href: '/story/', label: 'Dossier' },
+  { href: '/faq/', label: 'FAQ' },
+  { href: '/codes/', label: 'Codes' },
 ];
 ---
 
@@ -57,45 +57,53 @@ const navLinks = [
 </head>
 <body class="bg-op-darkest text-slate-100 font-sans min-h-screen flex flex-col selection:bg-op-laser selection:text-white">
 
-  <!-- Top Release Alert Header -->
-  <div class="bg-gradient-to-r from-op-laser/20 via-op-dark to-op-cryo/20 border-b border-op-border text-[11px] sm:text-xs py-1.5 px-4 text-center text-slate-300 font-mono">
-    <span class="inline-block px-1.5 py-0.5 rounded bg-op-laser/20 text-op-laser font-bold mr-2 border border-op-laser/30">VERSION 0.6 EARLY ACCESS</span>
-    <span>OverPeak Official Release Tracker • Android (Live on Google Play) • iOS & PC Setup Guide</span>
+  <!-- Top Release Alert Header (Clean Editorial Strip) -->
+  <div class="bg-op-dark border-b border-op-border text-[11px] py-1.5 px-4 text-center text-slate-400 font-mono">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-op-green"></span>
+        <span class="text-white font-bold">OverPeak Ver. 0.6</span>
+        <span class="hidden sm:inline text-op-dim">| Published by R-USER Games</span>
+      </div>
+      <div class="flex items-center gap-4 text-op-dim">
+        <span class="hidden md:inline">Google Play (Android) Live</span>
+        <span>•</span>
+        <span>100% Offline Playable</span>
+      </div>
+    </div>
   </div>
 
-  <!-- Main Navbar (Clean Internal Navigation ONLY) -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-op-darkest/92 border-b border-op-border/80">
+  <!-- Main Navbar -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-op-darkest/95 border-b border-op-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
       <!-- Brand Logo -->
       <a href="/" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-op-laser via-op-dark to-op-cryo p-[1px] shadow-glow-laser group-hover:scale-105 transition-transform">
-          <div class="w-full h-full bg-op-darkest rounded-[11px] flex items-center justify-center font-mono font-black text-sm text-op-cryo">
-            OP
-          </div>
+        <div class="w-9 h-9 rounded-lg bg-op-card border border-op-border flex items-center justify-center font-mono font-black text-sm text-white group-hover:border-op-laser transition-colors">
+          OP
         </div>
         <div>
-          <span class="font-mono font-black text-lg sm:text-xl tracking-tight text-white flex items-center gap-1.5">
+          <span class="font-mono font-black text-base sm:text-lg tracking-tight text-white flex items-center gap-1.5">
             OVER<span class="text-op-laser">PEAK</span>
-            <span class="text-[9px] px-1.5 py-0.5 rounded bg-op-laser/15 text-op-laser border border-op-laser/30 font-bold uppercase">GAME HUB</span>
+            <span class="text-[9px] px-1.5 py-0.2 rounded bg-op-dark border border-op-border text-slate-400 font-mono font-bold uppercase">DATABASE</span>
           </span>
           <span class="hidden sm:block text-[10px] font-mono text-op-muted tracking-wider uppercase">
-            Subject OP • Open-World Action
+            Action Game Strategy &amp; Wiki
           </span>
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-1 font-mono text-xs uppercase tracking-wider font-semibold">
+      <!-- Desktop Nav Links (Clean Editorial Gaming Typography, Zero Emojis) -->
+      <nav class="hidden md:flex items-center gap-1 font-mono text-xs uppercase tracking-wider font-medium">
         {navLinks.map((link) => {
           const isActive = currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href));
           return (
             <a
               href={link.href}
-              class={`px-3 py-2 rounded-lg transition-all ${
+              class={`px-3 py-1.5 rounded-md transition-colors ${
                 isActive
-                  ? 'bg-op-card text-op-cryo border border-op-cryo/40 shadow-sm'
-                  : 'text-slate-300 hover:text-white hover:bg-op-card/60'
+                  ? 'bg-op-card text-white border border-op-border font-bold'
+                  : 'text-slate-400 hover:text-white hover:bg-op-card/40'
               }`}
             >
               {link.label}
@@ -108,10 +116,12 @@ const navLinks = [
       <div class="flex items-center gap-3">
         <a
           href="/download/"
-          class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-op-laser to-rose-600 text-white font-mono font-bold text-xs uppercase tracking-wider shadow-glow-laser hover:brightness-110 transition-all"
+          class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white text-op-darkest font-mono font-bold text-xs uppercase tracking-wider hover:bg-slate-200 transition-colors shadow-sm"
         >
-          <span>📥</span>
-          <span>Get OverPeak</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          <span>Get Game</span>
         </a>
 
         <!-- Mobile Menu Toggle Button -->
@@ -135,10 +145,10 @@ const navLinks = [
         return (
           <a
             href={link.href}
-            class={`block px-3 py-2 rounded-lg text-sm font-mono font-medium ${
+            class={`block px-3 py-2 rounded-lg text-sm font-mono ${
               isActive
-                ? 'bg-op-card text-op-cryo font-bold'
-                : 'text-slate-300 hover:text-white hover:bg-op-card/60'
+                ? 'bg-op-card text-white font-bold'
+                : 'text-slate-400 hover:text-white'
             }`}
           >
             {link.label}

@@ -39,9 +39,9 @@ const powersSchema = {
 const abilities = [
   {
     id: 'laser',
+    code: '01',
     title: 'Thermal Laser Vision',
     category: 'Sustained Energy Projectile',
-    icon: '🔥',
     badge: 'High Precision / Piercing',
     accent: 'border-op-laser/40 bg-op-laser/10 text-op-laser',
     image: '/images/hero-banner.jpg',
@@ -56,9 +56,9 @@ const abilities = [
   },
   {
     id: 'cryo',
+    code: '02',
     title: 'Cryo Freeze Ray',
     category: 'Sub-Zero Crowd Control',
-    icon: '❄️',
     badge: 'Area Freeze / Shatter',
     accent: 'border-op-cryo/40 bg-op-cryo/10 text-op-cryo',
     image: '/images/cryo-freeze.jpg',
@@ -73,9 +73,9 @@ const abilities = [
   },
   {
     id: 'kinetic',
+    code: '03',
     title: 'Telekinetic Force Grip',
     category: 'Physics & Environmental Weaponry',
-    icon: '🌀',
     badge: 'Physics Manipulation',
     accent: 'border-op-kinetic/40 bg-op-kinetic/10 text-op-kinetic',
     image: '/images/telekinesis.jpg',
@@ -90,9 +90,9 @@ const abilities = [
   },
   {
     id: 'flight',
+    code: '04',
     title: 'Sonic Flight & Air Dash',
     category: 'Three-Dimensional Traversal',
-    icon: '⚡',
     badge: 'Supersonic Velocity',
     accent: 'border-op-gold/40 bg-op-gold/10 text-op-gold',
     stats: { damage: '75 / 100 (Shockwave)', range: 'Unlimited', consumption: 'Passive Flight Drain', cooldown: 'None' },
@@ -105,9 +105,9 @@ const abilities = [
   },
   {
     id: 'slam',
+    code: '05',
     title: 'Cataclysmic Ground Slam',
     category: 'Seismic Area of Effect',
-    icon: '💥',
     badge: 'Structural Seismic Shock',
     accent: 'border-rose-500/40 bg-rose-500/10 text-rose-400',
     stats: { damage: '100 / 100', range: '35 meter radius', consumption: '100% Burst Gauge', cooldown: '15 Seconds' },
@@ -124,53 +124,46 @@ const abilities = [
 <Layout title={pageTitle} description={pageDescription} schema={powersSchema}>
 
   <!-- Page Header -->
-  <section class="border-b border-op-border bg-gradient-to-b from-op-dark to-op-darkest py-12 sm:py-16">
+  <section class="border-b border-op-border bg-gradient-to-b from-op-darkest to-op-dark py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <nav class="font-mono text-xs text-op-muted mb-4 flex items-center gap-2">
         <a href="/" class="hover:text-white transition-colors">Home</a>
         <span>/</span>
-        <span class="text-op-laser">Superpowers &amp; Destruction</span>
+        <span class="text-white">Superpowers &amp; Destruction</span>
       </nav>
 
       <div class="max-w-3xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-op-laser/15 border border-op-laser/30 text-xs font-mono text-op-laser mb-4">
-          <span>⚡ Subject OP Genetic Arsenal</span>
-          <span>• Complete Combat Matrix</span>
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-op-card border border-op-border text-xs font-mono text-slate-300 mb-3">
+          <span>Subject OP Genetic Arsenal</span>
+          <span>• Combat Matrix</span>
         </div>
         <h1 class="text-3xl sm:text-5xl font-black text-white font-display uppercase tracking-tight mb-4">
           OverPeak Superpowers &amp; Physics Guide
         </h1>
         <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-          Unlock the full destructive potential of Jason Fieldway. Explore individual superpower mechanics, energy consumption profiles, and proprietary architectural demolition techniques in Prism City.
+          Master the genetic arsenal of Jason Fieldway. Explore individual superpower mechanics, energy consumption profiles, and proprietary architectural demolition techniques in Prism City.
         </p>
       </div>
 
     </div>
   </section>
 
-  <!-- GEO AI Overview Direct Answer Box -->
-  <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
-    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-laser/30 shadow-2xl bg-gradient-to-r from-op-laser/10 via-op-card to-op-dark">
-      <div class="flex items-start gap-4">
-        <div class="w-12 h-12 rounded-xl bg-op-laser/20 border border-op-laser/40 text-op-laser text-2xl flex items-center justify-center flex-shrink-0 font-mono font-black">
-          ⚡
-        </div>
-        <div>
-          <span class="font-mono text-xs text-op-laser font-bold uppercase tracking-wider block mb-1">
-            GEO DIRECT ANSWER • OVERPEAK SUPERPOWERS &amp; ABILITIES OVERVIEW
-          </span>
-          <h2 class="text-xl sm:text-2xl font-black text-white font-display mb-2">
-            What Superpowers Does Subject OP Have in OverPeak?
-          </h2>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
-            In OverPeak, protagonist Jason Fieldway (Subject OP) wields five genetically engineered abilities: <strong>Thermal Laser Vision</strong> (high-precision cutting beam), <strong>Cryo Freeze Ray</strong> (absolute-zero crowd control), <strong>Telekinetic Force Grip</strong> (real-time physics mass throw), <strong>Sonic Flight</strong> (Mach-2 aerial traversal), and <strong>Cataclysmic Ground Slam</strong> (seismic area devastation). Each ability interacts dynamically with Prism City's unscripted voxel physics engine to collapse skyscrapers and neutralize Starbridge military forces.
-          </p>
-          <div class="flex flex-wrap gap-4 font-mono text-xs text-slate-400">
-            <span>• <strong>Core Synergies:</strong> Freeze + Kinetic Throw (300% Shatter Damage)</span>
-            <span>• <strong>Demolition Method:</strong> Beam severance of base structural load points</span>
-          </div>
-        </div>
+  <!-- Editorial Arsenal Summary Box (Clean Wiki Briefing) -->
+  <section class="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="p-6 sm:p-8 rounded-2xl bg-op-card border border-op-border">
+      <span class="font-mono text-xs text-slate-400 uppercase tracking-wider block mb-1">
+        ARSENAL BRIEFING // ABILITY MATRIX
+      </span>
+      <h2 class="text-xl sm:text-2xl font-black text-white font-display mb-2">
+        Subject OP Superpowers Breakdown
+      </h2>
+      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
+        In OverPeak, protagonist Jason Fieldway (Subject OP) wields five genetically engineered abilities: <strong>Thermal Laser Vision</strong> (high-precision cutting beam), <strong>Cryo Freeze Ray</strong> (absolute-zero crowd control), <strong>Telekinetic Force Grip</strong> (real-time physics mass throw), <strong>Sonic Flight</strong> (Mach-2 aerial traversal), and <strong>Cataclysmic Ground Slam</strong> (seismic area devastation). Each ability interacts dynamically with Prism City's unscripted voxel physics engine to collapse skyscrapers and neutralize Starbridge military forces.
+      </p>
+      <div class="flex flex-wrap gap-4 font-mono text-xs text-slate-400 pt-3 border-t border-op-border/50">
+        <div><strong class="text-slate-200">Core Synergy:</strong> Freeze + Kinetic Throw (300% Shatter Damage)</div>
+        <div><strong class="text-slate-200">Demolition:</strong> Targeted severance of foundational load-bearing columns</div>
       </div>
     </div>
   </section>
@@ -182,8 +175,8 @@ const abilities = [
         <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-6">
           
           <div class="flex items-start gap-4">
-            <div class="w-14 h-14 rounded-2xl bg-op-dark border border-op-border flex items-center justify-center text-3xl shadow-inner flex-shrink-0">
-              {ability.icon}
+            <div class="w-12 h-12 rounded-xl bg-op-dark border border-op-border flex items-center justify-center font-mono font-black text-sm text-slate-300 flex-shrink-0">
+              {ability.code}
             </div>
             <div>
               <div class="flex items-center gap-3 flex-wrap mb-1">
@@ -248,8 +241,7 @@ const abilities = [
         <!-- Combat Tips Box -->
         <div class="p-4 rounded-xl bg-op-dark/60 border border-op-border/70">
           <h4 class="font-mono text-xs font-bold text-white uppercase tracking-wider mb-2 flex items-center gap-1.5">
-            <span>💡</span>
-            <span>Tactical Synergies &amp; Pro Tips</span>
+            <span>TACTICAL SYNERGIES &amp; EXECUTION</span>
           </h4>
           <ul class="space-y-1.5 text-xs text-slate-300 font-mono">
             {ability.tips.map((tip) => (
